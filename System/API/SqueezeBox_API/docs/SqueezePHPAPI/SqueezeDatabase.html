@@ -1,0 +1,1481 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>Docs For Class SqueezeDatabase</title>
+<link rel="stylesheet" type="text/css" href="../media/style.css" />
+</head>
+<body>
+<a name="top" style="display:none;"></a>
+<div align="center">
+<div class="page">
+<table border="0" cellspacing="0" cellpadding="0" width="100%">
+  <tr>
+    <td class="header_top"><div class="logo"><!-- crazy logo start--><div style="margin-bottom:0.75em;"><a href="http://org.0r9.org" style="color:#000;text-decoration:none;" title="0r9.org - Generally just disorganized."><span style="padding-bottom:0.75em;"><strong><font size="7" face="Verdana, Arial, Helvetica, sans-serif"><em>0</em></font><font color="#FF0000"size="7" face="Times,serif;">r</font></strong><span style="position:relative;top:0.5em;"><font size="7" face="Verdana, Arial, Helvetica, sans-serif"><strong><em>9</em></strong></font></span>&nbsp;<span style="position:relative;top:-0.5em;"><font size="5"face="Verdana, Arial, Helvetica, sans-serif"><strong><em>.org</em></strong></font></span></span></a><div style="margin-bottom:-0.75em;">&nbsp;</div><tt>&ldquo;Organization ((unofficial)) of the disorganized.<br />Don't ask! We can't find it.&rdquo;</tt></div><!-- crazy logo end--></div><div class="package_header">SqueezePHPAPI</div></td>
+  </tr>
+  <tr><td class="header_line"><img src="../media/empty.png" width="1" height="1" border="0" alt=""  /></td></tr>
+  <tr>
+    <td class="header_menu">
+        
+                                    
+                              		  [ <a href="../classtrees_SqueezePHPAPI.html" class="menu">class tree: SqueezePHPAPI</a> ]
+		  [ <a href="../elementindex_SqueezePHPAPI.html" class="menu">index: SqueezePHPAPI</a> ]
+		  	    [ <a href="../elementindex.html" class="menu">all elements</a> ]
+  	    [ <a href="../index.html" class="menu">doc index</a> ]
+    </td>
+  </tr>
+  <tr><td class="header_line"><img src="../media/empty.png" width="1" height="1" border="0" alt=""  /></td></tr>
+</table>
+
+<table width="100%" border="0" cellpadding="0" cellspacing="0">
+  <tr valign="top">
+    <td width="200" class="menu">
+	<div id="ric">
+					<p><a href="../ric_README.html">README</a></p>
+					<p><a href="../ric_ChangeLog.html">ChangeLog</a></p>
+					<p><a href="../ric_INSTALL.html">INSTALL</a></p>
+					<p><a href="../ric_NEWS.html">NEWS</a></p>
+			</div>
+	<div id="todolist">
+			<p><a href="../todolist.html">Todo List</a></p>
+	</div>
+      <b>Packages:</b><br />
+              <a href="../li_SqueezePHPAPI.html">SqueezePHPAPI</a><br />
+            <br /><br />
+                        <b>Files:</b><br />
+      	  <div class="package">
+			<a href="../SqueezePHPAPI/_examples---basic_example.php.html">		basic_example.php
+		</a><br />
+			<a href="../SqueezePHPAPI/_lib---class.SqueezeAlarm.php.html">		class.SqueezeAlarm.php
+		</a><br />
+			<a href="../SqueezePHPAPI/_lib---class.SqueezeCenter.php.html">		class.SqueezeCenter.php
+		</a><br />
+			<a href="../SqueezePHPAPI/_lib---class.SqueezeConnection.php.html">		class.SqueezeConnection.php
+		</a><br />
+			<a href="../SqueezePHPAPI/_lib---class.SqueezeDatabase.php.html">		class.SqueezeDatabase.php
+		</a><br />
+			<a href="../SqueezePHPAPI/_lib---class.SqueezeMixer.php.html">		class.SqueezeMixer.php
+		</a><br />
+			<a href="../SqueezePHPAPI/_lib---class.SqueezePlayer.php.html">		class.SqueezePlayer.php
+		</a><br />
+			<a href="../SqueezePHPAPI/_lib---class.SqueezePlayers.php.html">		class.SqueezePlayers.php
+		</a><br />
+			<a href="../SqueezePHPAPI/_lib---class.SqueezePlaylist.php.html">		class.SqueezePlaylist.php
+		</a><br />
+			<a href="../SqueezePHPAPI/_lib---class.SqueezeStreamProxy.php.html">		class.SqueezeStreamProxy.php
+		</a><br />
+	  </div><br />
+      
+      
+            <b>Classes:</b><br />
+        <div class="package">
+		    		<a href="../SqueezePHPAPI/SqueezeAlarm.html">SqueezeAlarm</a><br />
+	    		<a href="../SqueezePHPAPI/SqueezeCenter.html">SqueezeCenter</a><br />
+	    		<a href="../SqueezePHPAPI/SqueezeConnection.html">SqueezeConnection</a><br />
+	    		<a href="../SqueezePHPAPI/SqueezeDatabase.html">SqueezeDatabase</a><br />
+	    		<a href="../SqueezePHPAPI/SqueezeMixer.html">SqueezeMixer</a><br />
+	    		<a href="../SqueezePHPAPI/SqueezePlayer.html">SqueezePlayer</a><br />
+	    		<a href="../SqueezePHPAPI/SqueezePlayers.html">SqueezePlayers</a><br />
+	    		<a href="../SqueezePHPAPI/SqueezePlaylist.html">SqueezePlaylist</a><br />
+	    		<a href="../SqueezePHPAPI/SqueezeStreamProxy.html">SqueezeStreamProxy</a><br />
+	  </div>
+                </td>
+    <td style="padding-left:1em;">
+      <table cellpadding="10" cellspacing="0" width="100%" border="0"><tr><td valign="top">
+
+<h1>Class: SqueezeDatabase</h1>
+Source Location: /lib/class.SqueezeDatabase.php<br /><br />
+
+
+<table width="100%" border="0">
+<tr><td valign="top">
+
+<h3><a href="#class_details">Class Overview</a></h3>
+<div class="description">SqueezeDatabase</div><br /><br />
+<h4>Author(s):</h4>
+<ul>
+          <li>David Broz &lt;<a href="mailto:db-dev__AT__0r9.org">db-dev__AT__0r9.org</a>&gt;</li>
+                  </ul>
+
+
+
+
+          
+      
+
+<h4>Copyright:</h4>
+<ul>
+  <li>(c) 2009 by David Broz - <a href="http://org.0r9.org">Disorganization</a> Zurich, Switzerland</li>
+</ul>
+        
+</td>
+
+
+
+<td valign="top">
+<h3><a href="#class_methods">Methods</a></h3>
+<ul>
+    <li><a href="../SqueezePHPAPI/SqueezeDatabase.html#method__construct">__construct</a></li>
+    <li><a href="../SqueezePHPAPI/SqueezeDatabase.html#method__destruct">__destruct</a></li>
+    <li><a href="../SqueezePHPAPI/SqueezeDatabase.html#methodabortscan">abortscan</a></li>
+    <li><a href="../SqueezePHPAPI/SqueezeDatabase.html#methodalbums">albums</a></li>
+    <li><a href="../SqueezePHPAPI/SqueezeDatabase.html#methodartists">artists</a></li>
+    <li><a href="../SqueezePHPAPI/SqueezeDatabase.html#methodgenres">genres</a></li>
+    <li><a href="../SqueezePHPAPI/SqueezeDatabase.html#methodinfo_total_albums">info_total_albums</a></li>
+    <li><a href="../SqueezePHPAPI/SqueezeDatabase.html#methodinfo_total_artists">info_total_artists</a></li>
+    <li><a href="../SqueezePHPAPI/SqueezeDatabase.html#methodinfo_total_genres">info_total_genres</a></li>
+    <li><a href="../SqueezePHPAPI/SqueezeDatabase.html#methodinfo_total_songs">info_total_songs</a></li>
+    <li><a href="../SqueezePHPAPI/SqueezeDatabase.html#methodmusicfolder">musicfolder</a></li>
+    <li><a href="../SqueezePHPAPI/SqueezeDatabase.html#methodplaylists">playlists</a></li>
+    <li><a href="../SqueezePHPAPI/SqueezeDatabase.html#methodplaylists_delete">playlists_delete</a></li>
+    <li><a href="../SqueezePHPAPI/SqueezeDatabase.html#methodplaylists_edit">playlists_edit</a></li>
+    <li><a href="../SqueezePHPAPI/SqueezeDatabase.html#methodplaylists_new">playlists_new</a></li>
+    <li><a href="../SqueezePHPAPI/SqueezeDatabase.html#methodplaylists_rename">playlists_rename</a></li>
+    <li><a href="../SqueezePHPAPI/SqueezeDatabase.html#methodplaylists_tracks">playlists_tracks</a></li>
+    <li><a href="../SqueezePHPAPI/SqueezeDatabase.html#methodrescan">rescan</a></li>
+    <li><a href="../SqueezePHPAPI/SqueezeDatabase.html#methodrescanprogress">rescanprogress</a></li>
+    <li><a href="../SqueezePHPAPI/SqueezeDatabase.html#methodsearch">search</a></li>
+    <li><a href="../SqueezePHPAPI/SqueezeDatabase.html#methodsonginfo">songinfo</a></li>
+    <li><a href="../SqueezePHPAPI/SqueezeDatabase.html#methodsongs">songs</a></li>
+    <li><a href="../SqueezePHPAPI/SqueezeDatabase.html#methodtitles">titles</a></li>
+    <li><a href="../SqueezePHPAPI/SqueezeDatabase.html#methodtracks">tracks</a></li>
+    <li><a href="../SqueezePHPAPI/SqueezeDatabase.html#methodwipecache">wipecache</a></li>
+    <li><a href="../SqueezePHPAPI/SqueezeDatabase.html#methodyears">years</a></li>
+  </ul>
+</td>
+
+</tr></table>
+<hr />
+
+<table width="100%" border="0"><tr>
+
+
+
+
+
+<td>&nbsp;</td>
+</tr></table>
+<hr />
+
+<a name="class_details"></a>
+<h3>Class Details</h3>
+<div class="tags">
+[line 27]<br />
+SqueezeDatabase<br /><br /><p>SqueezeCenter database commands and queries</p><br /><h4>Tags:</h4>
+<div class="tags">
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><b>author:</b>&nbsp;&nbsp;</td><td>David Broz &lt;<a href="mailto:db-dev__AT__0r9.org">db-dev__AT__0r9.org</a>&gt;</td>
+  </tr>
+  <tr>
+    <td><b>copyright:</b>&nbsp;&nbsp;</td><td>(c) 2009 by David Broz - <a href="http://org.0r9.org">Disorganization</a> Zurich, Switzerland</td>
+  </tr>
+  <tr>
+    <td><b>license:</b>&nbsp;&nbsp;</td><td><a href="http://creativecommons.org/licenses/GPL/2.0/">GNU General Public License v2</a></td>
+  </tr>
+</table>
+</div>
+</div><br /><br />
+<div class="top">[ <a href="#top">Top</a> ]</div><br />
+
+
+<hr />
+<a name="class_methods"></a>
+<h3>Class Methods</h3>
+<div class="tags">
+
+  <hr />
+	<a name="method__construct"></a>
+	<h3>constructor __construct <span class="smalllinenumber">[line 46]</span></h3>
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code><a href="../SqueezePHPAPI/SqueezeDatabase.html">SqueezeDatabase</a> __construct(
+<a href="../SqueezePHPAPI/SqueezeConnection.html">SqueezeConnection</a>
+$CLI)</code>
+    </td></tr></table>
+    </td></tr></table><br />
+	
+		SqueezeDatabase (constructor)<br /><br /><br /><br />
+
+	
+        <h4>Parameters:</h4>
+    <div class="tags">
+    <table border="0" cellspacing="0" cellpadding="0">
+          <tr>
+        <td class="type"><a href="../SqueezePHPAPI/SqueezeConnection.html">SqueezeConnection</a>&nbsp;&nbsp;</td>
+        <td><b>$CLI</b>&nbsp;&nbsp;</td>
+        <td></td>
+      </tr>
+        </table>
+    </div><br />
+        <div class="top">[ <a href="#top">Top</a> ]</div>
+  </div>
+  <hr />
+	<a name="method__destruct"></a>
+	<h3>destructor __destruct <span class="smalllinenumber">[line 501]</span></h3>
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code>void __destruct(
+)</code>
+    </td></tr></table>
+    </td></tr></table><br />
+	
+		SqueezeDatabase (destructor)<br /><br /><br /><br />
+
+	
+        <div class="top">[ <a href="#top">Top</a> ]</div>
+  </div>
+  <hr />
+	<a name="methodabortscan"></a>
+	<h3>method abortscan <span class="smalllinenumber">[line 87]</span></h3>
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code>boolean abortscan(
+)</code>
+    </td></tr></table>
+    </td></tr></table><br />
+	
+		abortscan<br /><br /><p>The &quot;abortscan&quot; command causes SqueezeCenter to cancel a running scan.</p><br /><h4>Tags:</h4>
+<div class="tags">
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><b>return:</b>&nbsp;&nbsp;</td><td>(success)</td>
+  </tr>
+  <tr>
+    <td><b>access:</b>&nbsp;&nbsp;</td><td>public</td>
+  </tr>
+</table>
+</div>
+<br /><br />
+
+	
+        <div class="top">[ <a href="#top">Top</a> ]</div>
+  </div>
+  <hr />
+	<a name="methodalbums"></a>
+	<h3>method albums <span class="smalllinenumber">[line 209]</span></h3>
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code>array albums(
+[integer
+$start = 0], [integer
+$itemsPerResponse = 5], [string
+$search = &quot;&quot;], [string
+$genre_id = &quot;&quot;], [string
+$artist_id = &quot;&quot;], [string
+$track_id = &quot;&quot;], [string
+$year = &quot;&quot;], [boolean
+$compilation = false], [string
+$sort = &quot;album&quot;], [string
+$tags = &quot;&quot;])</code>
+    </td></tr></table>
+    </td></tr></table><br />
+	
+		albums<br /><br /><p>The &quot;albums&quot; query returns all albums known by the server.</p><br /><h4>Tags:</h4>
+<div class="tags">
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><b>return:</b>&nbsp;&nbsp;</td><td>&lt;taggedParameters&gt;</td>
+  </tr>
+  <tr>
+    <td><b>access:</b>&nbsp;&nbsp;</td><td>public</td>
+  </tr>
+</table>
+</div>
+<br /><br />
+
+	
+        <h4>Parameters:</h4>
+    <div class="tags">
+    <table border="0" cellspacing="0" cellpadding="0">
+          <tr>
+        <td class="type">integer&nbsp;&nbsp;</td>
+        <td><b>$start</b>&nbsp;&nbsp;</td>
+        <td>&lt;start&gt;</td>
+      </tr>
+          <tr>
+        <td class="type">integer&nbsp;&nbsp;</td>
+        <td><b>$itemsPerResponse</b>&nbsp;&nbsp;</td>
+        <td>&lt;itemsPerResponse&gt;</td>
+      </tr>
+          <tr>
+        <td class="type">string&nbsp;&nbsp;</td>
+        <td><b>$search</b>&nbsp;&nbsp;</td>
+        <td>Search substring. The search is case insensitive and obeys the &quot;Search Within Words&quot; server parameter.</td>
+      </tr>
+          <tr>
+        <td class="type">string&nbsp;&nbsp;</td>
+        <td><b>$genre_id</b>&nbsp;&nbsp;</td>
+        <td>Genre ID, to restrict the results to those albums with songs of that genre.</td>
+      </tr>
+          <tr>
+        <td class="type">string&nbsp;&nbsp;</td>
+        <td><b>$artist_id</b>&nbsp;&nbsp;</td>
+        <td>Artist ID, to restrict the results to those albums by &quot;artist_id&quot;.</td>
+      </tr>
+          <tr>
+        <td class="type">string&nbsp;&nbsp;</td>
+        <td><b>$track_id</b>&nbsp;&nbsp;</td>
+        <td>Track ID, to restrict the results to the album of &quot;track_id&quot;. If specified, all other filters are ignored.</td>
+      </tr>
+          <tr>
+        <td class="type">string&nbsp;&nbsp;</td>
+        <td><b>$year</b>&nbsp;&nbsp;</td>
+        <td>Year, to restrict the results to those albums of that year.</td>
+      </tr>
+          <tr>
+        <td class="type">boolean&nbsp;&nbsp;</td>
+        <td><b>$compilation</b>&nbsp;&nbsp;</td>
+        <td>Compilation, to restrict the results to those albums that are (true) or aren't (false) compilations.</td>
+      </tr>
+          <tr>
+        <td class="type">string&nbsp;&nbsp;</td>
+        <td><b>$sort</b>&nbsp;&nbsp;</td>
+        <td>Sort order of the returned list of albums. One of &quot;album&quot;, (the default), &quot;new&quot; which replicates the &quot;New Music&quot; browse mode of the web interface, or &quot;artflow&quot; which sorts by artist, year, album for use with artwork-centric interfaces.</td>
+      </tr>
+          <tr>
+        <td class="type">string&nbsp;&nbsp;</td>
+        <td><b>$tags</b>&nbsp;&nbsp;</td>
+        <td>Determines which tags are returned. Each returned tag is identified by a letter. The default value is &quot;l&quot;.</td>
+      </tr>
+        </table>
+    </div><br />
+        <div class="top">[ <a href="#top">Top</a> ]</div>
+  </div>
+  <hr />
+	<a name="methodartists"></a>
+	<h3>method artists <span class="smalllinenumber">[line 186]</span></h3>
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code>array artists(
+[integer
+$start = 0], [integer
+$itemsPerResponse = 5], [string
+$search = &quot;&quot;], [string
+$genre_id = &quot;&quot;], [string
+$album_id = &quot;&quot;], [string
+$tags = &quot;&quot;])</code>
+    </td></tr></table>
+    </td></tr></table><br />
+	
+		artists<br /><br /><p>The &quot;artists&quot; query returns all artists known by the server.</p><br /><h4>Tags:</h4>
+<div class="tags">
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><b>return:</b>&nbsp;&nbsp;</td><td>&lt;taggedParameters&gt;</td>
+  </tr>
+  <tr>
+    <td><b>access:</b>&nbsp;&nbsp;</td><td>public</td>
+  </tr>
+</table>
+</div>
+<br /><br />
+
+	
+        <h4>Parameters:</h4>
+    <div class="tags">
+    <table border="0" cellspacing="0" cellpadding="0">
+          <tr>
+        <td class="type">integer&nbsp;&nbsp;</td>
+        <td><b>$start</b>&nbsp;&nbsp;</td>
+        <td>&lt;start&gt;</td>
+      </tr>
+          <tr>
+        <td class="type">integer&nbsp;&nbsp;</td>
+        <td><b>$itemsPerResponse</b>&nbsp;&nbsp;</td>
+        <td>&lt;itemsPerResponse&gt;</td>
+      </tr>
+          <tr>
+        <td class="type">string&nbsp;&nbsp;</td>
+        <td><b>$search</b>&nbsp;&nbsp;</td>
+        <td>Search substring. The search is case insensitive and obeys the &quot;Search Within Words&quot; server parameter.</td>
+      </tr>
+          <tr>
+        <td class="type">string&nbsp;&nbsp;</td>
+        <td><b>$genre_id</b>&nbsp;&nbsp;</td>
+        <td>Genre ID, to restrict the results to those artists with songs of that genre.</td>
+      </tr>
+          <tr>
+        <td class="type">string&nbsp;&nbsp;</td>
+        <td><b>$album_id</b>&nbsp;&nbsp;</td>
+        <td>Genre ID, to restrict the results to those artists with songs of that genre.</td>
+      </tr>
+          <tr>
+        <td class="type">string&nbsp;&nbsp;</td>
+        <td><b>$tags</b>&nbsp;&nbsp;</td>
+        <td>Determines which tags are returned. Each returned tag is identified by a letter. The default value is empty.</td>
+      </tr>
+        </table>
+    </div><br />
+        <div class="top">[ <a href="#top">Top</a> ]</div>
+  </div>
+  <hr />
+	<a name="methodgenres"></a>
+	<h3>method genres <span class="smalllinenumber">[line 167]</span></h3>
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code>array genres(
+[integer
+$start = 0], [integer
+$itemsPerResponse = 5], [string
+$search = &quot;&quot;], [string
+$artist_id = &quot;&quot;], [string
+$album_id = &quot;&quot;], [string
+$track_id = &quot;&quot;], [string
+$year = &quot;&quot;], [string
+$tags = &quot;&quot;])</code>
+    </td></tr></table>
+    </td></tr></table><br />
+	
+		genres<br /><br /><p>The &quot;genres&quot; query returns all genres known by the server.</p><br /><h4>Tags:</h4>
+<div class="tags">
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><b>return:</b>&nbsp;&nbsp;</td><td>&lt;taggedParameters&gt;</td>
+  </tr>
+  <tr>
+    <td><b>access:</b>&nbsp;&nbsp;</td><td>public</td>
+  </tr>
+</table>
+</div>
+<br /><br />
+
+	
+        <h4>Parameters:</h4>
+    <div class="tags">
+    <table border="0" cellspacing="0" cellpadding="0">
+          <tr>
+        <td class="type">integer&nbsp;&nbsp;</td>
+        <td><b>$start</b>&nbsp;&nbsp;</td>
+        <td>&lt;start&gt;</td>
+      </tr>
+          <tr>
+        <td class="type">integer&nbsp;&nbsp;</td>
+        <td><b>$itemsPerResponse</b>&nbsp;&nbsp;</td>
+        <td>&lt;itemsPerResponse&gt;</td>
+      </tr>
+          <tr>
+        <td class="type">string&nbsp;&nbsp;</td>
+        <td><b>$search</b>&nbsp;&nbsp;</td>
+        <td>Search string. The search is case insensitive and obeys the &quot;Search Within Words&quot; server parameter.</td>
+      </tr>
+          <tr>
+        <td class="type">string&nbsp;&nbsp;</td>
+        <td><b>$artist_id</b>&nbsp;&nbsp;</td>
+        <td>Limit results to those genres proposed by the artist identified by &quot;artist_id&quot;.</td>
+      </tr>
+          <tr>
+        <td class="type">string&nbsp;&nbsp;</td>
+        <td><b>$album_id</b>&nbsp;&nbsp;</td>
+        <td>Limit results to those genres available on the album identified by &quot;album_id&quot;.</td>
+      </tr>
+          <tr>
+        <td class="type">string&nbsp;&nbsp;</td>
+        <td><b>$track_id</b>&nbsp;&nbsp;</td>
+        <td>Limit results to the genres of the track identified by &quot;track_id&quot;. If present, other filters are ignored.</td>
+      </tr>
+          <tr>
+        <td class="type">string&nbsp;&nbsp;</td>
+        <td><b>$year</b>&nbsp;&nbsp;</td>
+        <td>Limit results to the genres of the tracks of the given &quot;year&quot;.</td>
+      </tr>
+          <tr>
+        <td class="type">string&nbsp;&nbsp;</td>
+        <td><b>$tags</b>&nbsp;&nbsp;</td>
+        <td>Determines which tags are returned. Each returned tag is identified by a letter. The default value is empty.</td>
+      </tr>
+        </table>
+    </div><br />
+        <div class="top">[ <a href="#top">Top</a> ]</div>
+  </div>
+  <hr />
+	<a name="methodinfo_total_albums"></a>
+	<h3>method info_total_albums <span class="smalllinenumber">[line 135]</span></h3>
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code>integer info_total_albums(
+)</code>
+    </td></tr></table>
+    </td></tr></table><br />
+	
+		info_total_albums<br /><br /><p>The &quot;info total albums ?&quot; query returns the number of unique albums in the server music database.</p><br /><h4>Tags:</h4>
+<div class="tags">
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><b>access:</b>&nbsp;&nbsp;</td><td>public</td>
+  </tr>
+</table>
+</div>
+<br /><br />
+
+	
+        <div class="top">[ <a href="#top">Top</a> ]</div>
+  </div>
+  <hr />
+	<a name="methodinfo_total_artists"></a>
+	<h3>method info_total_artists <span class="smalllinenumber">[line 123]</span></h3>
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code>integer info_total_artists(
+)</code>
+    </td></tr></table>
+    </td></tr></table><br />
+	
+		info_total_artists<br /><br /><p>The &quot;info total artists ?&quot; query returns the number of unique artists in the server music database.</p><br /><h4>Tags:</h4>
+<div class="tags">
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><b>access:</b>&nbsp;&nbsp;</td><td>public</td>
+  </tr>
+</table>
+</div>
+<br /><br />
+
+	
+        <div class="top">[ <a href="#top">Top</a> ]</div>
+  </div>
+  <hr />
+	<a name="methodinfo_total_genres"></a>
+	<h3>method info_total_genres <span class="smalllinenumber">[line 111]</span></h3>
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code>integer info_total_genres(
+)</code>
+    </td></tr></table>
+    </td></tr></table><br />
+	
+		info_total_genres<br /><br /><p>The &quot;info total genres ?&quot; query returns the number of unique genres in the server music database.</p><br /><h4>Tags:</h4>
+<div class="tags">
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><b>access:</b>&nbsp;&nbsp;</td><td>public</td>
+  </tr>
+</table>
+</div>
+<br /><br />
+
+	
+        <div class="top">[ <a href="#top">Top</a> ]</div>
+  </div>
+  <hr />
+	<a name="methodinfo_total_songs"></a>
+	<h3>method info_total_songs <span class="smalllinenumber">[line 147]</span></h3>
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code>integer info_total_songs(
+)</code>
+    </td></tr></table>
+    </td></tr></table><br />
+	
+		info_total_songs<br /><br /><p>The &quot;info total songs ?&quot; query returns the number of unique songs in the server music database.</p><br /><h4>Tags:</h4>
+<div class="tags">
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><b>access:</b>&nbsp;&nbsp;</td><td>public</td>
+  </tr>
+</table>
+</div>
+<br /><br />
+
+	
+        <div class="top">[ <a href="#top">Top</a> ]</div>
+  </div>
+  <hr />
+	<a name="methodmusicfolder"></a>
+	<h3>method musicfolder <span class="smalllinenumber">[line 241]</span></h3>
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code>array musicfolder(
+[integer
+$start = 0], [integer
+$itemsPerResponse = 5], [string
+$folder_id = &quot;&quot;], [string
+$url = &quot;&quot;], [string
+$tags = &quot;&quot;])</code>
+    </td></tr></table>
+    </td></tr></table><br />
+	
+		musicfolder<br /><br /><p>The &quot;musicfolder&quot; query returns the content of a given music folder, starting from the top level directory configured in SqueezeCenter.</p><br /><h4>Tags:</h4>
+<div class="tags">
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><b>return:</b>&nbsp;&nbsp;</td><td>&lt;taggedParameters&gt;</td>
+  </tr>
+  <tr>
+    <td><b>access:</b>&nbsp;&nbsp;</td><td>public</td>
+  </tr>
+</table>
+</div>
+<br /><br />
+
+	
+        <h4>Parameters:</h4>
+    <div class="tags">
+    <table border="0" cellspacing="0" cellpadding="0">
+          <tr>
+        <td class="type">integer&nbsp;&nbsp;</td>
+        <td><b>$start</b>&nbsp;&nbsp;</td>
+        <td>&lt;start&gt;</td>
+      </tr>
+          <tr>
+        <td class="type">integer&nbsp;&nbsp;</td>
+        <td><b>$itemsPerResponse</b>&nbsp;&nbsp;</td>
+        <td>&lt;itemsPerResponse&gt;</td>
+      </tr>
+          <tr>
+        <td class="type">string&nbsp;&nbsp;</td>
+        <td><b>$folder_id</b>&nbsp;&nbsp;</td>
+        <td>Browses the folder identified by &quot;folder_id&quot;.</td>
+      </tr>
+          <tr>
+        <td class="type">string&nbsp;&nbsp;</td>
+        <td><b>$url</b>&nbsp;&nbsp;</td>
+        <td>Browses the folder identified by &quot;url&quot;. If the content of &quot;url&quot; did not happen to be in the SqueezeCenter database, it is added to it. &quot;url&quot; has precedence over &quot;folder_id&quot; if both are provided.</td>
+      </tr>
+          <tr>
+        <td class="type">string&nbsp;&nbsp;</td>
+        <td><b>$tags</b>&nbsp;&nbsp;</td>
+        <td>Determines which tags are returned. Each returned tag is identified by a letter. The default value is empty.</td>
+      </tr>
+        </table>
+    </div><br />
+        <div class="top">[ <a href="#top">Top</a> ]</div>
+  </div>
+  <hr />
+	<a name="methodplaylists"></a>
+	<h3>method playlists <span class="smalllinenumber">[line 258]</span></h3>
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code>array playlists(
+[integer
+$start = 0], [integer
+$itemsPerResponse = 5], [string
+$search = &quot;&quot;], [string
+$tags = &quot;&quot;])</code>
+    </td></tr></table>
+    </td></tr></table><br />
+	
+		playlists<br /><br /><p>The &quot;playlists&quot; query returns all playlists known by the server.</p><br /><h4>Tags:</h4>
+<div class="tags">
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><b>return:</b>&nbsp;&nbsp;</td><td>&lt;taggedParameters&gt;</td>
+  </tr>
+  <tr>
+    <td><b>access:</b>&nbsp;&nbsp;</td><td>public</td>
+  </tr>
+</table>
+</div>
+<br /><br />
+
+	
+        <h4>Parameters:</h4>
+    <div class="tags">
+    <table border="0" cellspacing="0" cellpadding="0">
+          <tr>
+        <td class="type">integer&nbsp;&nbsp;</td>
+        <td><b>$start</b>&nbsp;&nbsp;</td>
+        <td>&lt;start&gt;</td>
+      </tr>
+          <tr>
+        <td class="type">integer&nbsp;&nbsp;</td>
+        <td><b>$itemsPerResponse</b>&nbsp;&nbsp;</td>
+        <td>&lt;itemsPerResponse&gt;</td>
+      </tr>
+          <tr>
+        <td class="type">string&nbsp;&nbsp;</td>
+        <td><b>$search</b>&nbsp;&nbsp;</td>
+        <td>Search substring. The search is case insensitive and obeys the &quot;Search Within Words&quot; server parameter.</td>
+      </tr>
+          <tr>
+        <td class="type">string&nbsp;&nbsp;</td>
+        <td><b>$tags</b>&nbsp;&nbsp;</td>
+        <td>Determines which tags are returned. Each returned tag is identified by a letter. The default value is empty.</td>
+      </tr>
+        </table>
+    </div><br />
+        <div class="top">[ <a href="#top">Top</a> ]</div>
+  </div>
+  <hr />
+	<a name="methodplaylists_delete"></a>
+	<h3>method playlists_delete <span class="smalllinenumber">[line 319]</span></h3>
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code>boolean playlists_delete(
+[string
+$playlist_id = &quot;&quot;])</code>
+    </td></tr></table>
+    </td></tr></table><br />
+	
+		playlists_delete<br /><br /><p>This command deletes a saved playlist.</p><br /><h4>Tags:</h4>
+<div class="tags">
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><b>return:</b>&nbsp;&nbsp;</td><td>(success)</td>
+  </tr>
+  <tr>
+    <td><b>access:</b>&nbsp;&nbsp;</td><td>public</td>
+  </tr>
+</table>
+</div>
+<br /><br />
+
+	
+        <h4>Parameters:</h4>
+    <div class="tags">
+    <table border="0" cellspacing="0" cellpadding="0">
+          <tr>
+        <td class="type">string&nbsp;&nbsp;</td>
+        <td><b>$playlist_id</b>&nbsp;&nbsp;</td>
+        <td>The id of the playlist to delete.</td>
+      </tr>
+        </table>
+    </div><br />
+        <div class="top">[ <a href="#top">Top</a> ]</div>
+  </div>
+  <hr />
+	<a name="methodplaylists_edit"></a>
+	<h3>method playlists_edit <span class="smalllinenumber">[line 338]</span></h3>
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code>boolean playlists_edit(
+[string
+$playlist_id = &quot;&quot;], [string
+$cmd = &quot;&quot;], [string
+$index = &quot;&quot;], [string
+$toindex = &quot;&quot;], [string
+$title = &quot;&quot;], [string
+$url = &quot;&quot;])</code>
+    </td></tr></table>
+    </td></tr></table><br />
+	
+		playlists_edit<br /><br /><p>This command manipulates the track content of a saved playlist.</p><br /><h4>Tags:</h4>
+<div class="tags">
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><b>return:</b>&nbsp;&nbsp;</td><td>(success)</td>
+  </tr>
+  <tr>
+    <td><b>access:</b>&nbsp;&nbsp;</td><td>public</td>
+  </tr>
+</table>
+</div>
+<br /><br />
+
+	
+        <h4>Parameters:</h4>
+    <div class="tags">
+    <table border="0" cellspacing="0" cellpadding="0">
+          <tr>
+        <td class="type">string&nbsp;&nbsp;</td>
+        <td><b>$playlist_id</b>&nbsp;&nbsp;</td>
+        <td>The id of the playlist to manipulate.</td>
+      </tr>
+          <tr>
+        <td class="type">string&nbsp;&nbsp;</td>
+        <td><b>$cmd</b>&nbsp;&nbsp;</td>
+        <td>One of &quot;up&quot;, &quot;down&quot;, &quot;move&quot;, &quot;delete&quot; or &quot;add&quot;, in order to move up, down, delete or add a track.</td>
+      </tr>
+          <tr>
+        <td class="type">string&nbsp;&nbsp;</td>
+        <td><b>$index</b>&nbsp;&nbsp;</td>
+        <td>For &quot;cmd:up&quot;, &quot;cmd:down&quot;, &quot;cmd:move&quot; and &quot;cmd:delete&quot; the index of the track to edit.</td>
+      </tr>
+          <tr>
+        <td class="type">string&nbsp;&nbsp;</td>
+        <td><b>$toindex</b>&nbsp;&nbsp;</td>
+        <td>For &quot;cmd:move&quot; the new index of the track to be moved.</td>
+      </tr>
+          <tr>
+        <td class="type">string&nbsp;&nbsp;</td>
+        <td><b>$title</b>&nbsp;&nbsp;</td>
+        <td>For &quot;cmd:add&quot;, the title of the track to add.</td>
+      </tr>
+          <tr>
+        <td class="type">string&nbsp;&nbsp;</td>
+        <td><b>$url</b>&nbsp;&nbsp;</td>
+        <td>For &quot;cmd:add&quot;, the url of the track to add.</td>
+      </tr>
+        </table>
+    </div><br />
+        <div class="top">[ <a href="#top">Top</a> ]</div>
+  </div>
+  <hr />
+	<a name="methodplaylists_new"></a>
+	<h3>method playlists_new <span class="smalllinenumber">[line 305]</span></h3>
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code>array playlists_new(
+[string
+$name = &quot;&quot;])</code>
+    </td></tr></table>
+    </td></tr></table><br />
+	
+		playlists_new<br /><br /><p>This command creates an empty saved playlist, to be further manipulated by other commands.</p><br /><h4>Tags:</h4>
+<div class="tags">
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><b>return:</b>&nbsp;&nbsp;</td><td>&lt;taggedParameters&gt;</td>
+  </tr>
+  <tr>
+    <td><b>access:</b>&nbsp;&nbsp;</td><td>public</td>
+  </tr>
+</table>
+</div>
+<br /><br />
+
+	
+        <h4>Parameters:</h4>
+    <div class="tags">
+    <table border="0" cellspacing="0" cellpadding="0">
+          <tr>
+        <td class="type">string&nbsp;&nbsp;</td>
+        <td><b>$name</b>&nbsp;&nbsp;</td>
+        <td>The name of the playlist (without .m3u).</td>
+      </tr>
+        </table>
+    </div><br />
+        <div class="top">[ <a href="#top">Top</a> ]</div>
+  </div>
+  <hr />
+	<a name="methodplaylists_rename"></a>
+	<h3>method playlists_rename <span class="smalllinenumber">[line 291]</span></h3>
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code>array playlists_rename(
+[string
+$playlist_id = &quot;&quot;], [string
+$newname = &quot;&quot;], [string
+$dry_run = &quot;&quot;])</code>
+    </td></tr></table>
+    </td></tr></table><br />
+	
+		playlists_rename<br /><br /><p>This command renames a saved playlist.</p><br /><h4>Tags:</h4>
+<div class="tags">
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><b>return:</b>&nbsp;&nbsp;</td><td>&lt;taggedParameters&gt;</td>
+  </tr>
+  <tr>
+    <td><b>access:</b>&nbsp;&nbsp;</td><td>public</td>
+  </tr>
+</table>
+</div>
+<br /><br />
+
+	
+        <h4>Parameters:</h4>
+    <div class="tags">
+    <table border="0" cellspacing="0" cellpadding="0">
+          <tr>
+        <td class="type">string&nbsp;&nbsp;</td>
+        <td><b>$playlist_id</b>&nbsp;&nbsp;</td>
+        <td>The id of the playlist to rename.</td>
+      </tr>
+          <tr>
+        <td class="type">string&nbsp;&nbsp;</td>
+        <td><b>$newname</b>&nbsp;&nbsp;</td>
+        <td>The new name of the playlist (without .m3u).</td>
+      </tr>
+          <tr>
+        <td class="type">string&nbsp;&nbsp;</td>
+        <td><b>$dry_run</b>&nbsp;&nbsp;</td>
+        <td>Used to check if the new name is already used by another playlist. The command performs the name check but does not overwrite the existing playlist. If a name conflict occurs, the command will return a &quot;overwritten_playlist_id&quot; parameter.</td>
+      </tr>
+        </table>
+    </div><br />
+        <div class="top">[ <a href="#top">Top</a> ]</div>
+  </div>
+  <hr />
+	<a name="methodplaylists_tracks"></a>
+	<h3>method playlists_tracks <span class="smalllinenumber">[line 275]</span></h3>
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code>array playlists_tracks(
+[integer
+$start = 0], [integer
+$itemsPerResponse = 5], [string
+$playlist_id = &quot;&quot;], [string
+$tags = &quot;&quot;])</code>
+    </td></tr></table>
+    </td></tr></table><br />
+	
+		playlists_tracks<br /><br /><p>The &quot;playlists tracks&quot; query returns the tracks of a given playlist.</p><br /><h4>Tags:</h4>
+<div class="tags">
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><b>return:</b>&nbsp;&nbsp;</td><td>&lt;taggedParameters&gt;</td>
+  </tr>
+  <tr>
+    <td><b>access:</b>&nbsp;&nbsp;</td><td>public</td>
+  </tr>
+</table>
+</div>
+<br /><br />
+
+	
+        <h4>Parameters:</h4>
+    <div class="tags">
+    <table border="0" cellspacing="0" cellpadding="0">
+          <tr>
+        <td class="type">integer&nbsp;&nbsp;</td>
+        <td><b>$start</b>&nbsp;&nbsp;</td>
+        <td>&lt;start&gt;</td>
+      </tr>
+          <tr>
+        <td class="type">integer&nbsp;&nbsp;</td>
+        <td><b>$itemsPerResponse</b>&nbsp;&nbsp;</td>
+        <td>&lt;itemsPerResponse&gt;</td>
+      </tr>
+          <tr>
+        <td class="type">string&nbsp;&nbsp;</td>
+        <td><b>$playlist_id</b>&nbsp;&nbsp;</td>
+        <td>Playlist ID as returned by the &quot;playlists&quot; query. This is a mandatory parameter.</td>
+      </tr>
+          <tr>
+        <td class="type">string&nbsp;&nbsp;</td>
+        <td><b>$tags</b>&nbsp;&nbsp;</td>
+        <td>Determines which tags are returned. Each returned tag is identified by a letter (see command &quot;songinfo&quot; for a list of possible fields and their identifying letter). The default tags value for this command is &quot;gald&quot;.</td>
+      </tr>
+        </table>
+    </div><br />
+        <div class="top">[ <a href="#top">Top</a> ]</div>
+  </div>
+  <hr />
+	<a name="methodrescan"></a>
+	<h3>method rescan <span class="smalllinenumber">[line 59]</span></h3>
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code>boolean rescan(
+[string
+$query = &quot;?&quot;])</code>
+    </td></tr></table>
+    </td></tr></table><br />
+	
+		rescan<br /><br /><p>The &quot;rescan&quot; command causes SqueezeCenter to rescan the entire music library, reloading the music file information. If &quot;playlists&quot; is indicated (&quot;rescan playlists&quot;), only the playlist directory is rescanned.</p><br /><h4>Tags:</h4>
+<div class="tags">
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><b>return:</b>&nbsp;&nbsp;</td><td>(success)</td>
+  </tr>
+  <tr>
+    <td><b>access:</b>&nbsp;&nbsp;</td><td>public</td>
+  </tr>
+</table>
+</div>
+<br /><br />
+
+	
+        <h4>Parameters:</h4>
+    <div class="tags">
+    <table border="0" cellspacing="0" cellpadding="0">
+          <tr>
+        <td class="type">string&nbsp;&nbsp;</td>
+        <td><b>$query</b>&nbsp;&nbsp;</td>
+        <td>&lt;|playlists|?&gt;</td>
+      </tr>
+        </table>
+    </div><br />
+        <div class="top">[ <a href="#top">Top</a> ]</div>
+  </div>
+  <hr />
+	<a name="methodrescanprogress"></a>
+	<h3>method rescanprogress <span class="smalllinenumber">[line 75]</span></h3>
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code>array rescanprogress(
+)</code>
+    </td></tr></table>
+    </td></tr></table><br />
+	
+		rescanprogress<br /><br /><p>The &quot;rescanprogress&quot; query returns details on the scanning progress.</p><br /><h4>Tags:</h4>
+<div class="tags">
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><b>return:</b>&nbsp;&nbsp;</td><td>&lt;taggedParameters&gt;  &lt;taggedParameters&gt;</td>
+  </tr>
+  <tr>
+    <td><b>access:</b>&nbsp;&nbsp;</td><td>public</td>
+  </tr>
+</table>
+</div>
+<br /><br />
+
+	
+        <div class="top">[ <a href="#top">Top</a> ]</div>
+  </div>
+  <hr />
+	<a name="methodsearch"></a>
+	<h3>method search <span class="smalllinenumber">[line 491]</span></h3>
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code>array search(
+[integer
+$start = 0], [integer
+$itemsPerResponse = 5], [string
+$term = &quot;&quot;])</code>
+    </td></tr></table>
+    </td></tr></table><br />
+	
+		search<br /><br /><p>The &quot;search&quot; command returns artists, albums and tracks matching a search string.<br />Please note that &quot;start&quot; and &quot;itemsPerResponse&quot; are calculated per category. If you eg. have genres and tracks with the search term in them, you'll get &quot;itemsPerResponse&quot; number of each of them. The total number of items returned therefore can be a multiple of &quot;itemsPerResponse&quot;.</p><br /><h4>Tags:</h4>
+<div class="tags">
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><b>return:</b>&nbsp;&nbsp;</td><td>&lt;taggedParameters&gt;</td>
+  </tr>
+  <tr>
+    <td><b>access:</b>&nbsp;&nbsp;</td><td>public</td>
+  </tr>
+</table>
+</div>
+<br /><br />
+
+	
+        <h4>Parameters:</h4>
+    <div class="tags">
+    <table border="0" cellspacing="0" cellpadding="0">
+          <tr>
+        <td class="type">integer&nbsp;&nbsp;</td>
+        <td><b>$start</b>&nbsp;&nbsp;</td>
+        <td>&lt;start&gt;</td>
+      </tr>
+          <tr>
+        <td class="type">integer&nbsp;&nbsp;</td>
+        <td><b>$itemsPerResponse</b>&nbsp;&nbsp;</td>
+        <td>&lt;itemsPerResponse&gt;</td>
+      </tr>
+          <tr>
+        <td class="type">string&nbsp;&nbsp;</td>
+        <td><b>$term</b>&nbsp;&nbsp;</td>
+        <td>Search string</td>
+      </tr>
+        </table>
+    </div><br />
+        <div class="top">[ <a href="#top">Top</a> ]</div>
+  </div>
+  <hr />
+	<a name="methodsonginfo"></a>
+	<h3>method songinfo <span class="smalllinenumber">[line 385]</span></h3>
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code>array songinfo(
+[integer
+$start = 0], [integer
+$itemsPerResponse = 5], [string
+$url = &quot;&quot;], [string
+$track_id = &quot;&quot;], [string
+$tags = &quot;&quot;])</code>
+    </td></tr></table>
+    </td></tr></table><br />
+	
+		songinfo<br /><br /><p>The &quot;songinfo&quot; command returns all the information on a song known by the server. Please note that the &lt;start&gt; and &lt;itemsPerResponse&gt; parameters apply to the individual data fields below and not, as they do in other extended CLI queries, to the number or songs (or artists, genres, etc.) returned; the &quot;songinfo&quot; only ever returns information about a single song.</p><br /><h4>Tags:</h4>
+<div class="tags">
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><b>return:</b>&nbsp;&nbsp;</td><td>&lt;taggedParameters&gt; (bool false on failure)</td>
+  </tr>
+  <tr>
+    <td><b>access:</b>&nbsp;&nbsp;</td><td>public</td>
+  </tr>
+</table>
+</div>
+<br /><br />
+
+	
+        <h4>Parameters:</h4>
+    <div class="tags">
+    <table border="0" cellspacing="0" cellpadding="0">
+          <tr>
+        <td class="type">integer&nbsp;&nbsp;</td>
+        <td><b>$start</b>&nbsp;&nbsp;</td>
+        <td>&lt;start&gt;</td>
+      </tr>
+          <tr>
+        <td class="type">integer&nbsp;&nbsp;</td>
+        <td><b>$itemsPerResponse</b>&nbsp;&nbsp;</td>
+        <td>&lt;itemsPerResponse&gt;</td>
+      </tr>
+          <tr>
+        <td class="type">string&nbsp;&nbsp;</td>
+        <td><b>$url</b>&nbsp;&nbsp;</td>
+        <td>Song path as returned by other CLI commands. This is a mandatory parameter, except if &quot;track_id&quot; is provided.</td>
+      </tr>
+          <tr>
+        <td class="type">string&nbsp;&nbsp;</td>
+        <td><b>$track_id</b>&nbsp;&nbsp;</td>
+        <td>Track ID as returned by other CLI commands. This is a mandatory parameter, except if &quot;url&quot; is provided.</td>
+      </tr>
+          <tr>
+        <td class="type">string&nbsp;&nbsp;</td>
+        <td><b>$tags</b>&nbsp;&nbsp;</td>
+        <td>Determines which tags are returned. Each returned tag is identified by a letter. The default value is all info except the url (u) and the multi-valued tags for genre(s) (G &amp; P) and artists (A &amp; S)</td>
+      </tr>
+        </table>
+    </div><br />
+        <div class="top">[ <a href="#top">Top</a> ]</div>
+  </div>
+  <hr />
+	<a name="methodsongs"></a>
+	<h3>method songs <span class="smalllinenumber">[line 433]</span></h3>
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code>array songs(
+[integer
+$start = 0], [integer
+$itemsPerResponse = 5], [string
+$genre_id = &quot;&quot;], [string
+$artist_id = &quot;&quot;], [string
+$album_id = &quot;&quot;], [string
+$year = &quot;&quot;], [string
+$search = &quot;&quot;], [string
+$tags = &quot;&quot;], [string
+$sort = &quot;&quot;])</code>
+    </td></tr></table>
+    </td></tr></table><br />
+	
+		songs<br /><br /><p>The &quot;songs&quot; command returns all titles known by the SqueezeCenter.</p><br /><h4>Tags:</h4>
+<div class="tags">
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><b>return:</b>&nbsp;&nbsp;</td><td>&lt;taggedParameters&gt;</td>
+  </tr>
+  <tr>
+    <td><b>access:</b>&nbsp;&nbsp;</td><td>public</td>
+  </tr>
+</table>
+</div>
+<br /><br />
+
+	
+        <h4>Parameters:</h4>
+    <div class="tags">
+    <table border="0" cellspacing="0" cellpadding="0">
+          <tr>
+        <td class="type">integer&nbsp;&nbsp;</td>
+        <td><b>$start</b>&nbsp;&nbsp;</td>
+        <td>&lt;start&gt;</td>
+      </tr>
+          <tr>
+        <td class="type">integer&nbsp;&nbsp;</td>
+        <td><b>$itemsPerResponse</b>&nbsp;&nbsp;</td>
+        <td>&lt;itemsPerResponse&gt;</td>
+      </tr>
+          <tr>
+        <td class="type">string&nbsp;&nbsp;</td>
+        <td><b>$genre_id</b>&nbsp;&nbsp;</td>
+        <td>Genre ID, to restrict the results to the titles of that genre.</td>
+      </tr>
+          <tr>
+        <td class="type">string&nbsp;&nbsp;</td>
+        <td><b>$artist_id</b>&nbsp;&nbsp;</td>
+        <td>Artist ID, to restrict the results to the titles of that artist.</td>
+      </tr>
+          <tr>
+        <td class="type">string&nbsp;&nbsp;</td>
+        <td><b>$album_id</b>&nbsp;&nbsp;</td>
+        <td>Album ID, to restrict the results to the titles of that album.</td>
+      </tr>
+          <tr>
+        <td class="type">string&nbsp;&nbsp;</td>
+        <td><b>$year</b>&nbsp;&nbsp;</td>
+        <td>Year, to restrict the results to the titles of that year.</td>
+      </tr>
+          <tr>
+        <td class="type">string&nbsp;&nbsp;</td>
+        <td><b>$search</b>&nbsp;&nbsp;</td>
+        <td>Search substring. The search is case insensitive and obeys the &quot;Search Within Words&quot; server parameter.</td>
+      </tr>
+          <tr>
+        <td class="type">string&nbsp;&nbsp;</td>
+        <td><b>$tags</b>&nbsp;&nbsp;</td>
+        <td>Determines which tags are returned. Each returned tag is identified by a letter (see command &quot;songinfo&quot; for a list of possible fields and their identifying letter). The default tags value for this command is &quot;gald&quot;.</td>
+      </tr>
+          <tr>
+        <td class="type">string&nbsp;&nbsp;</td>
+        <td><b>$sort</b>&nbsp;&nbsp;</td>
+        <td>Sorting, one of &quot;title&quot; (the default) or &quot;tracknum&quot; (in which case the track field (&quot;t&quot;) is added automatically to the response). Sorting by tracks is possible only if tracks are defined and for a single album.</td>
+      </tr>
+        </table>
+    </div><br />
+        <div class="top">[ <a href="#top">Top</a> ]</div>
+  </div>
+  <hr />
+	<a name="methodtitles"></a>
+	<h3>method titles <span class="smalllinenumber">[line 412]</span></h3>
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code>array titles(
+[integer
+$start = 0], [integer
+$itemsPerResponse = 5], [string
+$genre_id = &quot;&quot;], [string
+$artist_id = &quot;&quot;], [string
+$album_id = &quot;&quot;], [string
+$year = &quot;&quot;], [string
+$search = &quot;&quot;], [string
+$tags = &quot;&quot;], [string
+$sort = &quot;&quot;])</code>
+    </td></tr></table>
+    </td></tr></table><br />
+	
+		titles<br /><br /><p>The &quot;titles&quot; command returns all titles known by the SqueezeCenter.</p><br /><h4>Tags:</h4>
+<div class="tags">
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><b>return:</b>&nbsp;&nbsp;</td><td>&lt;taggedParameters&gt;</td>
+  </tr>
+  <tr>
+    <td><b>access:</b>&nbsp;&nbsp;</td><td>public</td>
+  </tr>
+</table>
+</div>
+<br /><br />
+
+	
+        <h4>Parameters:</h4>
+    <div class="tags">
+    <table border="0" cellspacing="0" cellpadding="0">
+          <tr>
+        <td class="type">integer&nbsp;&nbsp;</td>
+        <td><b>$start</b>&nbsp;&nbsp;</td>
+        <td>&lt;start&gt;</td>
+      </tr>
+          <tr>
+        <td class="type">integer&nbsp;&nbsp;</td>
+        <td><b>$itemsPerResponse</b>&nbsp;&nbsp;</td>
+        <td>&lt;itemsPerResponse&gt;</td>
+      </tr>
+          <tr>
+        <td class="type">string&nbsp;&nbsp;</td>
+        <td><b>$genre_id</b>&nbsp;&nbsp;</td>
+        <td>Genre ID, to restrict the results to the titles of that genre.</td>
+      </tr>
+          <tr>
+        <td class="type">string&nbsp;&nbsp;</td>
+        <td><b>$artist_id</b>&nbsp;&nbsp;</td>
+        <td>Artist ID, to restrict the results to the titles of that artist.</td>
+      </tr>
+          <tr>
+        <td class="type">string&nbsp;&nbsp;</td>
+        <td><b>$album_id</b>&nbsp;&nbsp;</td>
+        <td>Album ID, to restrict the results to the titles of that album.</td>
+      </tr>
+          <tr>
+        <td class="type">string&nbsp;&nbsp;</td>
+        <td><b>$year</b>&nbsp;&nbsp;</td>
+        <td>Year, to restrict the results to the titles of that year.</td>
+      </tr>
+          <tr>
+        <td class="type">string&nbsp;&nbsp;</td>
+        <td><b>$search</b>&nbsp;&nbsp;</td>
+        <td>Search substring. The search is case insensitive and obeys the &quot;Search Within Words&quot; server parameter.</td>
+      </tr>
+          <tr>
+        <td class="type">string&nbsp;&nbsp;</td>
+        <td><b>$tags</b>&nbsp;&nbsp;</td>
+        <td>Determines which tags are returned. Each returned tag is identified by a letter (see command &quot;songinfo&quot; for a list of possible fields and their identifying letter). The default tags value for this command is &quot;gald&quot;.</td>
+      </tr>
+          <tr>
+        <td class="type">string&nbsp;&nbsp;</td>
+        <td><b>$sort</b>&nbsp;&nbsp;</td>
+        <td>Sorting, one of &quot;title&quot; (the default) or &quot;tracknum&quot; (in which case the track field (&quot;t&quot;) is added automatically to the response). Sorting by tracks is possible only if tracks are defined and for a single album.</td>
+      </tr>
+        </table>
+    </div><br />
+        <div class="top">[ <a href="#top">Top</a> ]</div>
+  </div>
+  <hr />
+	<a name="methodtracks"></a>
+	<h3>method tracks <span class="smalllinenumber">[line 454]</span></h3>
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code>array tracks(
+[integer
+$start = 0], [integer
+$itemsPerResponse = 5], [string
+$genre_id = &quot;&quot;], [string
+$artist_id = &quot;&quot;], [string
+$album_id = &quot;&quot;], [string
+$year = &quot;&quot;], [string
+$search = &quot;&quot;], [string
+$tags = &quot;&quot;], [string
+$sort = &quot;&quot;])</code>
+    </td></tr></table>
+    </td></tr></table><br />
+	
+		tracks<br /><br /><p>The &quot;tracks&quot; command returns all titles known by the SqueezeCenter.</p><br /><h4>Tags:</h4>
+<div class="tags">
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><b>return:</b>&nbsp;&nbsp;</td><td>&lt;taggedParameters&gt;</td>
+  </tr>
+  <tr>
+    <td><b>access:</b>&nbsp;&nbsp;</td><td>public</td>
+  </tr>
+</table>
+</div>
+<br /><br />
+
+	
+        <h4>Parameters:</h4>
+    <div class="tags">
+    <table border="0" cellspacing="0" cellpadding="0">
+          <tr>
+        <td class="type">integer&nbsp;&nbsp;</td>
+        <td><b>$start</b>&nbsp;&nbsp;</td>
+        <td>&lt;start&gt;</td>
+      </tr>
+          <tr>
+        <td class="type">integer&nbsp;&nbsp;</td>
+        <td><b>$itemsPerResponse</b>&nbsp;&nbsp;</td>
+        <td>&lt;itemsPerResponse&gt;</td>
+      </tr>
+          <tr>
+        <td class="type">string&nbsp;&nbsp;</td>
+        <td><b>$genre_id</b>&nbsp;&nbsp;</td>
+        <td>Genre ID, to restrict the results to the titles of that genre.</td>
+      </tr>
+          <tr>
+        <td class="type">string&nbsp;&nbsp;</td>
+        <td><b>$artist_id</b>&nbsp;&nbsp;</td>
+        <td>Artist ID, to restrict the results to the titles of that artist.</td>
+      </tr>
+          <tr>
+        <td class="type">string&nbsp;&nbsp;</td>
+        <td><b>$album_id</b>&nbsp;&nbsp;</td>
+        <td>Album ID, to restrict the results to the titles of that album.</td>
+      </tr>
+          <tr>
+        <td class="type">string&nbsp;&nbsp;</td>
+        <td><b>$year</b>&nbsp;&nbsp;</td>
+        <td>Year, to restrict the results to the titles of that year.</td>
+      </tr>
+          <tr>
+        <td class="type">string&nbsp;&nbsp;</td>
+        <td><b>$search</b>&nbsp;&nbsp;</td>
+        <td>Search substring. The search is case insensitive and obeys the &quot;Search Within Words&quot; server parameter.</td>
+      </tr>
+          <tr>
+        <td class="type">string&nbsp;&nbsp;</td>
+        <td><b>$tags</b>&nbsp;&nbsp;</td>
+        <td>Determines which tags are returned. Each returned tag is identified by a letter (see command &quot;songinfo&quot; for a list of possible fields and their identifying letter). The default tags value for this command is &quot;gald&quot;.</td>
+      </tr>
+          <tr>
+        <td class="type">string&nbsp;&nbsp;</td>
+        <td><b>$sort</b>&nbsp;&nbsp;</td>
+        <td>Sorting, one of &quot;title&quot; (the default) or &quot;tracknum&quot; (in which case the track field (&quot;t&quot;) is added automatically to the response). Sorting by tracks is possible only if tracks are defined and for a single album.</td>
+      </tr>
+        </table>
+    </div><br />
+        <div class="top">[ <a href="#top">Top</a> ]</div>
+  </div>
+  <hr />
+	<a name="methodwipecache"></a>
+	<h3>method wipecache <span class="smalllinenumber">[line 99]</span></h3>
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code>boolean wipecache(
+)</code>
+    </td></tr></table>
+    </td></tr></table><br />
+	
+		wipecache<br /><br /><p>The &quot;wipecache&quot; command allows the caller to have the SqueezeCenter rescan its music library, reloading the music file information.</p><br /><h4>Tags:</h4>
+<div class="tags">
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><b>return:</b>&nbsp;&nbsp;</td><td>(success)</td>
+  </tr>
+  <tr>
+    <td><b>access:</b>&nbsp;&nbsp;</td><td>public</td>
+  </tr>
+</table>
+</div>
+<br /><br />
+
+	
+        <div class="top">[ <a href="#top">Top</a> ]</div>
+  </div>
+  <hr />
+	<a name="methodyears"></a>
+	<h3>method years <span class="smalllinenumber">[line 224]</span></h3>
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code>array years(
+[integer
+$start = 0], [integer
+$itemsPerResponse = 5])</code>
+    </td></tr></table>
+    </td></tr></table><br />
+	
+		years<br /><br /><p>The &quot;years&quot; query returns all years known by the server.</p><br /><h4>Tags:</h4>
+<div class="tags">
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><b>return:</b>&nbsp;&nbsp;</td><td>&lt;taggedParameters&gt;</td>
+  </tr>
+  <tr>
+    <td><b>access:</b>&nbsp;&nbsp;</td><td>public</td>
+  </tr>
+</table>
+</div>
+<br /><br />
+
+	
+        <h4>Parameters:</h4>
+    <div class="tags">
+    <table border="0" cellspacing="0" cellpadding="0">
+          <tr>
+        <td class="type">integer&nbsp;&nbsp;</td>
+        <td><b>$start</b>&nbsp;&nbsp;</td>
+        <td>&lt;start&gt;</td>
+      </tr>
+          <tr>
+        <td class="type">integer&nbsp;&nbsp;</td>
+        <td><b>$itemsPerResponse</b>&nbsp;&nbsp;</td>
+        <td>&lt;itemsPerResponse&gt;</td>
+      </tr>
+        </table>
+    </div><br />
+        <div class="top">[ <a href="#top">Top</a> ]</div>
+  </div>
+</div><br />
+
+
+        <div class="credit">
+		    <hr />
+		    Documentation generated on Wed, 16 Sep 2009 18:08:27 +0200 by <a href="http://www.phpdoc.org">phpDocumentor 1.4.2</a>
+	      </div>
+      </td></tr></table>
+    </td>
+  </tr>
+</table>
+</div>
+</div>
+</body>
+</html>

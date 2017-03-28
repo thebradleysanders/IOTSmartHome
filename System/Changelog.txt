@@ -1,0 +1,201 @@
+
+Changelog 5-10-16
+	Pages Affected: All
+	changed page title in tasks.php
+	changed page title in manage_music.php
+	Added alert box on login.php to forgot password link "Please Contact System Admin"
+	Added notes to notifications.php
+	Deleted Unneeded images in the images folder
+	Added Confirm Option for shutdown/restart Smarthome
+	change page formating to better suit header formating
+	removed code duplicates in web/(main pages) 
+	optimized autoload script functions
+	optimized iot_recieve_que.php
+	optimized system/iot_transmit_que.php
+	updated iot_transmit_que.php
+	Updated timers.php with new timers (time and schedule)
+	added notes in alarm.php
+	Bugs in debug mode in iot_recieve_que.php fixed
+	added incorrect password warning on login.php
+	Added enable/disable sensor in ifttt
+	Added enable/disable featured in ifttt
+	fixed a bug in ifttt time where AM times would run as PM
+	Made all strings sql safe with function clean_text
+	moved common php post code to header.php
+
+Changelog 5-11-16
+	Pages Affected: All
+	allowed ifttt schedule to accept dates
+	now you can disable/enable sensors in scenes
+	now you can disable/enable sensor featured state in scenes
+	added enable/disable device featured in ifttt
+	added enable/disable camera in ifttt
+	added enable/disable images to home page and room page
+	fixed bug on camera alerts stuck when sensor disabled
+	added camera enable/disable, sensor enable/disable, sensor featured enable/disable,
+		device featured enable/disable in the scene section of then_that in functions.php
+	
+Cangelog 5-12-16
+	Pages Affected: All
+	renamed files room.php,scene.php and taks.php
+	add device_method(int 1) to specify something other that open/close		
+	
+Changelog 5-13-16
+	Changed Order of ifttt time selection
+	Nodes can now communicate to SmartHome, it used to be one way communication
+	
+Changelog 5-16-16
+	bug fixes
+	revamped users page with added permissions
+	added admin as type for account type
+	added account enable/disable
+	added account disabled alert on login page
+
+	add device_type(Varchar-25) in devices table
+	add Device Type column in manage_devices.php - we will do more on this later that involes room and Zones
+		Add options: Main Light,Lamp,Heating,Cooling,Blinds,Entertainment,Appliance,Other
+	
+Changelog 7/14/16
+	added ifttt if (and and and) 
+	added belkin wemo support
+	added email support
+	added phillips hue
+	ifttt page redone
+
+Changelog 8-18-16
+	Removed iot_transmit_que.php
+	added SystemTimers.php
+	made web buttons directly control devices
+	added MQTTNodeData.php to get signal,ip address,uptime...
+	updated manage_buttons.php to show all ifttt options
+	added <THEN></THEN> and <IF></IF> tags to ifttt and manage_buttons.php to neated up formated text from nice text
+	released version 1.4 of SH Broker that implements background worker and not timers
+	added System Monitor
+	you now get email notifications when a node gets disconnected/connected
+	can now change camera name, room name, scene name without having to reassign permissions
+	add add/edit/modify permssions per user
+
+Changelog 10/5/16
+	Added squeezebox audio support
+	Major bug fixes
+	SmartHome Broker redesigned to support php cli (Command Line Interface)
+	Added music control to ifttt
+	added Configure Services Page
+
+	add table to mysql: installed_services
+	columns:
+	ID
+	service_name ->string
+	service_enabled ->1|0
+	service_enabled_date ->time
+	service_enabled_by ->User ID
+
+	Add enabled column to devices and music_servers
+	make the smarthome broker check system_monitor.php
+
+	https://www.sitepoint.com/community/t/stop-using-mysql-migrating-to-procedural-mysqli/37704
+	mysqli support:
+		change mysql -> mysqli
+		change mysql_query( -> mysql_query($GS_db
+		change $connection -> $GS_db	
+	
+Changelog 10-31-16
+	added card ui to dashboard
+	stability improvments
+	add icould api for pressence detection
+	SmartHome broker uses PHP CLI
+	sql table dashboard_cards added
+	fixed major bug in "before time" and "after time" in ifttt
+	fixed sunet/sunrise not showing in ifttt
+	added CalledBy string to each function in SystemFunctions.php
+		SYS/USER:ID
+	added new file Documentation.txt
+	added new dir Install
+	added Config.php to configure settings
+
+Changelog 12/27/16
+	can change theme color with config.php
+	can configure mysql settings with config.php
+	add wakeUp to each room (Brighten up the lights from 0% to 100% over a period of 30 minuites)
+	major/minor bug fixes
+	contunuity with each ui element and page structure
+	added user specified width/height to Dashboard cards
+	made enable/disable sensor button bigger
+	added Phillips Hue Motion Sensor support
+	the autoload directory is automaticly in the db.php permission exclude list
+	added history logs and sensor logs 
+	major/minor ui changes
+	card ui is now more ajustable and reliable when rearranging
+	cleaned up ifttt 
+	added script support - still in progress
+	changed the ui of the sidebar/header
+	made changes to system monitor to disable phue devices if phue service is disabled
+	created a new version of SH Broker to an easier to use ui/backend
+	changed how sensors are added to accomidate the new Phillips Hue motion sensors
+	new login page now using ajax in sh/gui/Ajx/getlogin.php
+	
+Changelog 12/30/16
+	Created File SystemServicesCheck.php 
+	added SystemServicesCheck.php to each loop running in system broker
+	can now get phillips hue key from settings
+	renamed class-db.php to DBConn.php
+	moved DBConn.php from gui/includes to system/api/SmartHome_API
+	removed header.php include from each page and added it to IOT_includes
+	moved function from DBConn.php to webFunctions.php
+	New Manage Devices page
+	minor ui changes
+	zip code entry in settings now sets the weather zip code
+	
+Chnagelog 2-7-2017
+	Web ui bug fixes
+	SmartHome Broker no longer needs external program to run
+	Raspberry Pi support
+	Major speed improvments
+	Web UI uses less web trafic
+	User change password/picture dialog added
+	History logs now work again
+	minor changes in picture uploading
+	minor web ui visual improvments
+	room sensors now show correct state (open/close for doors, actice/inactive for others)
+	
+Changelog 2-23-17
+	Web UI Bug Fixes
+	General Bug Fixes
+	Added And/Or to ifttt
+	SmartHome Monitor Bug fixes
+	Autoload now in one call and not 3+
+	Add ability to add playlists in the playmusic page
+	Songs now now be a member of more than one playlist
+	Sensor can now be excluded from the alarm system
+	
+Chnagelog 3-8-17
+	Data sensors now work to provide data and automations in ifttt
+	Data sensor Dashboard card added
+	minor UI fixes
+	system monitor: node online/offline logging fixed
+	updated docummentation
+	updated new feature list
+	addded data sensors to user permssions
+	added time screansave to ipad
+	added quick login feature based on browser cookies
+	redid manage_rooms.php
+	weather widget is now autoloaded
+	autoform now works on manage_rooms.php
+	fix ghost items in dashboard cards (Item is delete but still trying to show)
+
+Changelog 3-23-17
+	IFTTT supports unlimited statements
+	IFTTT supports if else
+	minor ui bug fixes
+	all sensor data handled through system services or MQTTInbox
+	
+
+
+
+
+
+
+
+
+	
+	

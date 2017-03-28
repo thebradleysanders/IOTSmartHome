@@ -1,0 +1,2 @@
+Dimmable - can change brightness of device
+Color

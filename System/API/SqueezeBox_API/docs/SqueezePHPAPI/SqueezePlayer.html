@@ -1,0 +1,1632 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>Docs For Class SqueezePlayer</title>
+<link rel="stylesheet" type="text/css" href="../media/style.css" />
+</head>
+<body>
+<a name="top" style="display:none;"></a>
+<div align="center">
+<div class="page">
+<table border="0" cellspacing="0" cellpadding="0" width="100%">
+  <tr>
+    <td class="header_top"><div class="logo"><!-- crazy logo start--><div style="margin-bottom:0.75em;"><a href="http://org.0r9.org" style="color:#000;text-decoration:none;" title="0r9.org - Generally just disorganized."><span style="padding-bottom:0.75em;"><strong><font size="7" face="Verdana, Arial, Helvetica, sans-serif"><em>0</em></font><font color="#FF0000"size="7" face="Times,serif;">r</font></strong><span style="position:relative;top:0.5em;"><font size="7" face="Verdana, Arial, Helvetica, sans-serif"><strong><em>9</em></strong></font></span>&nbsp;<span style="position:relative;top:-0.5em;"><font size="5"face="Verdana, Arial, Helvetica, sans-serif"><strong><em>.org</em></strong></font></span></span></a><div style="margin-bottom:-0.75em;">&nbsp;</div><tt>&ldquo;Organization ((unofficial)) of the disorganized.<br />Don't ask! We can't find it.&rdquo;</tt></div><!-- crazy logo end--></div><div class="package_header">SqueezePHPAPI</div></td>
+  </tr>
+  <tr><td class="header_line"><img src="../media/empty.png" width="1" height="1" border="0" alt=""  /></td></tr>
+  <tr>
+    <td class="header_menu">
+        
+                                    
+                              		  [ <a href="../classtrees_SqueezePHPAPI.html" class="menu">class tree: SqueezePHPAPI</a> ]
+		  [ <a href="../elementindex_SqueezePHPAPI.html" class="menu">index: SqueezePHPAPI</a> ]
+		  	    [ <a href="../elementindex.html" class="menu">all elements</a> ]
+  	    [ <a href="../index.html" class="menu">doc index</a> ]
+    </td>
+  </tr>
+  <tr><td class="header_line"><img src="../media/empty.png" width="1" height="1" border="0" alt=""  /></td></tr>
+</table>
+
+<table width="100%" border="0" cellpadding="0" cellspacing="0">
+  <tr valign="top">
+    <td width="200" class="menu">
+	<div id="ric">
+					<p><a href="../ric_README.html">README</a></p>
+					<p><a href="../ric_ChangeLog.html">ChangeLog</a></p>
+					<p><a href="../ric_INSTALL.html">INSTALL</a></p>
+					<p><a href="../ric_NEWS.html">NEWS</a></p>
+			</div>
+	<div id="todolist">
+			<p><a href="../todolist.html">Todo List</a></p>
+	</div>
+      <b>Packages:</b><br />
+              <a href="../li_SqueezePHPAPI.html">SqueezePHPAPI</a><br />
+            <br /><br />
+                        <b>Files:</b><br />
+      	  <div class="package">
+			<a href="../SqueezePHPAPI/_examples---basic_example.php.html">		basic_example.php
+		</a><br />
+			<a href="../SqueezePHPAPI/_lib---class.SqueezeAlarm.php.html">		class.SqueezeAlarm.php
+		</a><br />
+			<a href="../SqueezePHPAPI/_lib---class.SqueezeCenter.php.html">		class.SqueezeCenter.php
+		</a><br />
+			<a href="../SqueezePHPAPI/_lib---class.SqueezeConnection.php.html">		class.SqueezeConnection.php
+		</a><br />
+			<a href="../SqueezePHPAPI/_lib---class.SqueezeDatabase.php.html">		class.SqueezeDatabase.php
+		</a><br />
+			<a href="../SqueezePHPAPI/_lib---class.SqueezeMixer.php.html">		class.SqueezeMixer.php
+		</a><br />
+			<a href="../SqueezePHPAPI/_lib---class.SqueezePlayer.php.html">		class.SqueezePlayer.php
+		</a><br />
+			<a href="../SqueezePHPAPI/_lib---class.SqueezePlayers.php.html">		class.SqueezePlayers.php
+		</a><br />
+			<a href="../SqueezePHPAPI/_lib---class.SqueezePlaylist.php.html">		class.SqueezePlaylist.php
+		</a><br />
+			<a href="../SqueezePHPAPI/_lib---class.SqueezeStreamProxy.php.html">		class.SqueezeStreamProxy.php
+		</a><br />
+	  </div><br />
+      
+      
+            <b>Classes:</b><br />
+        <div class="package">
+		    		<a href="../SqueezePHPAPI/SqueezeAlarm.html">SqueezeAlarm</a><br />
+	    		<a href="../SqueezePHPAPI/SqueezeCenter.html">SqueezeCenter</a><br />
+	    		<a href="../SqueezePHPAPI/SqueezeConnection.html">SqueezeConnection</a><br />
+	    		<a href="../SqueezePHPAPI/SqueezeDatabase.html">SqueezeDatabase</a><br />
+	    		<a href="../SqueezePHPAPI/SqueezeMixer.html">SqueezeMixer</a><br />
+	    		<a href="../SqueezePHPAPI/SqueezePlayer.html">SqueezePlayer</a><br />
+	    		<a href="../SqueezePHPAPI/SqueezePlayers.html">SqueezePlayers</a><br />
+	    		<a href="../SqueezePHPAPI/SqueezePlaylist.html">SqueezePlaylist</a><br />
+	    		<a href="../SqueezePHPAPI/SqueezeStreamProxy.html">SqueezeStreamProxy</a><br />
+	  </div>
+                </td>
+    <td style="padding-left:1em;">
+      <table cellpadding="10" cellspacing="0" width="100%" border="0"><tr><td valign="top">
+
+<h1>Class: SqueezePlayer</h1>
+Source Location: /lib/class.SqueezePlayer.php<br /><br />
+
+
+<table width="100%" border="0">
+<tr><td valign="top">
+
+<h3><a href="#class_details">Class Overview</a></h3>
+<div class="description">SqueezePlayer</div><br /><br />
+<h4>Author(s):</h4>
+<ul>
+          <li>David Broz &lt;<a href="mailto:db-dev__AT__0r9.org">db-dev__AT__0r9.org</a>&gt;</li>
+                  </ul>
+
+
+
+
+          
+      
+
+<h4>Copyright:</h4>
+<ul>
+  <li>(c) 2009 by David Broz - <a href="http://org.0r9.org">Disorganization</a> Zurich, Switzerland</li>
+</ul>
+        
+</td>
+
+<td valign="top">
+<h3><a href="#class_vars">Variables</a></h3>
+<ul>
+    <li><a href="../SqueezePHPAPI/SqueezePlayer.html#varAlarms">$Alarms</a></li>
+    <li><a href="../SqueezePHPAPI/SqueezePlayer.html#varMixer">$Mixer</a></li>
+    <li><a href="../SqueezePHPAPI/SqueezePlayer.html#varPlayers">$Players</a></li>
+    <li><a href="../SqueezePHPAPI/SqueezePlayer.html#varPlaylist">$Playlist</a></li>
+  </ul>
+</td>
+
+
+<td valign="top">
+<h3><a href="#class_methods">Methods</a></h3>
+<ul>
+    <li><a href="../SqueezePHPAPI/SqueezePlayer.html#method__construct">__construct</a></li>
+    <li><a href="../SqueezePHPAPI/SqueezePlayer.html#method__destruct">__destruct</a></li>
+    <li><a href="../SqueezePHPAPI/SqueezePlayer.html#methodalbum">album</a></li>
+    <li><a href="../SqueezePHPAPI/SqueezePlayer.html#methodartist">artist</a></li>
+    <li><a href="../SqueezePHPAPI/SqueezePlayer.html#methodbutton">button</a></li>
+    <li><a href="../SqueezePHPAPI/SqueezePlayer.html#methodcanpoweroff">canpoweroff</a></li>
+    <li><a href="../SqueezePHPAPI/SqueezePlayer.html#methodclient_forget">client_forget</a></li>
+    <li><a href="../SqueezePHPAPI/SqueezePlayer.html#methodconnect">connect</a></li>
+    <li><a href="../SqueezePHPAPI/SqueezePlayer.html#methodconnected">connected</a></li>
+    <li><a href="../SqueezePHPAPI/SqueezePlayer.html#methodcurrent_title">current_title</a></li>
+    <li><a href="../SqueezePHPAPI/SqueezePlayer.html#methoddisconnect">disconnect</a></li>
+    <li><a href="../SqueezePHPAPI/SqueezePlayer.html#methoddisplay">display</a></li>
+    <li><a href="../SqueezePHPAPI/SqueezePlayer.html#methoddisplaynow">displaynow</a></li>
+    <li><a href="../SqueezePHPAPI/SqueezePlayer.html#methoddisplaytype">displaytype</a></li>
+    <li><a href="../SqueezePHPAPI/SqueezePlayer.html#methoddisplay_current">display_current</a></li>
+    <li><a href="../SqueezePHPAPI/SqueezePlayer.html#methodduration">duration</a></li>
+    <li><a href="../SqueezePHPAPI/SqueezePlayer.html#methodgenre">genre</a></li>
+    <li><a href="../SqueezePHPAPI/SqueezePlayer.html#methodid">id</a></li>
+    <li><a href="../SqueezePHPAPI/SqueezePlayer.html#methodip">ip</a></li>
+    <li><a href="../SqueezePHPAPI/SqueezePlayer.html#methodir">ir</a></li>
+    <li><a href="../SqueezePHPAPI/SqueezePlayer.html#methodirenable">irenable</a></li>
+    <li><a href="../SqueezePHPAPI/SqueezePlayer.html#methodisplayer">isplayer</a></li>
+    <li><a href="../SqueezePHPAPI/SqueezePlayer.html#methodmode">mode</a></li>
+    <li><a href="../SqueezePHPAPI/SqueezePlayer.html#methodmodel">model</a></li>
+    <li><a href="../SqueezePHPAPI/SqueezePlayer.html#methodname">name</a></li>
+    <li><a href="../SqueezePHPAPI/SqueezePlayer.html#methodpath">path</a></li>
+    <li><a href="../SqueezePHPAPI/SqueezePlayer.html#methodpause">pause</a></li>
+    <li><a href="../SqueezePHPAPI/SqueezePlayer.html#methodplay">play</a></li>
+    <li><a href="../SqueezePHPAPI/SqueezePlayer.html#methodplayerpref">playerpref</a></li>
+    <li><a href="../SqueezePHPAPI/SqueezePlayer.html#methodplayerpref_validate">playerpref_validate</a></li>
+    <li><a href="../SqueezePHPAPI/SqueezePlayer.html#methodpower">power</a></li>
+    <li><a href="../SqueezePHPAPI/SqueezePlayer.html#methodrate">rate</a></li>
+    <li><a href="../SqueezePHPAPI/SqueezePlayer.html#methodremote">remote</a></li>
+    <li><a href="../SqueezePHPAPI/SqueezePlayer.html#methodshow">show</a></li>
+    <li><a href="../SqueezePHPAPI/SqueezePlayer.html#methodsignalstrength">signalstrength</a></li>
+    <li><a href="../SqueezePHPAPI/SqueezePlayer.html#methodsleep_time">sleep_time</a></li>
+    <li><a href="../SqueezePHPAPI/SqueezePlayer.html#methodstop">stop</a></li>
+    <li><a href="../SqueezePHPAPI/SqueezePlayer.html#methodsync">sync</a></li>
+    <li><a href="../SqueezePHPAPI/SqueezePlayer.html#methodsyncgroups">syncgroups</a></li>
+    <li><a href="../SqueezePHPAPI/SqueezePlayer.html#methodtime">time</a></li>
+    <li><a href="../SqueezePHPAPI/SqueezePlayer.html#methodtitle">title</a></li>
+    <li><a href="../SqueezePHPAPI/SqueezePlayer.html#method__get">__get</a></li>
+  </ul>
+</td>
+
+</tr></table>
+<hr />
+
+<table width="100%" border="0"><tr>
+
+
+
+
+
+<td>&nbsp;</td>
+</tr></table>
+<hr />
+
+<a name="class_details"></a>
+<h3>Class Details</h3>
+<div class="tags">
+[line 27]<br />
+SqueezePlayer<br /><br /><p>SqueezePlayer Interface</p><br /><h4>Tags:</h4>
+<div class="tags">
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><b>author:</b>&nbsp;&nbsp;</td><td>David Broz &lt;<a href="mailto:db-dev__AT__0r9.org">db-dev__AT__0r9.org</a>&gt;</td>
+  </tr>
+  <tr>
+    <td><b>copyright:</b>&nbsp;&nbsp;</td><td>(c) 2009 by David Broz - <a href="http://org.0r9.org">Disorganization</a> Zurich, Switzerland</td>
+  </tr>
+  <tr>
+    <td><b>license:</b>&nbsp;&nbsp;</td><td><a href="http://creativecommons.org/licenses/GPL/2.0/">GNU General Public License v2</a></td>
+  </tr>
+</table>
+</div>
+</div><br /><br />
+<div class="top">[ <a href="#top">Top</a> ]</div><br />
+
+<hr />
+<a name="class_vars"></a>
+<h3>Class Variables</h3>
+<div class="tags">
+	<a name="varAlarms"></a>
+	<h4>$Alarms = <span class="value">&nbsp;</span></h4>
+	<p>[line 61]</p>
+  $Alarms<br /><br /><p>SqueezePlayer alarm interface</p><br /><h4>Tags:</h4>
+<div class="tags">
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><b>access:</b>&nbsp;&nbsp;</td><td>protected</td>
+  </tr>
+</table>
+</div>
+
+  <br />
+	<div class="tags">
+  <table border="0" cellspacing="0" cellpadding="0">
+    <tr>
+      <td><b>Type:</b>&nbsp;&nbsp;</td>
+      <td><a href="../SqueezePHPAPI/SqueezeAlarm.html">SqueezeAlarm</a></td>
+    </tr>
+      </table>
+	</div><br /><br />
+	<div class="top">[ <a href="#top">Top</a> ]</div><br />
+	<a name="varMixer"></a>
+	<h4>$Mixer = <span class="value">&nbsp;</span></h4>
+	<p>[line 70]</p>
+  $Mixer<br /><br /><p>SqueezePlayer mixer interface</p><br /><h4>Tags:</h4>
+<div class="tags">
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><b>access:</b>&nbsp;&nbsp;</td><td>protected</td>
+  </tr>
+</table>
+</div>
+
+  <br />
+	<div class="tags">
+  <table border="0" cellspacing="0" cellpadding="0">
+    <tr>
+      <td><b>Type:</b>&nbsp;&nbsp;</td>
+      <td><a href="../SqueezePHPAPI/SqueezeMixer.html">SqueezeMixer</a></td>
+    </tr>
+      </table>
+	</div><br /><br />
+	<div class="top">[ <a href="#top">Top</a> ]</div><br />
+	<a name="varPlayers"></a>
+	<h4>$Players = <span class="value">&nbsp;</span></h4>
+	<p>[line 80]</p>
+  $Players<br /><br /><p>SqueezePlayers interface</p><br /><h4>Tags:</h4>
+<div class="tags">
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><b>access:</b>&nbsp;&nbsp;</td><td>protected</td>
+  </tr>
+</table>
+</div>
+
+  <br />
+	<div class="tags">
+  <table border="0" cellspacing="0" cellpadding="0">
+    <tr>
+      <td><b>Type:</b>&nbsp;&nbsp;</td>
+      <td><a href="../SqueezePHPAPI/SqueezePlayers.html">SqueezePlayers</a></td>
+    </tr>
+      </table>
+	</div><br /><br />
+	<div class="top">[ <a href="#top">Top</a> ]</div><br />
+	<a name="varPlaylist"></a>
+	<h4>$Playlist = <span class="value">&nbsp;</span></h4>
+	<p>[line 52]</p>
+  $Playlist<br /><br /><p>SqueezePlayer playlist interface</p><br /><h4>Tags:</h4>
+<div class="tags">
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><b>access:</b>&nbsp;&nbsp;</td><td>protected</td>
+  </tr>
+</table>
+</div>
+
+  <br />
+	<div class="tags">
+  <table border="0" cellspacing="0" cellpadding="0">
+    <tr>
+      <td><b>Type:</b>&nbsp;&nbsp;</td>
+      <td><a href="../SqueezePHPAPI/SqueezePlaylist.html">SqueezePlaylist</a></td>
+    </tr>
+      </table>
+	</div><br /><br />
+	<div class="top">[ <a href="#top">Top</a> ]</div><br />
+</div><br />
+
+<hr />
+<a name="class_methods"></a>
+<h3>Class Methods</h3>
+<div class="tags">
+
+  <hr />
+	<a name="method__construct"></a>
+	<h3>constructor __construct <span class="smalllinenumber">[line 91]</span></h3>
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code><a href="../SqueezePHPAPI/SqueezePlayer.html">SqueezePlayer</a> __construct(
+<a href="../SqueezePHPAPI/SqueezeConnection.html">SqueezeConnection</a>
+$CLI, [string
+$SqueezePlyrID = &quot;&quot;])</code>
+    </td></tr></table>
+    </td></tr></table><br />
+	
+		SqueezePlayer (constructor)<br /><br /><br /><br />
+
+	
+        <h4>Parameters:</h4>
+    <div class="tags">
+    <table border="0" cellspacing="0" cellpadding="0">
+          <tr>
+        <td class="type"><a href="../SqueezePHPAPI/SqueezeConnection.html">SqueezeConnection</a>&nbsp;&nbsp;</td>
+        <td><b>$CLI</b>&nbsp;&nbsp;</td>
+        <td></td>
+      </tr>
+          <tr>
+        <td class="type">string&nbsp;&nbsp;</td>
+        <td><b>$SqueezePlyrID</b>&nbsp;&nbsp;</td>
+        <td></td>
+      </tr>
+        </table>
+    </div><br />
+        <div class="top">[ <a href="#top">Top</a> ]</div>
+  </div>
+  <hr />
+	<a name="method__destruct"></a>
+	<h3>destructor __destruct <span class="smalllinenumber">[line 743]</span></h3>
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code>void __destruct(
+)</code>
+    </td></tr></table>
+    </td></tr></table><br />
+	
+		SqueezePlayer (destructor)<br /><br /><br /><br />
+
+	
+        <div class="top">[ <a href="#top">Top</a> ]</div>
+  </div>
+  <hr />
+	<a name="methodalbum"></a>
+	<h3>method album <span class="smalllinenumber">[line 211]</span></h3>
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code>string album(
+)</code>
+    </td></tr></table>
+    </td></tr></table><br />
+	
+		album<br /><br /><p>Returns &quot;album&quot; of song currently playing.</p><br /><h4>Tags:</h4>
+<div class="tags">
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><b>access:</b>&nbsp;&nbsp;</td><td>public</td>
+  </tr>
+</table>
+</div>
+<br /><br />
+
+	
+        <div class="top">[ <a href="#top">Top</a> ]</div>
+  </div>
+  <hr />
+	<a name="methodartist"></a>
+	<h3>method artist <span class="smalllinenumber">[line 199]</span></h3>
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code>string artist(
+)</code>
+    </td></tr></table>
+    </td></tr></table><br />
+	
+		artist<br /><br /><p>Returns &quot;artist&quot; of song currently playing.</p><br /><h4>Tags:</h4>
+<div class="tags">
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><b>access:</b>&nbsp;&nbsp;</td><td>public</td>
+  </tr>
+</table>
+</div>
+<br /><br />
+
+	
+        <div class="top">[ <a href="#top">Top</a> ]</div>
+  </div>
+  <hr />
+	<a name="methodbutton"></a>
+	<h3>method button <span class="smalllinenumber">[line 585]</span></h3>
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code>boolean button(
+[string
+$buttoncode = &quot;&quot;])</code>
+    </td></tr></table>
+    </td></tr></table><br />
+	
+		button<br /><br /><p>The &quot;button&quot; command simulates a button press. Valid button codes correspond to the functions defined in the Default.map file.</p><br /><h4>Tags:</h4>
+<div class="tags">
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><b>return:</b>&nbsp;&nbsp;</td><td>(success)</td>
+  </tr>
+  <tr>
+    <td><b>access:</b>&nbsp;&nbsp;</td><td>public</td>
+  </tr>
+</table>
+</div>
+<br /><br />
+
+	
+        <h4>Parameters:</h4>
+    <div class="tags">
+    <table border="0" cellspacing="0" cellpadding="0">
+          <tr>
+        <td class="type">string&nbsp;&nbsp;</td>
+        <td><b>$buttoncode</b>&nbsp;&nbsp;</td>
+        <td></td>
+      </tr>
+        </table>
+    </div><br />
+        <div class="top">[ <a href="#top">Top</a> ]</div>
+  </div>
+  <hr />
+	<a name="methodcanpoweroff"></a>
+	<h3>method canpoweroff <span class="smalllinenumber">[line 348]</span></h3>
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code>boolean canpoweroff(
+)</code>
+    </td></tr></table>
+    </td></tr></table><br />
+	
+		canpoweroff<br /><br /><p>Returns whether the player can be powered off or not. Current hardware players and SoftSqueeze would return 1, web clients 0.</p><br /><h4>Tags:</h4>
+<div class="tags">
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><b>access:</b>&nbsp;&nbsp;</td><td>public</td>
+  </tr>
+</table>
+</div>
+<br /><br />
+
+	
+        <div class="top">[ <a href="#top">Top</a> ]</div>
+  </div>
+  <hr />
+	<a name="methodclient_forget"></a>
+	<h3>method client_forget <span class="smalllinenumber">[line 658]</span></h3>
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code>boolean client_forget(
+)</code>
+    </td></tr></table>
+    </td></tr></table><br />
+	
+		client_forget<br /><br /><p>The &quot;client forget&quot; command deletes the client/player from the server database.</p><br /><h4>Tags:</h4>
+<div class="tags">
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><b>return:</b>&nbsp;&nbsp;</td><td>(success)</td>
+  </tr>
+  <tr>
+    <td><b>access:</b>&nbsp;&nbsp;</td><td>public</td>
+  </tr>
+</table>
+</div>
+<br /><br />
+
+	
+        <div class="top">[ <a href="#top">Top</a> ]</div>
+  </div>
+  <hr />
+	<a name="methodconnect"></a>
+	<h3>method connect <span class="smalllinenumber">[line 642]</span></h3>
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code>boolean connect(
+[string
+$ip_address = &quot;&quot;])</code>
+    </td></tr></table>
+    </td></tr></table><br />
+	
+		connect<br /><br /><p>The &quot;connect&quot; command tells a Squeezebox 2 or newer player to connect to a different server address or to SqueezeNetwork.</p><br /><h4>Tags:</h4>
+<div class="tags">
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><b>return:</b>&nbsp;&nbsp;</td><td>(success)</td>
+  </tr>
+  <tr>
+    <td><b>access:</b>&nbsp;&nbsp;</td><td>public</td>
+  </tr>
+</table>
+</div>
+<br /><br />
+
+	
+        <h4>Parameters:</h4>
+    <div class="tags">
+    <table border="0" cellspacing="0" cellpadding="0">
+          <tr>
+        <td class="type">string&nbsp;&nbsp;</td>
+        <td><b>$ip_address</b>&nbsp;&nbsp;</td>
+        <td></td>
+      </tr>
+        </table>
+    </div><br />
+        <div class="top">[ <a href="#top">Top</a> ]</div>
+  </div>
+  <hr />
+	<a name="methodconnected"></a>
+	<h3>method connected <span class="smalllinenumber">[line 373]</span></h3>
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code>boolean connected(
+)</code>
+    </td></tr></table>
+    </td></tr></table><br />
+	
+		connected<br /><br /><p>Returns the connected state of the player, 1 or 0 depending on the state of the TCP connection to the player. SLIMP3 players, since they use UDP, always return 1.</p><br /><h4>Tags:</h4>
+<div class="tags">
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><b>access:</b>&nbsp;&nbsp;</td><td>public</td>
+  </tr>
+</table>
+</div>
+<br /><br />
+
+	
+        <div class="top">[ <a href="#top">Top</a> ]</div>
+  </div>
+  <hr />
+	<a name="methodcurrent_title"></a>
+	<h3>method current_title <span class="smalllinenumber">[line 259]</span></h3>
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code>string current_title(
+)</code>
+    </td></tr></table>
+    </td></tr></table><br />
+	
+		current_title<br /><br /><p>Returns &quot;current_title&quot; of song currently playing.</p><br /><h4>Tags:</h4>
+<div class="tags">
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><b>access:</b>&nbsp;&nbsp;</td><td>public</td>
+  </tr>
+</table>
+</div>
+<br /><br />
+
+	
+        <div class="top">[ <a href="#top">Top</a> ]</div>
+  </div>
+  <hr />
+	<a name="methoddisconnect"></a>
+	<h3>method disconnect <span class="smalllinenumber">[line 671]</span></h3>
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code>boolean disconnect(
+[string
+$ip_address = &quot;&quot;])</code>
+    </td></tr></table>
+    </td></tr></table><br />
+	
+		disconnect<br /><br /><p>The &quot;disconnect&quot; command tells a Squeezebox 2 or newer player on another SqueezeCenter instance to disconnect from its server and connect to another server or SqueezeNetwork.</p><br /><h4>Tags:</h4>
+<div class="tags">
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><b>return:</b>&nbsp;&nbsp;</td><td>(success)</td>
+  </tr>
+  <tr>
+    <td><b>access:</b>&nbsp;&nbsp;</td><td>public</td>
+  </tr>
+</table>
+</div>
+<br /><br />
+
+	
+        <h4>Parameters:</h4>
+    <div class="tags">
+    <table border="0" cellspacing="0" cellpadding="0">
+          <tr>
+        <td class="type">string&nbsp;&nbsp;</td>
+        <td><b>$ip_address</b>&nbsp;&nbsp;</td>
+        <td></td>
+      </tr>
+        </table>
+    </div><br />
+        <div class="top">[ <a href="#top">Top</a> ]</div>
+  </div>
+  <hr />
+	<a name="methoddisplay"></a>
+	<h3>method display <span class="smalllinenumber">[line 496]</span></h3>
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code>boolean display(
+[string
+$line1 = &quot;&quot;], [string
+$line2 = &quot;&quot;], [integer
+$duration = 3])</code>
+    </td></tr></table>
+    </td></tr></table><br />
+	
+		display<br /><br /><p>The &quot;display&quot; command specifies some text to be displayed on the player screen for a specified amount of time (in seconds).</p><br /><h4>Tags:</h4>
+<div class="tags">
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><b>return:</b>&nbsp;&nbsp;</td><td>(success)</td>
+  </tr>
+  <tr>
+    <td><b>access:</b>&nbsp;&nbsp;</td><td>public</td>
+  </tr>
+</table>
+</div>
+<br /><br />
+
+	
+        <h4>Parameters:</h4>
+    <div class="tags">
+    <table border="0" cellspacing="0" cellpadding="0">
+          <tr>
+        <td class="type">string&nbsp;&nbsp;</td>
+        <td><b>$line1</b>&nbsp;&nbsp;</td>
+        <td>First line of the display.</td>
+      </tr>
+          <tr>
+        <td class="type">string&nbsp;&nbsp;</td>
+        <td><b>$line2</b>&nbsp;&nbsp;</td>
+        <td>Second line of the display.</td>
+      </tr>
+          <tr>
+        <td class="type">integer&nbsp;&nbsp;</td>
+        <td><b>$duration</b>&nbsp;&nbsp;</td>
+        <td>Time in seconds to display the message.</td>
+      </tr>
+        </table>
+    </div><br />
+        <div class="top">[ <a href="#top">Top</a> ]</div>
+  </div>
+  <hr />
+	<a name="methoddisplaynow"></a>
+	<h3>method displaynow <span class="smalllinenumber">[line 520]</span></h3>
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code>string displaynow(
+)</code>
+    </td></tr></table>
+    </td></tr></table><br />
+	
+		displaynow<br /><br /><p>The &quot;displaynow&quot; command provides access to the data currently on the display. This differs from the &quot;display ? ?&quot; display_current() command in that it returns the latest data sent to the display, including any animation, double-size fonts, etc...</p><br /><h4>Tags:</h4>
+<div class="tags">
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><b>access:</b>&nbsp;&nbsp;</td><td>public</td>
+  </tr>
+</table>
+</div>
+<br /><br />
+
+	
+        <div class="top">[ <a href="#top">Top</a> ]</div>
+  </div>
+  <hr />
+	<a name="methoddisplaytype"></a>
+	<h3>method displaytype <span class="smalllinenumber">[line 336]</span></h3>
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code>string displaytype(
+)</code>
+    </td></tr></table>
+    </td></tr></table><br />
+	
+		displaytype<br /><br /><p>Returns the display model of the player. Graphical display types start with &quot;graphic-&quot;, non-graphical display type with &quot;noritake-&quot;.</p><br /><h4>Tags:</h4>
+<div class="tags">
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><b>access:</b>&nbsp;&nbsp;</td><td>public</td>
+  </tr>
+</table>
+</div>
+<br /><br />
+
+	
+        <div class="top">[ <a href="#top">Top</a> ]</div>
+  </div>
+  <hr />
+	<a name="methoddisplay_current"></a>
+	<h3>method display_current <span class="smalllinenumber">[line 508]</span></h3>
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code>string display_current(
+)</code>
+    </td></tr></table>
+    </td></tr></table><br />
+	
+		display_current<br /><br /><p>The &quot;display ? ?&quot; command may be used to obtain the text that is currently displayed on the screen.</p><br /><h4>Tags:</h4>
+<div class="tags">
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><b>access:</b>&nbsp;&nbsp;</td><td>public</td>
+  </tr>
+</table>
+</div>
+<br /><br />
+
+	
+        <div class="top">[ <a href="#top">Top</a> ]</div>
+  </div>
+  <hr />
+	<a name="methodduration"></a>
+	<h3>method duration <span class="smalllinenumber">[line 235]</span></h3>
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code>string duration(
+)</code>
+    </td></tr></table>
+    </td></tr></table><br />
+	
+		duration<br /><br /><p>Returns &quot;duration&quot; of song currently playing.</p><br /><h4>Tags:</h4>
+<div class="tags">
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><b>access:</b>&nbsp;&nbsp;</td><td>public</td>
+  </tr>
+</table>
+</div>
+<br /><br />
+
+	
+        <div class="top">[ <a href="#top">Top</a> ]</div>
+  </div>
+  <hr />
+	<a name="methodgenre"></a>
+	<h3>method genre <span class="smalllinenumber">[line 187]</span></h3>
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code>string genre(
+)</code>
+    </td></tr></table>
+    </td></tr></table><br />
+	
+		genre<br /><br /><p>Returns &quot;genre&quot; of song currently playing.</p><br /><h4>Tags:</h4>
+<div class="tags">
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><b>access:</b>&nbsp;&nbsp;</td><td>public</td>
+  </tr>
+</table>
+</div>
+<br /><br />
+
+	
+        <div class="top">[ <a href="#top">Top</a> ]</div>
+  </div>
+  <hr />
+	<a name="methodid"></a>
+	<h3>method id <span class="smalllinenumber">[line 108]</span></h3>
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code>string id(
+)</code>
+    </td></tr></table>
+    </td></tr></table><br />
+	
+		id<br /><br /><p>Returns the current player id.</p><br /><h4>Tags:</h4>
+<div class="tags">
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><b>access:</b>&nbsp;&nbsp;</td><td>public</td>
+  </tr>
+</table>
+</div>
+<br /><br />
+
+	
+        <div class="top">[ <a href="#top">Top</a> ]</div>
+  </div>
+  <hr />
+	<a name="methodip"></a>
+	<h3>method ip <span class="smalllinenumber">[line 300]</span></h3>
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code>string ip(
+)</code>
+    </td></tr></table>
+    </td></tr></table><br />
+	
+		ip<br /><br /><p>Returns the IP address (along with port number) of the player.</p><br /><h4>Tags:</h4>
+<div class="tags">
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><b>access:</b>&nbsp;&nbsp;</td><td>public</td>
+  </tr>
+</table>
+</div>
+<br /><br />
+
+	
+        <div class="top">[ <a href="#top">Top</a> ]</div>
+  </div>
+  <hr />
+	<a name="methodir"></a>
+	<h3>method ir <span class="smalllinenumber">[line 603]</span></h3>
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code>boolean ir(
+[string
+$ircode = &quot;&quot;], [string
+$time = &quot;&quot;])</code>
+    </td></tr></table>
+    </td></tr></table><br />
+	
+		ir<br /><br /><p>The &quot;ir&quot; command simulates an IR code. Valid IR codes are defined in the Default.map file.</p><br /><h4>Tags:</h4>
+<div class="tags">
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><b>return:</b>&nbsp;&nbsp;</td><td>(success)</td>
+  </tr>
+  <tr>
+    <td><b>access:</b>&nbsp;&nbsp;</td><td>public</td>
+  </tr>
+</table>
+</div>
+<br /><br />
+
+	
+        <h4>Parameters:</h4>
+    <div class="tags">
+    <table border="0" cellspacing="0" cellpadding="0">
+          <tr>
+        <td class="type">string&nbsp;&nbsp;</td>
+        <td><b>$ircode</b>&nbsp;&nbsp;</td>
+        <td>&lt;ircode&gt;</td>
+      </tr>
+          <tr>
+        <td class="type">string&nbsp;&nbsp;</td>
+        <td><b>$time</b>&nbsp;&nbsp;</td>
+        <td>&lt;time&gt;</td>
+      </tr>
+        </table>
+    </div><br />
+        <div class="top">[ <a href="#top">Top</a> ]</div>
+  </div>
+  <hr />
+	<a name="methodirenable"></a>
+	<h3>method irenable <span class="smalllinenumber">[line 620]</span></h3>
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code>boolean irenable(
+[string
+$state = &quot;&quot;])</code>
+    </td></tr></table>
+    </td></tr></table><br />
+	
+		irenable<br /><br /><p>The &quot;irenable&quot; command enables or disables IR processing for the player on or off. Use 0 to disable, 1 to enable, ? to query and no parameter to toggle IR processing of the player. For remote streaming connections, the command does nothing and the query always returns 1.</p><br /><h4>Tags:</h4>
+<div class="tags">
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><b>access:</b>&nbsp;&nbsp;</td><td>public</td>
+  </tr>
+</table>
+</div>
+<br /><br />
+
+	
+        <h4>Parameters:</h4>
+    <div class="tags">
+    <table border="0" cellspacing="0" cellpadding="0">
+          <tr>
+        <td class="type">string&nbsp;&nbsp;</td>
+        <td><b>$state</b>&nbsp;&nbsp;</td>
+        <td>&lt;0|1|?|&gt;</td>
+      </tr>
+        </table>
+    </div><br />
+        <div class="top">[ <a href="#top">Top</a> ]</div>
+  </div>
+  <hr />
+	<a name="methodisplayer"></a>
+	<h3>method isplayer <span class="smalllinenumber">[line 324]</span></h3>
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code>boolean isplayer(
+)</code>
+    </td></tr></table>
+    </td></tr></table><br />
+	
+		isplayer<br /><br /><p>Returns the if a player is a known player model. Currently know models are &quot;transporter&quot;, &quot;squeezebox2&quot;, &quot;squeezebox&quot;, &quot;slimp3&quot;, &quot;softsqueeze&quot;, or &quot;http&quot; (for remote streaming connections). Will return 0 for streaming connections.</p><br /><h4>Tags:</h4>
+<div class="tags">
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><b>access:</b>&nbsp;&nbsp;</td><td>public</td>
+  </tr>
+</table>
+</div>
+<br /><br />
+
+	
+        <div class="top">[ <a href="#top">Top</a> ]</div>
+  </div>
+  <hr />
+	<a name="methodmode"></a>
+	<h3>method mode <span class="smalllinenumber">[line 158]</span></h3>
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code>string mode(
+)</code>
+    </td></tr></table>
+    </td></tr></table><br />
+	
+		mode<br /><br /><p>The &quot;mode&quot; command allows to query the player state and returns one of &quot;play&quot;, &quot;stop&quot; or &quot;pause&quot;. If the player is off, &quot;mode ?&quot; returned value is undefined.</p><br /><h4>Tags:</h4>
+<div class="tags">
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><b>access:</b>&nbsp;&nbsp;</td><td>public</td>
+  </tr>
+</table>
+</div>
+<br /><br />
+
+	
+        <div class="top">[ <a href="#top">Top</a> ]</div>
+  </div>
+  <hr />
+	<a name="methodmodel"></a>
+	<h3>method model <span class="smalllinenumber">[line 312]</span></h3>
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code>string model(
+)</code>
+    </td></tr></table>
+    </td></tr></table><br />
+	
+		model<br /><br /><p>Returns the model of the player, currently one of &quot;transporter&quot;, &quot;squeezebox2&quot;, &quot;squeezebox&quot;, &quot;slimp3&quot;, &quot;softsqueeze&quot;, or &quot;http&quot; (for remote streaming connections).</p><br /><h4>Tags:</h4>
+<div class="tags">
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><b>access:</b>&nbsp;&nbsp;</td><td>public</td>
+  </tr>
+</table>
+</div>
+<br /><br />
+
+	
+        <div class="top">[ <a href="#top">Top</a> ]</div>
+  </div>
+  <hr />
+	<a name="methodname"></a>
+	<h3>method name <span class="smalllinenumber">[line 284]</span></h3>
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code>string name(
+[string
+$newname = &quot;&quot;])</code>
+    </td></tr></table>
+    </td></tr></table><br />
+	
+		name<br /><br /><p>Sets the name of the player. You may query the player name by passing in &quot;?&quot; or &quot;&quot; (default)</p><br /><h4>Tags:</h4>
+<div class="tags">
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><b>access:</b>&nbsp;&nbsp;</td><td>public</td>
+  </tr>
+</table>
+</div>
+<br /><br />
+
+	
+        <h4>Parameters:</h4>
+    <div class="tags">
+    <table border="0" cellspacing="0" cellpadding="0">
+          <tr>
+        <td class="type">string&nbsp;&nbsp;</td>
+        <td><b>$newname</b>&nbsp;&nbsp;</td>
+        <td>&lt;newname|?&gt;</td>
+      </tr>
+        </table>
+    </div><br />
+        <div class="top">[ <a href="#top">Top</a> ]</div>
+  </div>
+  <hr />
+	<a name="methodpath"></a>
+	<h3>method path <span class="smalllinenumber">[line 271]</span></h3>
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code>string path(
+)</code>
+    </td></tr></table>
+    </td></tr></table><br />
+	
+		path<br /><br /><p>Returns &quot;path&quot; of song currently playing.</p><br /><h4>Tags:</h4>
+<div class="tags">
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><b>access:</b>&nbsp;&nbsp;</td><td>public</td>
+  </tr>
+</table>
+</div>
+<br /><br />
+
+	
+        <div class="top">[ <a href="#top">Top</a> ]</div>
+  </div>
+  <hr />
+	<a name="methodpause"></a>
+	<h3>method pause <span class="smalllinenumber">[line 146]</span></h3>
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code>boolean pause(
+[integer
+$state = -1], [integer
+$fadeInSecs = -1])</code>
+    </td></tr></table>
+    </td></tr></table><br />
+	
+		pause<br /><br /><p>You may use &quot;pause 1&quot; to force the player to pause, &quot;pause 0&quot; to force the player to unpause and &quot;pause&quot; to toggle the pause state.</p><br /><h4>Tags:</h4>
+<div class="tags">
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><b>return:</b>&nbsp;&nbsp;</td><td>(success)</td>
+  </tr>
+  <tr>
+    <td><b>access:</b>&nbsp;&nbsp;</td><td>public</td>
+  </tr>
+</table>
+</div>
+<br /><br />
+
+	
+        <h4>Parameters:</h4>
+    <div class="tags">
+    <table border="0" cellspacing="0" cellpadding="0">
+          <tr>
+        <td class="type">integer&nbsp;&nbsp;</td>
+        <td><b>$state</b>&nbsp;&nbsp;</td>
+        <td>&lt;0|1|-1&gt; Default: -1 (toggle)</td>
+      </tr>
+          <tr>
+        <td class="type">integer&nbsp;&nbsp;</td>
+        <td><b>$fadeInSecs</b>&nbsp;&nbsp;</td>
+        <td>&lt;fadeInSecs&gt;</td>
+      </tr>
+        </table>
+    </div><br />
+        <div class="top">[ <a href="#top">Top</a> ]</div>
+  </div>
+  <hr />
+	<a name="methodplay"></a>
+	<h3>method play <span class="smalllinenumber">[line 120]</span></h3>
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code>boolean play(
+[integer
+$fadeInSecs = -1])</code>
+    </td></tr></table>
+    </td></tr></table><br />
+	
+		play<br /><br /><p>The &quot;play&quot; command allows to start playing the current playlist.</p><br /><h4>Tags:</h4>
+<div class="tags">
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><b>return:</b>&nbsp;&nbsp;</td><td>(success)</td>
+  </tr>
+  <tr>
+    <td><b>access:</b>&nbsp;&nbsp;</td><td>public</td>
+  </tr>
+</table>
+</div>
+<br /><br />
+
+	
+        <h4>Parameters:</h4>
+    <div class="tags">
+    <table border="0" cellspacing="0" cellpadding="0">
+          <tr>
+        <td class="type">integer&nbsp;&nbsp;</td>
+        <td><b>$fadeInSecs</b>&nbsp;&nbsp;</td>
+        <td>&lt;fadeInSecs&gt;</td>
+      </tr>
+        </table>
+    </div><br />
+        <div class="top">[ <a href="#top">Top</a> ]</div>
+  </div>
+  <hr />
+	<a name="methodplayerpref"></a>
+	<h3>method playerpref <span class="smalllinenumber">[line 534]</span></h3>
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code>mixed playerpref(
+[string
+$prefname = &quot;&quot;], [string
+$prefvalue = &quot;&quot;])</code>
+    </td></tr></table>
+    </td></tr></table><br />
+	
+		playerpref<br /><br /><p>The &quot;playerpref&quot; command allows the caller to set and query the SqueezeCenter's internal player-specific preferences values.</p><br /><h4>Tags:</h4>
+<div class="tags">
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><b>return:</b>&nbsp;&nbsp;</td><td>boolean (success) or string on query.</td>
+  </tr>
+  <tr>
+    <td><b>access:</b>&nbsp;&nbsp;</td><td>public</td>
+  </tr>
+</table>
+</div>
+<br /><br />
+
+	
+        <h4>Parameters:</h4>
+    <div class="tags">
+    <table border="0" cellspacing="0" cellpadding="0">
+          <tr>
+        <td class="type">string&nbsp;&nbsp;</td>
+        <td><b>$prefname</b>&nbsp;&nbsp;</td>
+        <td>&lt;prefname|namespace:prefname&gt;</td>
+      </tr>
+          <tr>
+        <td class="type">string&nbsp;&nbsp;</td>
+        <td><b>$prefvalue</b>&nbsp;&nbsp;</td>
+        <td>&lt;prefvalue|?&gt;</td>
+      </tr>
+        </table>
+    </div><br />
+        <div class="top">[ <a href="#top">Top</a> ]</div>
+  </div>
+  <hr />
+	<a name="methodplayerpref_validate"></a>
+	<h3>method playerpref_validate <span class="smalllinenumber">[line 557]</span></h3>
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code>boolean playerpref_validate(
+[string
+$prefname = &quot;&quot;], [string
+$prefvalue = &quot;&quot;])</code>
+    </td></tr></table>
+    </td></tr></table><br />
+	
+		playerpref_validate<br /><br /><p>The &quot;playerpref validate&quot; command allows the caller to validate a SqueezeCenter's internal player-specific preference value without setting it.</p><br /><h4>Tags:</h4>
+<div class="tags">
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><b>return:</b>&nbsp;&nbsp;</td><td>(success)</td>
+  </tr>
+  <tr>
+    <td><b>access:</b>&nbsp;&nbsp;</td><td>public</td>
+  </tr>
+</table>
+</div>
+<br /><br />
+
+	
+        <h4>Parameters:</h4>
+    <div class="tags">
+    <table border="0" cellspacing="0" cellpadding="0">
+          <tr>
+        <td class="type">string&nbsp;&nbsp;</td>
+        <td><b>$prefname</b>&nbsp;&nbsp;</td>
+        <td>&lt;prefname|namespace:prefname&gt;</td>
+      </tr>
+          <tr>
+        <td class="type">string&nbsp;&nbsp;</td>
+        <td><b>$prefvalue</b>&nbsp;&nbsp;</td>
+        <td>&lt;prefvalue&gt;</td>
+      </tr>
+        </table>
+    </div><br />
+        <div class="top">[ <a href="#top">Top</a> ]</div>
+  </div>
+  <hr />
+	<a name="methodpower"></a>
+	<h3>method power <span class="smalllinenumber">[line 431]</span></h3>
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code>boolean power(
+[string
+$state = &quot;&quot;])</code>
+    </td></tr></table>
+    </td></tr></table><br />
+	
+		power<br /><br /><p>The &quot;power&quot; command turns the player on or off. Use 0 to turn off, 1 to turn on, ? to query and no parameter to toggle the power state of the player. For remote streaming connections, the command does nothing and the query always returns 1.</p><br /><h4>Tags:</h4>
+<div class="tags">
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><b>access:</b>&nbsp;&nbsp;</td><td>public</td>
+  </tr>
+</table>
+</div>
+<br /><br />
+
+	
+        <h4>Parameters:</h4>
+    <div class="tags">
+    <table border="0" cellspacing="0" cellpadding="0">
+          <tr>
+        <td class="type">string&nbsp;&nbsp;</td>
+        <td><b>$state</b>&nbsp;&nbsp;</td>
+        <td></td>
+      </tr>
+        </table>
+    </div><br />
+        <div class="top">[ <a href="#top">Top</a> ]</div>
+  </div>
+  <hr />
+	<a name="methodrate"></a>
+	<h3>method rate <span class="smalllinenumber">[line 453]</span></h3>
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code>mixed rate(
+[string
+$rate = &quot;&quot;])</code>
+    </td></tr></table>
+    </td></tr></table><br />
+	
+		rate<br /><br /><p>The &quot;rate&quot; command returns or sets the current play rate for the player. 1 is normal, 2 is 2x fast forward, 0 is paused, -1 is rewind, etc.</p><br /><h4>Tags:</h4>
+<div class="tags">
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><b>return:</b>&nbsp;&nbsp;</td><td>boolean (success) or integer on query.</td>
+  </tr>
+  <tr>
+    <td><b>access:</b>&nbsp;&nbsp;</td><td>public</td>
+  </tr>
+</table>
+</div>
+<br /><br />
+
+	
+        <h4>Parameters:</h4>
+    <div class="tags">
+    <table border="0" cellspacing="0" cellpadding="0">
+          <tr>
+        <td class="type">string&nbsp;&nbsp;</td>
+        <td><b>$rate</b>&nbsp;&nbsp;</td>
+        <td>&lt;rate|?&gt;</td>
+      </tr>
+        </table>
+    </div><br />
+        <div class="top">[ <a href="#top">Top</a> ]</div>
+  </div>
+  <hr />
+	<a name="methodremote"></a>
+	<h3>method remote <span class="smalllinenumber">[line 247]</span></h3>
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code>boolean remote(
+)</code>
+    </td></tr></table>
+    </td></tr></table><br />
+	
+		remote<br /><br /><p>Returns if the song currently playing is a remote stream.</p><br /><h4>Tags:</h4>
+<div class="tags">
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><b>access:</b>&nbsp;&nbsp;</td><td>public</td>
+  </tr>
+</table>
+</div>
+<br /><br />
+
+	
+        <div class="top">[ <a href="#top">Top</a> ]</div>
+  </div>
+  <hr />
+	<a name="methodshow"></a>
+	<h3>method show <span class="smalllinenumber">[line 480]</span></h3>
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code>boolean show(
+[string
+$line1 = &quot;&quot;], [string
+$line2 = &quot;&quot;], [integer
+$duration = 3], [string
+$brightness = &quot;4&quot;], [string
+$font = &quot;&quot;], [string
+$centered = &quot;&quot;])</code>
+    </td></tr></table>
+    </td></tr></table><br />
+	
+		show<br /><br /><p>The &quot;show&quot; command displays a message on the player display for a given duration. Various options are provided to customize the appearance of the message (font size, centering). If the mesage is too long to fit on the display, it scrolls. This command is designed to display the message, and by default temporarily cancels any screensaver and increases the brightness to the maximum value. This command is only echoed once the message display is done.</p><br /><h4>Tags:</h4>
+<div class="tags">
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><b>return:</b>&nbsp;&nbsp;</td><td>(success)</td>
+  </tr>
+  <tr>
+    <td><b>access:</b>&nbsp;&nbsp;</td><td>public</td>
+  </tr>
+</table>
+</div>
+<br /><br />
+
+	
+        <h4>Parameters:</h4>
+    <div class="tags">
+    <table border="0" cellspacing="0" cellpadding="0">
+          <tr>
+        <td class="type">string&nbsp;&nbsp;</td>
+        <td><b>$line1</b>&nbsp;&nbsp;</td>
+        <td>First line of the display.</td>
+      </tr>
+          <tr>
+        <td class="type">string&nbsp;&nbsp;</td>
+        <td><b>$line2</b>&nbsp;&nbsp;</td>
+        <td>Second line of the display. This is the line used for single line display mode (font = huge).</td>
+      </tr>
+          <tr>
+        <td class="type">integer&nbsp;&nbsp;</td>
+        <td><b>$duration</b>&nbsp;&nbsp;</td>
+        <td>Time in seconds to display the message; this time does not take into account any scrolling time necessary, which will be performed to its completion. The default is 3 seconds.</td>
+      </tr>
+          <tr>
+        <td class="type">string&nbsp;&nbsp;</td>
+        <td><b>$brightness</b>&nbsp;&nbsp;</td>
+        <td>Brightness to use to display the message, either 'powerOn', 'powerOff', 'idle' or a value from 0 to 4. The default value is 4. The display brightness is reset to its configured value after the message.</td>
+      </tr>
+          <tr>
+        <td class="type">string&nbsp;&nbsp;</td>
+        <td><b>$font</b>&nbsp;&nbsp;</td>
+        <td>Use value &quot;huge&quot; to have line2 displayed on a large font using the entire display. The actual font used depends on the player model. Otherwise the command uses the standard, 2 lines display font.</td>
+      </tr>
+          <tr>
+        <td class="type">string&nbsp;&nbsp;</td>
+        <td><b>$centered</b>&nbsp;&nbsp;</td>
+        <td>Use value &quot;1&quot; to center the lines on the display. There is no scrolling in centered mode.</td>
+      </tr>
+        </table>
+    </div><br />
+        <div class="top">[ <a href="#top">Top</a> ]</div>
+  </div>
+  <hr />
+	<a name="methodsignalstrength"></a>
+	<h3>method signalstrength <span class="smalllinenumber">[line 361]</span></h3>
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code>integer signalstrength(
+)</code>
+    </td></tr></table>
+    </td></tr></table><br />
+	
+		signalstrength<br /><br /><p>Returns the wireless signal strength for the player, range is 1 to 100. Returns 0 if not connected wirelessly.</p><br /><h4>Tags:</h4>
+<div class="tags">
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><b>access:</b>&nbsp;&nbsp;</td><td>public</td>
+  </tr>
+</table>
+</div>
+<br /><br />
+
+	
+        <div class="top">[ <a href="#top">Top</a> ]</div>
+  </div>
+  <hr />
+	<a name="methodsleep_time"></a>
+	<h3>method sleep_time <span class="smalllinenumber">[line 386]</span></h3>
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code>mixed sleep_time(
+[string
+$number = &quot;&quot;])</code>
+    </td></tr></table>
+    </td></tr></table><br />
+	
+		sleep_time<br /><br /><p>The &quot;sleep&quot; command specifies a number of seconds to continue playing before powering off the player. You may query the amount of time until the player sleeps by passing in &quot;?&quot;.</p><br /><h4>Tags:</h4>
+<div class="tags">
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><b>return:</b>&nbsp;&nbsp;</td><td>boolean (success) or string on query (sleep time).</td>
+  </tr>
+  <tr>
+    <td><b>access:</b>&nbsp;&nbsp;</td><td>public</td>
+  </tr>
+</table>
+</div>
+<br /><br />
+
+	
+        <h4>Parameters:</h4>
+    <div class="tags">
+    <table border="0" cellspacing="0" cellpadding="0">
+          <tr>
+        <td class="type">string&nbsp;&nbsp;</td>
+        <td><b>$number</b>&nbsp;&nbsp;</td>
+        <td>&lt;number|?&gt;</td>
+      </tr>
+        </table>
+    </div><br />
+        <div class="top">[ <a href="#top">Top</a> ]</div>
+  </div>
+  <hr />
+	<a name="methodstop"></a>
+	<h3>method stop <span class="smalllinenumber">[line 132]</span></h3>
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code>boolean stop(
+)</code>
+    </td></tr></table>
+    </td></tr></table><br />
+	
+		stop<br /><br /><p>The &quot;stop&quot; command allows to stop playing the current playlist.</p><br /><h4>Tags:</h4>
+<div class="tags">
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><b>return:</b>&nbsp;&nbsp;</td><td>(success)</td>
+  </tr>
+  <tr>
+    <td><b>access:</b>&nbsp;&nbsp;</td><td>public</td>
+  </tr>
+</table>
+</div>
+<br /><br />
+
+	
+        <div class="top">[ <a href="#top">Top</a> ]</div>
+  </div>
+  <hr />
+	<a name="methodsync"></a>
+	<h3>method sync <span class="smalllinenumber">[line 403]</span></h3>
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code>mixed sync(
+[string
+$playerindex_id = &quot;&quot;])</code>
+    </td></tr></table>
+    </td></tr></table><br />
+	
+		sync<br /><br /><p>The &quot;sync&quot; command specifies the player to synchronise with the given playerid. The command accepts only one playerindex or playerid. To unsync the player, use the &quot;-&quot; parameter. Note that in both cases the first &lt;playerid&gt; is the player which is already a member of a sync group. When adding a player to a sync group, the second specified player will be added to the group which includes the first player, if necessary first removing the second player from its existing sync-group. You may query which players are already synced with this player by passing in a &quot;?&quot; parameter. Multiple playerids are separated by a comma. If the player is not synced, &quot;-&quot; is returned.</p><br /><h4>Tags:</h4>
+<div class="tags">
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><b>return:</b>&nbsp;&nbsp;</td><td>boolean (success) or string on query.</td>
+  </tr>
+  <tr>
+    <td><b>access:</b>&nbsp;&nbsp;</td><td>public</td>
+  </tr>
+</table>
+</div>
+<br /><br />
+
+	
+        <h4>Parameters:</h4>
+    <div class="tags">
+    <table border="0" cellspacing="0" cellpadding="0">
+          <tr>
+        <td class="type">string&nbsp;&nbsp;</td>
+        <td><b>$playerindex_id</b>&nbsp;&nbsp;</td>
+        <td></td>
+      </tr>
+        </table>
+    </div><br />
+        <div class="top">[ <a href="#top">Top</a> ]</div>
+  </div>
+  <hr />
+	<a name="methodsyncgroups"></a>
+	<h3>method syncgroups <span class="smalllinenumber">[line 418]</span></h3>
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code>string syncgroups(
+)</code>
+    </td></tr></table>
+    </td></tr></table><br />
+	
+		syncgroups<br /><br /><p>The &quot;syncgroups&quot; query returns a comma separated list of sync groups members (IDs and names).</p><br /><h4>Tags:</h4>
+<div class="tags">
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><b>access:</b>&nbsp;&nbsp;</td><td>public</td>
+  </tr>
+</table>
+</div>
+<br /><br />
+
+	
+        <div class="top">[ <a href="#top">Top</a> ]</div>
+  </div>
+  <hr />
+	<a name="methodtime"></a>
+	<h3>method time <span class="smalllinenumber">[line 171]</span></h3>
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code>mixed time(
+[string
+$number = ''])</code>
+    </td></tr></table>
+    </td></tr></table><br />
+	
+		time<br /><br /><p>The &quot;time&quot; command allows you to query the current number of seconds that the current song has been playing by passing in a &quot;?&quot;. You may jump to a particular position in a song by specifying a number of seconds to seek to. You may also jump to a relative position within a song by putting an explicit &quot;-&quot; or &quot;+&quot; character before a number of second you would like to seek.</p><br /><h4>Tags:</h4>
+<div class="tags">
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><b>return:</b>&nbsp;&nbsp;</td><td>boolean (success) or string on query (current track time).</td>
+  </tr>
+  <tr>
+    <td><b>access:</b>&nbsp;&nbsp;</td><td>public</td>
+  </tr>
+</table>
+</div>
+<br /><br />
+
+	
+        <h4>Parameters:</h4>
+    <div class="tags">
+    <table border="0" cellspacing="0" cellpadding="0">
+          <tr>
+        <td class="type">string&nbsp;&nbsp;</td>
+        <td><b>$number</b>&nbsp;&nbsp;</td>
+        <td>&lt;number|-number|+number|?&gt;</td>
+      </tr>
+        </table>
+    </div><br />
+        <div class="top">[ <a href="#top">Top</a> ]</div>
+  </div>
+  <hr />
+	<a name="methodtitle"></a>
+	<h3>method title <span class="smalllinenumber">[line 223]</span></h3>
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code>string title(
+)</code>
+    </td></tr></table>
+    </td></tr></table><br />
+	
+		title<br /><br /><p>Returns &quot;title&quot; of song currently playing.</p><br /><h4>Tags:</h4>
+<div class="tags">
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><b>access:</b>&nbsp;&nbsp;</td><td>public</td>
+  </tr>
+</table>
+</div>
+<br /><br />
+
+	
+        <div class="top">[ <a href="#top">Top</a> ]</div>
+  </div>
+  <hr />
+	<a name="method__get"></a>
+	<h3>method __get <span class="smalllinenumber">[line 688]</span></h3>
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code>mixed __get(
+string
+$property_name)</code>
+    </td></tr></table>
+    </td></tr></table><br />
+	
+		__get (getter)<br /><br /><br /><br />
+
+	
+        <h4>Parameters:</h4>
+    <div class="tags">
+    <table border="0" cellspacing="0" cellpadding="0">
+          <tr>
+        <td class="type">string&nbsp;&nbsp;</td>
+        <td><b>$property_name</b>&nbsp;&nbsp;</td>
+        <td></td>
+      </tr>
+        </table>
+    </div><br />
+        <div class="top">[ <a href="#top">Top</a> ]</div>
+  </div>
+</div><br />
+
+
+        <div class="credit">
+		    <hr />
+		    Documentation generated on Wed, 16 Sep 2009 18:08:27 +0200 by <a href="http://www.phpdoc.org">phpDocumentor 1.4.2</a>
+	      </div>
+      </td></tr></table>
+    </td>
+  </tr>
+</table>
+</div>
+</div>
+</body>
+</html>

@@ -1,0 +1,1492 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>Docs For Class SqueezePlaylist</title>
+<link rel="stylesheet" type="text/css" href="../media/style.css" />
+</head>
+<body>
+<a name="top" style="display:none;"></a>
+<div align="center">
+<div class="page">
+<table border="0" cellspacing="0" cellpadding="0" width="100%">
+  <tr>
+    <td class="header_top"><div class="logo"><!-- crazy logo start--><div style="margin-bottom:0.75em;"><a href="http://org.0r9.org" style="color:#000;text-decoration:none;" title="0r9.org - Generally just disorganized."><span style="padding-bottom:0.75em;"><strong><font size="7" face="Verdana, Arial, Helvetica, sans-serif"><em>0</em></font><font color="#FF0000"size="7" face="Times,serif;">r</font></strong><span style="position:relative;top:0.5em;"><font size="7" face="Verdana, Arial, Helvetica, sans-serif"><strong><em>9</em></strong></font></span>&nbsp;<span style="position:relative;top:-0.5em;"><font size="5"face="Verdana, Arial, Helvetica, sans-serif"><strong><em>.org</em></strong></font></span></span></a><div style="margin-bottom:-0.75em;">&nbsp;</div><tt>&ldquo;Organization ((unofficial)) of the disorganized.<br />Don't ask! We can't find it.&rdquo;</tt></div><!-- crazy logo end--></div><div class="package_header">SqueezePHPAPI</div></td>
+  </tr>
+  <tr><td class="header_line"><img src="../media/empty.png" width="1" height="1" border="0" alt=""  /></td></tr>
+  <tr>
+    <td class="header_menu">
+        
+                                    
+                              		  [ <a href="../classtrees_SqueezePHPAPI.html" class="menu">class tree: SqueezePHPAPI</a> ]
+		  [ <a href="../elementindex_SqueezePHPAPI.html" class="menu">index: SqueezePHPAPI</a> ]
+		  	    [ <a href="../elementindex.html" class="menu">all elements</a> ]
+  	    [ <a href="../index.html" class="menu">doc index</a> ]
+    </td>
+  </tr>
+  <tr><td class="header_line"><img src="../media/empty.png" width="1" height="1" border="0" alt=""  /></td></tr>
+</table>
+
+<table width="100%" border="0" cellpadding="0" cellspacing="0">
+  <tr valign="top">
+    <td width="200" class="menu">
+	<div id="ric">
+					<p><a href="../ric_README.html">README</a></p>
+					<p><a href="../ric_ChangeLog.html">ChangeLog</a></p>
+					<p><a href="../ric_INSTALL.html">INSTALL</a></p>
+					<p><a href="../ric_NEWS.html">NEWS</a></p>
+			</div>
+	<div id="todolist">
+			<p><a href="../todolist.html">Todo List</a></p>
+	</div>
+      <b>Packages:</b><br />
+              <a href="../li_SqueezePHPAPI.html">SqueezePHPAPI</a><br />
+            <br /><br />
+                        <b>Files:</b><br />
+      	  <div class="package">
+			<a href="../SqueezePHPAPI/_examples---basic_example.php.html">		basic_example.php
+		</a><br />
+			<a href="../SqueezePHPAPI/_lib---class.SqueezeAlarm.php.html">		class.SqueezeAlarm.php
+		</a><br />
+			<a href="../SqueezePHPAPI/_lib---class.SqueezeCenter.php.html">		class.SqueezeCenter.php
+		</a><br />
+			<a href="../SqueezePHPAPI/_lib---class.SqueezeConnection.php.html">		class.SqueezeConnection.php
+		</a><br />
+			<a href="../SqueezePHPAPI/_lib---class.SqueezeDatabase.php.html">		class.SqueezeDatabase.php
+		</a><br />
+			<a href="../SqueezePHPAPI/_lib---class.SqueezeMixer.php.html">		class.SqueezeMixer.php
+		</a><br />
+			<a href="../SqueezePHPAPI/_lib---class.SqueezePlayer.php.html">		class.SqueezePlayer.php
+		</a><br />
+			<a href="../SqueezePHPAPI/_lib---class.SqueezePlayers.php.html">		class.SqueezePlayers.php
+		</a><br />
+			<a href="../SqueezePHPAPI/_lib---class.SqueezePlaylist.php.html">		class.SqueezePlaylist.php
+		</a><br />
+			<a href="../SqueezePHPAPI/_lib---class.SqueezeStreamProxy.php.html">		class.SqueezeStreamProxy.php
+		</a><br />
+	  </div><br />
+      
+      
+            <b>Classes:</b><br />
+        <div class="package">
+		    		<a href="../SqueezePHPAPI/SqueezeAlarm.html">SqueezeAlarm</a><br />
+	    		<a href="../SqueezePHPAPI/SqueezeCenter.html">SqueezeCenter</a><br />
+	    		<a href="../SqueezePHPAPI/SqueezeConnection.html">SqueezeConnection</a><br />
+	    		<a href="../SqueezePHPAPI/SqueezeDatabase.html">SqueezeDatabase</a><br />
+	    		<a href="../SqueezePHPAPI/SqueezeMixer.html">SqueezeMixer</a><br />
+	    		<a href="../SqueezePHPAPI/SqueezePlayer.html">SqueezePlayer</a><br />
+	    		<a href="../SqueezePHPAPI/SqueezePlayers.html">SqueezePlayers</a><br />
+	    		<a href="../SqueezePHPAPI/SqueezePlaylist.html">SqueezePlaylist</a><br />
+	    		<a href="../SqueezePHPAPI/SqueezeStreamProxy.html">SqueezeStreamProxy</a><br />
+	  </div>
+                </td>
+    <td style="padding-left:1em;">
+      <table cellpadding="10" cellspacing="0" width="100%" border="0"><tr><td valign="top">
+
+<h1>Class: SqueezePlaylist</h1>
+Source Location: /lib/class.SqueezePlaylist.php<br /><br />
+
+
+<table width="100%" border="0">
+<tr><td valign="top">
+
+<h3><a href="#class_details">Class Overview</a></h3>
+<div class="description">SqueezePlaylist</div><br /><br />
+<h4>Author(s):</h4>
+<ul>
+          <li>David Broz &lt;<a href="mailto:db-dev__AT__0r9.org">db-dev__AT__0r9.org</a>&gt;</li>
+                  </ul>
+
+
+
+
+          
+      
+
+<h4>Copyright:</h4>
+<ul>
+  <li>(c) 2009 by David Broz - <a href="http://org.0r9.org">Disorganization</a> Zurich, Switzerland</li>
+</ul>
+        
+</td>
+
+
+
+<td valign="top">
+<h3><a href="#class_methods">Methods</a></h3>
+<ul>
+    <li><a href="../SqueezePHPAPI/SqueezePlaylist.html#method__construct">__construct</a></li>
+    <li><a href="../SqueezePHPAPI/SqueezePlaylist.html#method__destruct">__destruct</a></li>
+    <li><a href="../SqueezePHPAPI/SqueezePlaylist.html#methodadd">add</a></li>
+    <li><a href="../SqueezePHPAPI/SqueezePlaylist.html#methodaddalbum">addalbum</a></li>
+    <li><a href="../SqueezePHPAPI/SqueezePlaylist.html#methodaddtracks">addtracks</a></li>
+    <li><a href="../SqueezePHPAPI/SqueezePlaylist.html#methodalbum">album</a></li>
+    <li><a href="../SqueezePHPAPI/SqueezePlaylist.html#methodartist">artist</a></li>
+    <li><a href="../SqueezePHPAPI/SqueezePlaylist.html#methodclear">clear</a></li>
+    <li><a href="../SqueezePHPAPI/SqueezePlaylist.html#methoddelete">delete</a></li>
+    <li><a href="../SqueezePHPAPI/SqueezePlaylist.html#methoddeletealbum">deletealbum</a></li>
+    <li><a href="../SqueezePHPAPI/SqueezePlaylist.html#methoddeleteitem">deleteitem</a></li>
+    <li><a href="../SqueezePHPAPI/SqueezePlaylist.html#methodduration">duration</a></li>
+    <li><a href="../SqueezePHPAPI/SqueezePlaylist.html#methodgenre">genre</a></li>
+    <li><a href="../SqueezePHPAPI/SqueezePlaylist.html#methodindex">index</a></li>
+    <li><a href="../SqueezePHPAPI/SqueezePlaylist.html#methodinsert">insert</a></li>
+    <li><a href="../SqueezePHPAPI/SqueezePlaylist.html#methodinsertalbum">insertalbum</a></li>
+    <li><a href="../SqueezePHPAPI/SqueezePlaylist.html#methodloadalbum">loadalbum</a></li>
+    <li><a href="../SqueezePHPAPI/SqueezePlaylist.html#methodloadtracks">loadtracks</a></li>
+    <li><a href="../SqueezePHPAPI/SqueezePlaylist.html#methodmodified">modified</a></li>
+    <li><a href="../SqueezePHPAPI/SqueezePlaylist.html#methodmove">move</a></li>
+    <li><a href="../SqueezePHPAPI/SqueezePlaylist.html#methodname">name</a></li>
+    <li><a href="../SqueezePHPAPI/SqueezePlaylist.html#methodpath">path</a></li>
+    <li><a href="../SqueezePHPAPI/SqueezePlaylist.html#methodplay">play</a></li>
+    <li><a href="../SqueezePHPAPI/SqueezePlaylist.html#methodplaylistcontrol">playlistcontrol</a></li>
+    <li><a href="../SqueezePHPAPI/SqueezePlaylist.html#methodplaylistsinfo">playlistsinfo</a></li>
+    <li><a href="../SqueezePHPAPI/SqueezePlaylist.html#methodremote">remote</a></li>
+    <li><a href="../SqueezePHPAPI/SqueezePlaylist.html#methodrepeat">repeat</a></li>
+    <li><a href="../SqueezePHPAPI/SqueezePlaylist.html#methodresume">resume</a></li>
+    <li><a href="../SqueezePHPAPI/SqueezePlaylist.html#methodsave">save</a></li>
+    <li><a href="../SqueezePHPAPI/SqueezePlaylist.html#methodshuffle">shuffle</a></li>
+    <li><a href="../SqueezePHPAPI/SqueezePlaylist.html#methodtitle">title</a></li>
+    <li><a href="../SqueezePHPAPI/SqueezePlaylist.html#methodtracks">tracks</a></li>
+    <li><a href="../SqueezePHPAPI/SqueezePlaylist.html#methodurl">url</a></li>
+    <li><a href="../SqueezePHPAPI/SqueezePlaylist.html#methodzap">zap</a></li>
+  </ul>
+</td>
+
+</tr></table>
+<hr />
+
+<table width="100%" border="0"><tr>
+
+
+
+
+
+<td>&nbsp;</td>
+</tr></table>
+<hr />
+
+<a name="class_details"></a>
+<h3>Class Details</h3>
+<div class="tags">
+[line 27]<br />
+SqueezePlaylist<br /><br /><p>SqueezePlayer Playlist interface</p><br /><h4>Tags:</h4>
+<div class="tags">
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><b>author:</b>&nbsp;&nbsp;</td><td>David Broz &lt;<a href="mailto:db-dev__AT__0r9.org">db-dev__AT__0r9.org</a>&gt;</td>
+  </tr>
+  <tr>
+    <td><b>copyright:</b>&nbsp;&nbsp;</td><td>(c) 2009 by David Broz - <a href="http://org.0r9.org">Disorganization</a> Zurich, Switzerland</td>
+  </tr>
+  <tr>
+    <td><b>license:</b>&nbsp;&nbsp;</td><td><a href="http://creativecommons.org/licenses/GPL/2.0/">GNU General Public License v2</a></td>
+  </tr>
+</table>
+</div>
+</div><br /><br />
+<div class="top">[ <a href="#top">Top</a> ]</div><br />
+
+
+<hr />
+<a name="class_methods"></a>
+<h3>Class Methods</h3>
+<div class="tags">
+
+  <hr />
+	<a name="method__construct"></a>
+	<h3>constructor __construct <span class="smalllinenumber">[line 52]</span></h3>
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code><a href="../SqueezePHPAPI/SqueezePlaylist.html">SqueezePlaylist</a> __construct(
+<a href="../SqueezePHPAPI/SqueezeConnection.html">SqueezeConnection</a>
+$CLI, string
+$playerid)</code>
+    </td></tr></table>
+    </td></tr></table><br />
+	
+		SqueezePlaylist (constructor)<br /><br /><br /><br />
+
+	
+        <h4>Parameters:</h4>
+    <div class="tags">
+    <table border="0" cellspacing="0" cellpadding="0">
+          <tr>
+        <td class="type"><a href="../SqueezePHPAPI/SqueezeConnection.html">SqueezeConnection</a>&nbsp;&nbsp;</td>
+        <td><b>$CLI</b>&nbsp;&nbsp;</td>
+        <td></td>
+      </tr>
+          <tr>
+        <td class="type">string&nbsp;&nbsp;</td>
+        <td><b>$playerid</b>&nbsp;&nbsp;</td>
+        <td></td>
+      </tr>
+        </table>
+    </div><br />
+        <div class="top">[ <a href="#top">Top</a> ]</div>
+  </div>
+  <hr />
+	<a name="method__destruct"></a>
+	<h3>destructor __destruct <span class="smalllinenumber">[line 564]</span></h3>
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code>void __destruct(
+)</code>
+    </td></tr></table>
+    </td></tr></table><br />
+	
+		SqueezePlaylist (destructor)<br /><br /><br /><br />
+
+	
+        <div class="top">[ <a href="#top">Top</a> ]</div>
+  </div>
+  <hr />
+	<a name="methodadd"></a>
+	<h3>method add <span class="smalllinenumber">[line 81]</span></h3>
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code>boolean add(
+[string
+$item = &quot;&quot;])</code>
+    </td></tr></table>
+    </td></tr></table><br />
+	
+		add<br /><br /><p>The &quot;playlist add&quot; command adds the specified song URL, playlist or directory contents to the end of the current playlist. Songs currently playing or already on the playlist are not affected.</p><br /><h4>Tags:</h4>
+<div class="tags">
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><b>return:</b>&nbsp;&nbsp;</td><td>(success)</td>
+  </tr>
+  <tr>
+    <td><b>access:</b>&nbsp;&nbsp;</td><td>public</td>
+  </tr>
+</table>
+</div>
+<br /><br />
+
+	
+        <h4>Parameters:</h4>
+    <div class="tags">
+    <table border="0" cellspacing="0" cellpadding="0">
+          <tr>
+        <td class="type">string&nbsp;&nbsp;</td>
+        <td><b>$item</b>&nbsp;&nbsp;</td>
+        <td>&lt;item&gt;</td>
+      </tr>
+        </table>
+    </div><br />
+        <div class="top">[ <a href="#top">Top</a> ]</div>
+  </div>
+  <hr />
+	<a name="methodaddalbum"></a>
+	<h3>method addalbum <span class="smalllinenumber">[line 206]</span></h3>
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code>boolean addalbum(
+[string
+$genre = &quot;&quot;], [string
+$artist = &quot;&quot;], [string
+$album = &quot;&quot;])</code>
+    </td></tr></table>
+    </td></tr></table><br />
+	
+		addalbum<br /><br /><p>The &quot;playlist addalbum&quot; command appends all songs matching the specified criteria onto the end of the playlist. Songs currently playing or already on the playlist are not affected.</p><br /><h4>Tags:</h4>
+<div class="tags">
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><b>return:</b>&nbsp;&nbsp;</td><td>(success)</td>
+  </tr>
+  <tr>
+    <td><b>access:</b>&nbsp;&nbsp;</td><td>public</td>
+  </tr>
+</table>
+</div>
+<br /><br />
+
+	
+        <h4>Parameters:</h4>
+    <div class="tags">
+    <table border="0" cellspacing="0" cellpadding="0">
+          <tr>
+        <td class="type">string&nbsp;&nbsp;</td>
+        <td><b>$genre</b>&nbsp;&nbsp;</td>
+        <td>&lt;genre&gt;</td>
+      </tr>
+          <tr>
+        <td class="type">string&nbsp;&nbsp;</td>
+        <td><b>$artist</b>&nbsp;&nbsp;</td>
+        <td>&lt;artist&gt;</td>
+      </tr>
+          <tr>
+        <td class="type">string&nbsp;&nbsp;</td>
+        <td><b>$album</b>&nbsp;&nbsp;</td>
+        <td>&lt;album&gt;</td>
+      </tr>
+        </table>
+    </div><br />
+        <div class="top">[ <a href="#top">Top</a> ]</div>
+  </div>
+  <hr />
+	<a name="methodaddtracks"></a>
+	<h3>method addtracks <span class="smalllinenumber">[line 236]</span></h3>
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code>boolean addtracks(
+[string
+$searchparam = &quot;&quot;])</code>
+    </td></tr></table>
+    </td></tr></table><br />
+	
+		addtracks<br /><br /><p>The &quot;playlist addtracks&quot; command appends all songs matching the specified criteria onto the end of the playlist. Songs currently playing or already on the playlist are not affected. Note: you must provide a particular form to the searchparam (see examples)</p><br /><h4>Tags:</h4>
+<div class="tags">
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><b>return:</b>&nbsp;&nbsp;</td><td>(success)</td>
+  </tr>
+  <tr>
+    <td><b>access:</b>&nbsp;&nbsp;</td><td>public</td>
+  </tr>
+</table>
+</div>
+<br /><br />
+
+	
+        <h4>Parameters:</h4>
+    <div class="tags">
+    <table border="0" cellspacing="0" cellpadding="0">
+          <tr>
+        <td class="type">string&nbsp;&nbsp;</td>
+        <td><b>$searchparam</b>&nbsp;&nbsp;</td>
+        <td>&lt;searchparam&gt;</td>
+      </tr>
+        </table>
+    </div><br />
+        <div class="top">[ <a href="#top">Top</a> ]</div>
+  </div>
+  <hr />
+	<a name="methodalbum"></a>
+	<h3>method album <span class="smalllinenumber">[line 404]</span></h3>
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code>string album(
+[integer
+$index = -1])</code>
+    </td></tr></table>
+    </td></tr></table><br />
+	
+		album<br /><br /><p>The &quot;playlist album&quot; returns the requested information for a given song at an index position in the current playlist.</p><br /><h4>Tags:</h4>
+<div class="tags">
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><b>access:</b>&nbsp;&nbsp;</td><td>public</td>
+  </tr>
+</table>
+</div>
+<br /><br />
+
+	
+        <h4>Parameters:</h4>
+    <div class="tags">
+    <table border="0" cellspacing="0" cellpadding="0">
+          <tr>
+        <td class="type">integer&nbsp;&nbsp;</td>
+        <td><b>$index</b>&nbsp;&nbsp;</td>
+        <td>&lt;index&gt;</td>
+      </tr>
+        </table>
+    </div><br />
+        <div class="top">[ <a href="#top">Top</a> ]</div>
+  </div>
+  <hr />
+	<a name="methodartist"></a>
+	<h3>method artist <span class="smalllinenumber">[line 391]</span></h3>
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code>string artist(
+[integer
+$index = -1])</code>
+    </td></tr></table>
+    </td></tr></table><br />
+	
+		artist<br /><br /><p>The &quot;playlist artist&quot; returns the requested information for a given song at an index position in the current playlist.</p><br /><h4>Tags:</h4>
+<div class="tags">
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><b>access:</b>&nbsp;&nbsp;</td><td>public</td>
+  </tr>
+</table>
+</div>
+<br /><br />
+
+	
+        <h4>Parameters:</h4>
+    <div class="tags">
+    <table border="0" cellspacing="0" cellpadding="0">
+          <tr>
+        <td class="type">integer&nbsp;&nbsp;</td>
+        <td><b>$index</b>&nbsp;&nbsp;</td>
+        <td>&lt;index&gt;</td>
+      </tr>
+        </table>
+    </div><br />
+        <div class="top">[ <a href="#top">Top</a> ]</div>
+  </div>
+  <hr />
+	<a name="methodclear"></a>
+	<h3>method clear <span class="smalllinenumber">[line 282]</span></h3>
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code>boolean clear(
+)</code>
+    </td></tr></table>
+    </td></tr></table><br />
+	
+		clear<br /><br /><p>The &quot;playlist clear&quot; command removes any song that is on the playlist. The player is stopped.</p><br /><h4>Tags:</h4>
+<div class="tags">
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><b>return:</b>&nbsp;&nbsp;</td><td>(success)</td>
+  </tr>
+  <tr>
+    <td><b>access:</b>&nbsp;&nbsp;</td><td>public</td>
+  </tr>
+</table>
+</div>
+<br /><br />
+
+	
+        <div class="top">[ <a href="#top">Top</a> ]</div>
+  </div>
+  <hr />
+	<a name="methoddelete"></a>
+	<h3>method delete <span class="smalllinenumber">[line 138]</span></h3>
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code>boolean delete(
+[integer
+$songindex = -1])</code>
+    </td></tr></table>
+    </td></tr></table><br />
+	
+		delete<br /><br /><p>The &quot;playlist delete&quot; command deletes the song at the specified index from the current playlist.</p><br /><h4>Tags:</h4>
+<div class="tags">
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><b>return:</b>&nbsp;&nbsp;</td><td>(success)</td>
+  </tr>
+  <tr>
+    <td><b>access:</b>&nbsp;&nbsp;</td><td>public</td>
+  </tr>
+</table>
+</div>
+<br /><br />
+
+	
+        <h4>Parameters:</h4>
+    <div class="tags">
+    <table border="0" cellspacing="0" cellpadding="0">
+          <tr>
+        <td class="type">integer&nbsp;&nbsp;</td>
+        <td><b>$songindex</b>&nbsp;&nbsp;</td>
+        <td>&lt;songindex&gt;</td>
+      </tr>
+        </table>
+    </div><br />
+        <div class="top">[ <a href="#top">Top</a> ]</div>
+  </div>
+  <hr />
+	<a name="methoddeletealbum"></a>
+	<h3>method deletealbum <span class="smalllinenumber">[line 270]</span></h3>
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code>boolean deletealbum(
+[string
+$genre = &quot;&quot;], [string
+$artist = &quot;&quot;], [string
+$album = &quot;&quot;])</code>
+    </td></tr></table>
+    </td></tr></table><br />
+	
+		deletealbum<br /><br /><p>The &quot;playlist deletealbum&quot; command removes songs matching the specified genre artist and album criteria from the playlist.</p><br /><h4>Tags:</h4>
+<div class="tags">
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><b>return:</b>&nbsp;&nbsp;</td><td>(success)</td>
+  </tr>
+  <tr>
+    <td><b>access:</b>&nbsp;&nbsp;</td><td>public</td>
+  </tr>
+</table>
+</div>
+<br /><br />
+
+	
+        <h4>Parameters:</h4>
+    <div class="tags">
+    <table border="0" cellspacing="0" cellpadding="0">
+          <tr>
+        <td class="type">string&nbsp;&nbsp;</td>
+        <td><b>$genre</b>&nbsp;&nbsp;</td>
+        <td>&lt;genre&gt;</td>
+      </tr>
+          <tr>
+        <td class="type">string&nbsp;&nbsp;</td>
+        <td><b>$artist</b>&nbsp;&nbsp;</td>
+        <td>&lt;artist&gt;</td>
+      </tr>
+          <tr>
+        <td class="type">string&nbsp;&nbsp;</td>
+        <td><b>$album</b>&nbsp;&nbsp;</td>
+        <td>&lt;album&gt;</td>
+      </tr>
+        </table>
+    </div><br />
+        <div class="top">[ <a href="#top">Top</a> ]</div>
+  </div>
+  <hr />
+	<a name="methoddeleteitem"></a>
+	<h3>method deleteitem <span class="smalllinenumber">[line 107]</span></h3>
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code>boolean deleteitem(
+[string
+$item = &quot;&quot;])</code>
+    </td></tr></table>
+    </td></tr></table><br />
+	
+		deleteitem<br /><br /><p>The &quot;playlist deleteitem&quot; command removes the specified song URL, playlist or directory contents from the current playlist.</p><br /><h4>Tags:</h4>
+<div class="tags">
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><b>return:</b>&nbsp;&nbsp;</td><td>(success)</td>
+  </tr>
+  <tr>
+    <td><b>access:</b>&nbsp;&nbsp;</td><td>public</td>
+  </tr>
+</table>
+</div>
+<br /><br />
+
+	
+        <h4>Parameters:</h4>
+    <div class="tags">
+    <table border="0" cellspacing="0" cellpadding="0">
+          <tr>
+        <td class="type">string&nbsp;&nbsp;</td>
+        <td><b>$item</b>&nbsp;&nbsp;</td>
+        <td>&lt;item&gt;</td>
+      </tr>
+        </table>
+    </div><br />
+        <div class="top">[ <a href="#top">Top</a> ]</div>
+  </div>
+  <hr />
+	<a name="methodduration"></a>
+	<h3>method duration <span class="smalllinenumber">[line 456]</span></h3>
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code>string duration(
+[integer
+$index = -1])</code>
+    </td></tr></table>
+    </td></tr></table><br />
+	
+		duration<br /><br /><p>The &quot;playlist duration&quot; returns the requested information for a given song at an index position in the current playlist.</p><br /><h4>Tags:</h4>
+<div class="tags">
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><b>access:</b>&nbsp;&nbsp;</td><td>public</td>
+  </tr>
+</table>
+</div>
+<br /><br />
+
+	
+        <h4>Parameters:</h4>
+    <div class="tags">
+    <table border="0" cellspacing="0" cellpadding="0">
+          <tr>
+        <td class="type">integer&nbsp;&nbsp;</td>
+        <td><b>$index</b>&nbsp;&nbsp;</td>
+        <td>&lt;index&gt;</td>
+      </tr>
+        </table>
+    </div><br />
+        <div class="top">[ <a href="#top">Top</a> ]</div>
+  </div>
+  <hr />
+	<a name="methodgenre"></a>
+	<h3>method genre <span class="smalllinenumber">[line 378]</span></h3>
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code>string genre(
+[integer
+$index = -1])</code>
+    </td></tr></table>
+    </td></tr></table><br />
+	
+		genre<br /><br /><p>The &quot;playlist genre&quot; returns the requested information for a given song at an index position in the current playlist.</p><br /><h4>Tags:</h4>
+<div class="tags">
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><b>access:</b>&nbsp;&nbsp;</td><td>public</td>
+  </tr>
+</table>
+</div>
+<br /><br />
+
+	
+        <h4>Parameters:</h4>
+    <div class="tags">
+    <table border="0" cellspacing="0" cellpadding="0">
+          <tr>
+        <td class="type">integer&nbsp;&nbsp;</td>
+        <td><b>$index</b>&nbsp;&nbsp;</td>
+        <td>&lt;index&gt;</td>
+      </tr>
+        </table>
+    </div><br />
+        <div class="top">[ <a href="#top">Top</a> ]</div>
+  </div>
+  <hr />
+	<a name="methodindex"></a>
+	<h3>method index <span class="smalllinenumber">[line 361]</span></h3>
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code>mixed index(
+[string
+$index = &quot;?&quot;], [integer
+$fadeInSecs = -1])</code>
+    </td></tr></table>
+    </td></tr></table><br />
+	
+		index<br /><br /><p>The &quot;playlist index&quot; command sets or queries the song that is currently playing by index. When setting, a zero-based value may be used to indicate which song to play. An explicitly positive or negative number may be used to jump to a song relative to the currently playing song. If an index parameter is set then &quot;fadeInSecs&quot; may be passed to specify fade-in period. The value of the current song index may be obtained by passing in &quot;?&quot; as a parameter.</p><br /><h4>Tags:</h4>
+<div class="tags">
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><b>return:</b>&nbsp;&nbsp;</td><td>(integer on query) (boolean success)</td>
+  </tr>
+  <tr>
+    <td><b>access:</b>&nbsp;&nbsp;</td><td>public</td>
+  </tr>
+</table>
+</div>
+<br /><br />
+
+	
+        <h4>Parameters:</h4>
+    <div class="tags">
+    <table border="0" cellspacing="0" cellpadding="0">
+          <tr>
+        <td class="type">string&nbsp;&nbsp;</td>
+        <td><b>$index</b>&nbsp;&nbsp;</td>
+        <td>&lt;index|+index|-index|?&gt;</td>
+      </tr>
+          <tr>
+        <td class="type">integer&nbsp;&nbsp;</td>
+        <td><b>$fadeInSecs</b>&nbsp;&nbsp;</td>
+        <td>&lt;fadeInSecs&gt;</td>
+      </tr>
+        </table>
+    </div><br />
+        <div class="top">[ <a href="#top">Top</a> ]</div>
+  </div>
+  <hr />
+	<a name="methodinsert"></a>
+	<h3>method insert <span class="smalllinenumber">[line 94]</span></h3>
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code>boolean insert(
+[string
+$item = &quot;&quot;])</code>
+    </td></tr></table>
+    </td></tr></table><br />
+	
+		insert<br /><br /><p>The &quot;playlist insert&quot; command inserts the specified song URL, playlist or directory contents to be played immediately after the current song in the current playlist. Any songs currently playing or already on the playlist are not affected.</p><br /><h4>Tags:</h4>
+<div class="tags">
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><b>return:</b>&nbsp;&nbsp;</td><td>(success)</td>
+  </tr>
+  <tr>
+    <td><b>access:</b>&nbsp;&nbsp;</td><td>public</td>
+  </tr>
+</table>
+</div>
+<br /><br />
+
+	
+        <h4>Parameters:</h4>
+    <div class="tags">
+    <table border="0" cellspacing="0" cellpadding="0">
+          <tr>
+        <td class="type">string&nbsp;&nbsp;</td>
+        <td><b>$item</b>&nbsp;&nbsp;</td>
+        <td>&lt;item&gt;</td>
+      </tr>
+        </table>
+    </div><br />
+        <div class="top">[ <a href="#top">Top</a> ]</div>
+  </div>
+  <hr />
+	<a name="methodinsertalbum"></a>
+	<h3>method insertalbum <span class="smalllinenumber">[line 255]</span></h3>
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code>boolean insertalbum(
+[string
+$genre = &quot;&quot;], [string
+$artist = &quot;&quot;], [string
+$album = &quot;&quot;])</code>
+    </td></tr></table>
+    </td></tr></table><br />
+	
+		insertalbum<br /><br /><p>The &quot;playlist insertalbum&quot; command inserts all songs matching the specified criteria at the top of the playlist. Songs already on the playlist are not affected.</p><br /><h4>Tags:</h4>
+<div class="tags">
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><b>return:</b>&nbsp;&nbsp;</td><td>(success)</td>
+  </tr>
+  <tr>
+    <td><b>access:</b>&nbsp;&nbsp;</td><td>public</td>
+  </tr>
+</table>
+</div>
+<br /><br />
+
+	
+        <h4>Parameters:</h4>
+    <div class="tags">
+    <table border="0" cellspacing="0" cellpadding="0">
+          <tr>
+        <td class="type">string&nbsp;&nbsp;</td>
+        <td><b>$genre</b>&nbsp;&nbsp;</td>
+        <td>&lt;genre&gt;</td>
+      </tr>
+          <tr>
+        <td class="type">string&nbsp;&nbsp;</td>
+        <td><b>$artist</b>&nbsp;&nbsp;</td>
+        <td>&lt;artist&gt;</td>
+      </tr>
+          <tr>
+        <td class="type">string&nbsp;&nbsp;</td>
+        <td><b>$album</b>&nbsp;&nbsp;</td>
+        <td>&lt;album&gt;</td>
+      </tr>
+        </table>
+    </div><br />
+        <div class="top">[ <a href="#top">Top</a> ]</div>
+  </div>
+  <hr />
+	<a name="methodloadalbum"></a>
+	<h3>method loadalbum <span class="smalllinenumber">[line 191]</span></h3>
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code>boolean loadalbum(
+[string
+$genre = &quot;&quot;], [string
+$artist = &quot;&quot;], [string
+$album = &quot;&quot;])</code>
+    </td></tr></table>
+    </td></tr></table><br />
+	
+		loadalbum<br /><br /><p>The &quot;playlist loadalbum&quot; command puts songs matching the specified genre artist and album criteria on the playlist. Songs previously in the playlist are discarded.</p><br /><h4>Tags:</h4>
+<div class="tags">
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><b>return:</b>&nbsp;&nbsp;</td><td>(success)</td>
+  </tr>
+  <tr>
+    <td><b>access:</b>&nbsp;&nbsp;</td><td>public</td>
+  </tr>
+</table>
+</div>
+<br /><br />
+
+	
+        <h4>Parameters:</h4>
+    <div class="tags">
+    <table border="0" cellspacing="0" cellpadding="0">
+          <tr>
+        <td class="type">string&nbsp;&nbsp;</td>
+        <td><b>$genre</b>&nbsp;&nbsp;</td>
+        <td>&lt;genre&gt;</td>
+      </tr>
+          <tr>
+        <td class="type">string&nbsp;&nbsp;</td>
+        <td><b>$artist</b>&nbsp;&nbsp;</td>
+        <td>&lt;artist&gt;</td>
+      </tr>
+          <tr>
+        <td class="type">string&nbsp;&nbsp;</td>
+        <td><b>$album</b>&nbsp;&nbsp;</td>
+        <td>&lt;album&gt;</td>
+      </tr>
+        </table>
+    </div><br />
+        <div class="top">[ <a href="#top">Top</a> ]</div>
+  </div>
+  <hr />
+	<a name="methodloadtracks"></a>
+	<h3>method loadtracks <span class="smalllinenumber">[line 219]</span></h3>
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code>boolean loadtracks(
+[string
+$searchparam = &quot;&quot;])</code>
+    </td></tr></table>
+    </td></tr></table><br />
+	
+		loadtracks<br /><br /><p>The &quot;playlist loadtracks&quot; command puts tracks matching the specified query on the playlist. Songs previously in the playlist are discarded. Note: you must provide a particular form to the searchparam (see examples)</p><br /><h4>Tags:</h4>
+<div class="tags">
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><b>return:</b>&nbsp;&nbsp;</td><td>(success)</td>
+  </tr>
+  <tr>
+    <td><b>access:</b>&nbsp;&nbsp;</td><td>public</td>
+  </tr>
+</table>
+</div>
+<br /><br />
+
+	
+        <h4>Parameters:</h4>
+    <div class="tags">
+    <table border="0" cellspacing="0" cellpadding="0">
+          <tr>
+        <td class="type">string&nbsp;&nbsp;</td>
+        <td><b>$searchparam</b>&nbsp;&nbsp;</td>
+        <td>&lt;searchparam&gt;</td>
+      </tr>
+        </table>
+    </div><br />
+        <div class="top">[ <a href="#top">Top</a> ]</div>
+  </div>
+  <hr />
+	<a name="methodmodified"></a>
+	<h3>method modified <span class="smalllinenumber">[line 335]</span></h3>
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code>string modified(
+)</code>
+    </td></tr></table>
+    </td></tr></table><br />
+	
+		modified<br /><br /><p>The &quot;playlist modified&quot; returns the modification state of the saved playlist last loaded into the Now Playing playlist, if any. If &quot;1&quot;, the playlist has been modified since it was loaded.</p><br /><h4>Tags:</h4>
+<div class="tags">
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><b>access:</b>&nbsp;&nbsp;</td><td>public</td>
+  </tr>
+</table>
+</div>
+<br /><br />
+
+	
+        <div class="top">[ <a href="#top">Top</a> ]</div>
+  </div>
+  <hr />
+	<a name="methodmove"></a>
+	<h3>method move <span class="smalllinenumber">[line 121]</span></h3>
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code>boolean move(
+[integer
+$fromindex = 0], [integer
+$toindex = 5])</code>
+    </td></tr></table>
+    </td></tr></table><br />
+	
+		move<br /><br /><p>The &quot;playlist move&quot; command moves the song at the specified index to a new index in the playlist. An offset of zero is the first song in the playlist.</p><br /><h4>Tags:</h4>
+<div class="tags">
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><b>return:</b>&nbsp;&nbsp;</td><td>(success)</td>
+  </tr>
+  <tr>
+    <td><b>access:</b>&nbsp;&nbsp;</td><td>public</td>
+  </tr>
+</table>
+</div>
+<br /><br />
+
+	
+        <h4>Parameters:</h4>
+    <div class="tags">
+    <table border="0" cellspacing="0" cellpadding="0">
+          <tr>
+        <td class="type">integer&nbsp;&nbsp;</td>
+        <td><b>$fromindex</b>&nbsp;&nbsp;</td>
+        <td>&lt;fromindex&gt;</td>
+      </tr>
+          <tr>
+        <td class="type">integer&nbsp;&nbsp;</td>
+        <td><b>$toindex</b>&nbsp;&nbsp;</td>
+        <td>&lt;toindex&gt;</td>
+      </tr>
+        </table>
+    </div><br />
+        <div class="top">[ <a href="#top">Top</a> ]</div>
+  </div>
+  <hr />
+	<a name="methodname"></a>
+	<h3>method name <span class="smalllinenumber">[line 311]</span></h3>
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code>string name(
+)</code>
+    </td></tr></table>
+    </td></tr></table><br />
+	
+		name<br /><br /><p>The &quot;playlist name&quot; command returns the name of the saved playlist last loaded into the Now Playing playlist, if any.</p><br /><h4>Tags:</h4>
+<div class="tags">
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><b>access:</b>&nbsp;&nbsp;</td><td>public</td>
+  </tr>
+</table>
+</div>
+<br /><br />
+
+	
+        <div class="top">[ <a href="#top">Top</a> ]</div>
+  </div>
+  <hr />
+	<a name="methodpath"></a>
+	<h3>method path <span class="smalllinenumber">[line 430]</span></h3>
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code>string path(
+[integer
+$index = -1])</code>
+    </td></tr></table>
+    </td></tr></table><br />
+	
+		path<br /><br /><p>The &quot;playlist path&quot; returns the requested information for a given song at an index position in the current playlist.</p><br /><h4>Tags:</h4>
+<div class="tags">
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><b>access:</b>&nbsp;&nbsp;</td><td>public</td>
+  </tr>
+</table>
+</div>
+<br /><br />
+
+	
+        <h4>Parameters:</h4>
+    <div class="tags">
+    <table border="0" cellspacing="0" cellpadding="0">
+          <tr>
+        <td class="type">integer&nbsp;&nbsp;</td>
+        <td><b>$index</b>&nbsp;&nbsp;</td>
+        <td>&lt;index&gt;</td>
+      </tr>
+        </table>
+    </div><br />
+        <div class="top">[ <a href="#top">Top</a> ]</div>
+  </div>
+  <hr />
+	<a name="methodplay"></a>
+	<h3>method play <span class="smalllinenumber">[line 68]</span></h3>
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code>boolean play(
+[string
+$item = &quot;&quot;], [string
+$title = &quot;&quot;], [integer
+$fadeInSecs = -1])</code>
+    </td></tr></table>
+    </td></tr></table><br />
+	
+		play<br /><br /><p>The &quot;playlist play&quot; command puts the specified song URL, playlist or directory contents into the current playlist and plays starting at the first item. <br />Any songs previously in the playlist are discarded. An optional title value may be passed to set a title. This can be useful for remote URLs. The &quot;fadeInSecs&quot; parameter may be passed to specify fade-in period.</p><br /><h4>Tags:</h4>
+<div class="tags">
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><b>return:</b>&nbsp;&nbsp;</td><td>(success)</td>
+  </tr>
+  <tr>
+    <td><b>access:</b>&nbsp;&nbsp;</td><td>public</td>
+  </tr>
+</table>
+</div>
+<br /><br />
+
+	
+        <h4>Parameters:</h4>
+    <div class="tags">
+    <table border="0" cellspacing="0" cellpadding="0">
+          <tr>
+        <td class="type">string&nbsp;&nbsp;</td>
+        <td><b>$item</b>&nbsp;&nbsp;</td>
+        <td>&lt;item&gt;</td>
+      </tr>
+          <tr>
+        <td class="type">string&nbsp;&nbsp;</td>
+        <td><b>$title</b>&nbsp;&nbsp;</td>
+        <td>&lt;title&gt;</td>
+      </tr>
+          <tr>
+        <td class="type">integer&nbsp;&nbsp;</td>
+        <td><b>$fadeInSecs</b>&nbsp;&nbsp;</td>
+        <td>&lt;fadeInSecs&gt;</td>
+      </tr>
+        </table>
+    </div><br />
+        <div class="top">[ <a href="#top">Top</a> ]</div>
+  </div>
+  <hr />
+	<a name="methodplaylistcontrol"></a>
+	<h3>method playlistcontrol <span class="smalllinenumber">[line 549]</span></h3>
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code>array playlistcontrol(
+[string
+$cmd = &quot;&quot;], [string
+$genre_id = &quot;&quot;], [string
+$artist_id = &quot;&quot;], [string
+$album_id = &quot;&quot;], [string
+$track_id = &quot;&quot;], [string
+$year = &quot;&quot;], [string
+$playlist_id = &quot;&quot;], [string
+$folder_id = &quot;&quot;], [string
+$playlist_name = &quot;&quot;])</code>
+    </td></tr></table>
+    </td></tr></table><br />
+	
+		playlistcontrol<br /><br /><p>The &quot;playlistcontrol&quot; command enables playlist operations using IDs as returned by extended CLI queries (titles, artists, playlists, etc).</p><br /><h4>Tags:</h4>
+<div class="tags">
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><b>return:</b>&nbsp;&nbsp;</td><td>&lt;taggedParameters&gt;</td>
+  </tr>
+  <tr>
+    <td><b>access:</b>&nbsp;&nbsp;</td><td>public</td>
+  </tr>
+</table>
+</div>
+<br /><br />
+
+	
+        <h4>Parameters:</h4>
+    <div class="tags">
+    <table border="0" cellspacing="0" cellpadding="0">
+          <tr>
+        <td class="type">string&nbsp;&nbsp;</td>
+        <td><b>$cmd</b>&nbsp;&nbsp;</td>
+        <td>Command to perform on the playlist, one of &quot;load&quot;, &quot;add&quot;, &quot;insert&quot; or &quot;delete&quot;. This parameter is mandatory. If no additional parameter is provided, the entire DB is loaded/added/inserted/deleted.</td>
+      </tr>
+          <tr>
+        <td class="type">string&nbsp;&nbsp;</td>
+        <td><b>$genre_id</b>&nbsp;&nbsp;</td>
+        <td>Genre ID, to restrict the results to the titles of that genre.</td>
+      </tr>
+          <tr>
+        <td class="type">string&nbsp;&nbsp;</td>
+        <td><b>$artist_id</b>&nbsp;&nbsp;</td>
+        <td>Artist ID, to restrict the results to the titles of that artist.</td>
+      </tr>
+          <tr>
+        <td class="type">string&nbsp;&nbsp;</td>
+        <td><b>$album_id</b>&nbsp;&nbsp;</td>
+        <td>Album ID, to restrict the results to the titles of that album.</td>
+      </tr>
+          <tr>
+        <td class="type">string&nbsp;&nbsp;</td>
+        <td><b>$track_id</b>&nbsp;&nbsp;</td>
+        <td>Comma-separated list of track IDs, to restrict the results to these track_ids. If this parameter is provided, then any genre_id, artist_id and/or album_id parameter is ignored. The tracks are added to the playlist in the given order.</td>
+      </tr>
+          <tr>
+        <td class="type">string&nbsp;&nbsp;</td>
+        <td><b>$year</b>&nbsp;&nbsp;</td>
+        <td>Year, to restrict the results to the given year.</td>
+      </tr>
+          <tr>
+        <td class="type">string&nbsp;&nbsp;</td>
+        <td><b>$playlist_id</b>&nbsp;&nbsp;</td>
+        <td>Playlist ID, to restrict the results to this playlist_id. If this parameter is provided, then any genre_id, artist_id, album_id and/or track_id parameter is ignored.</td>
+      </tr>
+          <tr>
+        <td class="type">string&nbsp;&nbsp;</td>
+        <td><b>$folder_id</b>&nbsp;&nbsp;</td>
+        <td>Folder ID, to restrict the results to files in this folder_id. If this parameter is provided, then any all the others are ignored. Note that &quot;cmd:delete&quot; is not supported for folders.</td>
+      </tr>
+          <tr>
+        <td class="type">string&nbsp;&nbsp;</td>
+        <td><b>$playlist_name</b>&nbsp;&nbsp;</td>
+        <td>Playlist name, to restrict the results to this playlist_name. If this parameter is provided, then any genre_id, artist_id, album_id, track_id and/or playlist_id parameter is ignored.</td>
+      </tr>
+        </table>
+    </div><br />
+        <div class="top">[ <a href="#top">Top</a> ]</div>
+  </div>
+  <hr />
+	<a name="methodplaylistsinfo"></a>
+	<h3>method playlistsinfo <span class="smalllinenumber">[line 347]</span></h3>
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code>array playlistsinfo(
+)</code>
+    </td></tr></table>
+    </td></tr></table><br />
+	
+		playlistsinfo<br /><br /><p>The &quot;playlist playlistsinfo&quot; query returns information on the saved playlist last loaded into the Now Playing playlist, if any.</p><br /><h4>Tags:</h4>
+<div class="tags">
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><b>access:</b>&nbsp;&nbsp;</td><td>public</td>
+  </tr>
+</table>
+</div>
+<br /><br />
+
+	
+        <div class="top">[ <a href="#top">Top</a> ]</div>
+  </div>
+  <hr />
+	<a name="methodremote"></a>
+	<h3>method remote <span class="smalllinenumber">[line 443]</span></h3>
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code>string remote(
+[integer
+$index = -1])</code>
+    </td></tr></table>
+    </td></tr></table><br />
+	
+		remote<br /><br /><p>The &quot;playlist remote&quot; returns the requested information for a given song at an index position in the current playlist. &quot;playlist remote&quot; returns 1 if the &quot;song&quot; is a remote stream.</p><br /><h4>Tags:</h4>
+<div class="tags">
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><b>access:</b>&nbsp;&nbsp;</td><td>public</td>
+  </tr>
+</table>
+</div>
+<br /><br />
+
+	
+        <h4>Parameters:</h4>
+    <div class="tags">
+    <table border="0" cellspacing="0" cellpadding="0">
+          <tr>
+        <td class="type">integer&nbsp;&nbsp;</td>
+        <td><b>$index</b>&nbsp;&nbsp;</td>
+        <td>&lt;index&gt;</td>
+      </tr>
+        </table>
+    </div><br />
+        <div class="top">[ <a href="#top">Top</a> ]</div>
+  </div>
+  <hr />
+	<a name="methodrepeat"></a>
+	<h3>method repeat <span class="smalllinenumber">[line 520]</span></h3>
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code>boolean repeat(
+[string
+$state = &quot;&quot;])</code>
+    </td></tr></table>
+    </td></tr></table><br />
+	
+		repeat<br /><br /><p>The &quot;playlist repeat&quot; command is used to indicate or query if the player will stop playing at the end of the playlist, repeat the current song indefinitely, or repeat the current playlist indefinitely. A value of &quot;0&quot; indicates that the player will stop at the end of the playlist, &quot;1&quot; indicates that the player will repeat the current song indefinitely and a value of &quot;2&quot; indicates that the player will repeat the entire playlist indefinitely. Used with no parameter, the command toggles the repeat state.</p><br /><h4>Tags:</h4>
+<div class="tags">
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><b>return:</b>&nbsp;&nbsp;</td><td>(success)</td>
+  </tr>
+  <tr>
+    <td><b>access:</b>&nbsp;&nbsp;</td><td>public</td>
+  </tr>
+</table>
+</div>
+<br /><br />
+
+	
+        <h4>Parameters:</h4>
+    <div class="tags">
+    <table border="0" cellspacing="0" cellpadding="0">
+          <tr>
+        <td class="type">string&nbsp;&nbsp;</td>
+        <td><b>$state</b>&nbsp;&nbsp;</td>
+        <td>&lt;0|1|2|?|&gt;</td>
+      </tr>
+        </table>
+    </div><br />
+        <div class="top">[ <a href="#top">Top</a> ]</div>
+  </div>
+  <hr />
+	<a name="methodresume"></a>
+	<h3>method resume <span class="smalllinenumber">[line 155]</span></h3>
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code>boolean resume(
+[string
+$playlist = &quot;&quot;])</code>
+    </td></tr></table>
+    </td></tr></table><br />
+	
+		resume<br /><br /><p>Replace the current playlist with the playlist specified by p2, starting at the song that was playing when the file was saved. (Resuming works only with M3U files saved with the &quot;playlist save&quot; command below.) Shortcut: use a bare playlist name (without leading directories or trailing .m3u suffix) to load a playlist in the saved playlists folder.</p><br /><h4>Tags:</h4>
+<div class="tags">
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><b>return:</b>&nbsp;&nbsp;</td><td>(success)</td>
+  </tr>
+  <tr>
+    <td><b>access:</b>&nbsp;&nbsp;</td><td>public</td>
+  </tr>
+</table>
+</div>
+<br /><br />
+
+	
+        <h4>Parameters:</h4>
+    <div class="tags">
+    <table border="0" cellspacing="0" cellpadding="0">
+          <tr>
+        <td class="type">string&nbsp;&nbsp;</td>
+        <td><b>$playlist</b>&nbsp;&nbsp;</td>
+        <td>&lt;playlist&gt;</td>
+      </tr>
+        </table>
+    </div><br />
+        <div class="top">[ <a href="#top">Top</a> ]</div>
+  </div>
+  <hr />
+	<a name="methodsave"></a>
+	<h3>method save <span class="smalllinenumber">[line 172]</span></h3>
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code>boolean save(
+[string
+$filename = &quot;&quot;])</code>
+    </td></tr></table>
+    </td></tr></table><br />
+	
+		save<br /><br /><p>Saves a playlist file in the saved playlists directory. Accepts a playlist filename (without .m3u suffix) and saves in the top level of the playlists directory.</p><br /><h4>Tags:</h4>
+<div class="tags">
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><b>return:</b>&nbsp;&nbsp;</td><td>(success)</td>
+  </tr>
+  <tr>
+    <td><b>access:</b>&nbsp;&nbsp;</td><td>public</td>
+  </tr>
+</table>
+</div>
+<br /><br />
+
+	
+        <h4>Parameters:</h4>
+    <div class="tags">
+    <table border="0" cellspacing="0" cellpadding="0">
+          <tr>
+        <td class="type">string&nbsp;&nbsp;</td>
+        <td><b>$filename</b>&nbsp;&nbsp;</td>
+        <td>&lt;filename&gt;</td>
+      </tr>
+        </table>
+    </div><br />
+        <div class="top">[ <a href="#top">Top</a> ]</div>
+  </div>
+  <hr />
+	<a name="methodshuffle"></a>
+	<h3>method shuffle <span class="smalllinenumber">[line 499]</span></h3>
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code>boolean shuffle(
+[string
+$state = &quot;&quot;])</code>
+    </td></tr></table>
+    </td></tr></table><br />
+	
+		shuffle<br /><br /><p>The &quot;playlist shuffle&quot; command is used to shuffle, unshuffle or query the shuffle state for the current playlist. A value of &quot;0&quot; indicates that the playlist is not shuffled, &quot;1&quot; indicates that the playlist is shuffled by song, and &quot;2&quot; indicates that the playlist is shuffled by album. Used with no parameter, the command toggles the shuffling state.</p><br /><h4>Tags:</h4>
+<div class="tags">
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><b>return:</b>&nbsp;&nbsp;</td><td>(success)</td>
+  </tr>
+  <tr>
+    <td><b>access:</b>&nbsp;&nbsp;</td><td>public</td>
+  </tr>
+</table>
+</div>
+<br /><br />
+
+	
+        <h4>Parameters:</h4>
+    <div class="tags">
+    <table border="0" cellspacing="0" cellpadding="0">
+          <tr>
+        <td class="type">string&nbsp;&nbsp;</td>
+        <td><b>$state</b>&nbsp;&nbsp;</td>
+        <td>&lt;0|1|2|?|&gt;</td>
+      </tr>
+        </table>
+    </div><br />
+        <div class="top">[ <a href="#top">Top</a> ]</div>
+  </div>
+  <hr />
+	<a name="methodtitle"></a>
+	<h3>method title <span class="smalllinenumber">[line 417]</span></h3>
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code>string title(
+[integer
+$index = -1])</code>
+    </td></tr></table>
+    </td></tr></table><br />
+	
+		title<br /><br /><p>The &quot;playlist title&quot; returns the requested information for a given song at an index position in the current playlist.</p><br /><h4>Tags:</h4>
+<div class="tags">
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><b>access:</b>&nbsp;&nbsp;</td><td>public</td>
+  </tr>
+</table>
+</div>
+<br /><br />
+
+	
+        <h4>Parameters:</h4>
+    <div class="tags">
+    <table border="0" cellspacing="0" cellpadding="0">
+          <tr>
+        <td class="type">integer&nbsp;&nbsp;</td>
+        <td><b>$index</b>&nbsp;&nbsp;</td>
+        <td>&lt;index&gt;</td>
+      </tr>
+        </table>
+    </div><br />
+        <div class="top">[ <a href="#top">Top</a> ]</div>
+  </div>
+  <hr />
+	<a name="methodtracks"></a>
+	<h3>method tracks <span class="smalllinenumber">[line 486]</span></h3>
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code>integer tracks(
+)</code>
+    </td></tr></table>
+    </td></tr></table><br />
+	
+		tracks<br /><br /><p>The &quot;playlist tracks&quot; command returns the the total number of tracks in the current playlist</p><br /><h4>Tags:</h4>
+<div class="tags">
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><b>access:</b>&nbsp;&nbsp;</td><td>public</td>
+  </tr>
+</table>
+</div>
+<br /><br />
+
+	
+        <div class="top">[ <a href="#top">Top</a> ]</div>
+  </div>
+  <hr />
+	<a name="methodurl"></a>
+	<h3>method url <span class="smalllinenumber">[line 323]</span></h3>
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code>string url(
+)</code>
+    </td></tr></table>
+    </td></tr></table><br />
+	
+		url<br /><br /><p>The &quot;playlist url&quot; command returns the URL of the saved playlist last loaded into the Now Playing playlist, if any.</p><br /><h4>Tags:</h4>
+<div class="tags">
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><b>access:</b>&nbsp;&nbsp;</td><td>public</td>
+  </tr>
+</table>
+</div>
+<br /><br />
+
+	
+        <div class="top">[ <a href="#top">Top</a> ]</div>
+  </div>
+  <hr />
+	<a name="methodzap"></a>
+	<h3>method zap <span class="smalllinenumber">[line 295]</span></h3>
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code>boolean zap(
+[integer
+$songindex = -1])</code>
+    </td></tr></table>
+    </td></tr></table><br />
+	
+		zap<br /><br /><p>The &quot;playlist zap&quot; command adds the song at index songindex into the zapped song playlist.</p><br /><h4>Tags:</h4>
+<div class="tags">
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><b>return:</b>&nbsp;&nbsp;</td><td>(success)</td>
+  </tr>
+  <tr>
+    <td><b>access:</b>&nbsp;&nbsp;</td><td>public</td>
+  </tr>
+</table>
+</div>
+<br /><br />
+
+	
+        <h4>Parameters:</h4>
+    <div class="tags">
+    <table border="0" cellspacing="0" cellpadding="0">
+          <tr>
+        <td class="type">integer&nbsp;&nbsp;</td>
+        <td><b>$songindex</b>&nbsp;&nbsp;</td>
+        <td>&lt;songindex&gt;</td>
+      </tr>
+        </table>
+    </div><br />
+        <div class="top">[ <a href="#top">Top</a> ]</div>
+  </div>
+</div><br />
+
+
+        <div class="credit">
+		    <hr />
+		    Documentation generated on Wed, 16 Sep 2009 18:08:28 +0200 by <a href="http://www.phpdoc.org">phpDocumentor 1.4.2</a>
+	      </div>
+      </td></tr></table>
+    </td>
+  </tr>
+</table>
+</div>
+</div>
+</body>
+</html>

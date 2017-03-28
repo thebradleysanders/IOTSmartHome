@@ -1,0 +1,606 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>Docs For Class SqueezePlayers</title>
+<link rel="stylesheet" type="text/css" href="../media/style.css" />
+</head>
+<body>
+<a name="top" style="display:none;"></a>
+<div align="center">
+<div class="page">
+<table border="0" cellspacing="0" cellpadding="0" width="100%">
+  <tr>
+    <td class="header_top"><div class="logo"><!-- crazy logo start--><div style="margin-bottom:0.75em;"><a href="http://org.0r9.org" style="color:#000;text-decoration:none;" title="0r9.org - Generally just disorganized."><span style="padding-bottom:0.75em;"><strong><font size="7" face="Verdana, Arial, Helvetica, sans-serif"><em>0</em></font><font color="#FF0000"size="7" face="Times,serif;">r</font></strong><span style="position:relative;top:0.5em;"><font size="7" face="Verdana, Arial, Helvetica, sans-serif"><strong><em>9</em></strong></font></span>&nbsp;<span style="position:relative;top:-0.5em;"><font size="5"face="Verdana, Arial, Helvetica, sans-serif"><strong><em>.org</em></strong></font></span></span></a><div style="margin-bottom:-0.75em;">&nbsp;</div><tt>&ldquo;Organization ((unofficial)) of the disorganized.<br />Don't ask! We can't find it.&rdquo;</tt></div><!-- crazy logo end--></div><div class="package_header">SqueezePHPAPI</div></td>
+  </tr>
+  <tr><td class="header_line"><img src="../media/empty.png" width="1" height="1" border="0" alt=""  /></td></tr>
+  <tr>
+    <td class="header_menu">
+        
+                                    
+                              		  [ <a href="../classtrees_SqueezePHPAPI.html" class="menu">class tree: SqueezePHPAPI</a> ]
+		  [ <a href="../elementindex_SqueezePHPAPI.html" class="menu">index: SqueezePHPAPI</a> ]
+		  	    [ <a href="../elementindex.html" class="menu">all elements</a> ]
+  	    [ <a href="../index.html" class="menu">doc index</a> ]
+    </td>
+  </tr>
+  <tr><td class="header_line"><img src="../media/empty.png" width="1" height="1" border="0" alt=""  /></td></tr>
+</table>
+
+<table width="100%" border="0" cellpadding="0" cellspacing="0">
+  <tr valign="top">
+    <td width="200" class="menu">
+	<div id="ric">
+					<p><a href="../ric_README.html">README</a></p>
+					<p><a href="../ric_ChangeLog.html">ChangeLog</a></p>
+					<p><a href="../ric_INSTALL.html">INSTALL</a></p>
+					<p><a href="../ric_NEWS.html">NEWS</a></p>
+			</div>
+	<div id="todolist">
+			<p><a href="../todolist.html">Todo List</a></p>
+	</div>
+      <b>Packages:</b><br />
+              <a href="../li_SqueezePHPAPI.html">SqueezePHPAPI</a><br />
+            <br /><br />
+                        <b>Files:</b><br />
+      	  <div class="package">
+			<a href="../SqueezePHPAPI/_examples---basic_example.php.html">		basic_example.php
+		</a><br />
+			<a href="../SqueezePHPAPI/_lib---class.SqueezeAlarm.php.html">		class.SqueezeAlarm.php
+		</a><br />
+			<a href="../SqueezePHPAPI/_lib---class.SqueezeCenter.php.html">		class.SqueezeCenter.php
+		</a><br />
+			<a href="../SqueezePHPAPI/_lib---class.SqueezeConnection.php.html">		class.SqueezeConnection.php
+		</a><br />
+			<a href="../SqueezePHPAPI/_lib---class.SqueezeDatabase.php.html">		class.SqueezeDatabase.php
+		</a><br />
+			<a href="../SqueezePHPAPI/_lib---class.SqueezeMixer.php.html">		class.SqueezeMixer.php
+		</a><br />
+			<a href="../SqueezePHPAPI/_lib---class.SqueezePlayer.php.html">		class.SqueezePlayer.php
+		</a><br />
+			<a href="../SqueezePHPAPI/_lib---class.SqueezePlayers.php.html">		class.SqueezePlayers.php
+		</a><br />
+			<a href="../SqueezePHPAPI/_lib---class.SqueezePlaylist.php.html">		class.SqueezePlaylist.php
+		</a><br />
+			<a href="../SqueezePHPAPI/_lib---class.SqueezeStreamProxy.php.html">		class.SqueezeStreamProxy.php
+		</a><br />
+	  </div><br />
+      
+      
+            <b>Classes:</b><br />
+        <div class="package">
+		    		<a href="../SqueezePHPAPI/SqueezeAlarm.html">SqueezeAlarm</a><br />
+	    		<a href="../SqueezePHPAPI/SqueezeCenter.html">SqueezeCenter</a><br />
+	    		<a href="../SqueezePHPAPI/SqueezeConnection.html">SqueezeConnection</a><br />
+	    		<a href="../SqueezePHPAPI/SqueezeDatabase.html">SqueezeDatabase</a><br />
+	    		<a href="../SqueezePHPAPI/SqueezeMixer.html">SqueezeMixer</a><br />
+	    		<a href="../SqueezePHPAPI/SqueezePlayer.html">SqueezePlayer</a><br />
+	    		<a href="../SqueezePHPAPI/SqueezePlayers.html">SqueezePlayers</a><br />
+	    		<a href="../SqueezePHPAPI/SqueezePlaylist.html">SqueezePlaylist</a><br />
+	    		<a href="../SqueezePHPAPI/SqueezeStreamProxy.html">SqueezeStreamProxy</a><br />
+	  </div>
+                </td>
+    <td style="padding-left:1em;">
+      <table cellpadding="10" cellspacing="0" width="100%" border="0"><tr><td valign="top">
+
+<h1>Class: SqueezePlayers</h1>
+Source Location: /lib/class.SqueezePlayers.php<br /><br />
+
+
+<table width="100%" border="0">
+<tr><td valign="top">
+
+<h3><a href="#class_details">Class Overview</a></h3>
+<div class="description">SqueezePlayers</div><br /><br />
+<h4>Author(s):</h4>
+<ul>
+          <li>David Broz &lt;<a href="mailto:db-dev__AT__0r9.org">db-dev__AT__0r9.org</a>&gt;</li>
+                  </ul>
+
+
+
+
+          
+      
+
+<h4>Copyright:</h4>
+<ul>
+  <li>(c) 2009 by David Broz - <a href="http://org.0r9.org">Disorganization</a> Zurich, Switzerland</li>
+</ul>
+        
+</td>
+
+
+
+<td valign="top">
+<h3><a href="#class_methods">Methods</a></h3>
+<ul>
+    <li><a href="../SqueezePHPAPI/SqueezePlayers.html#method__construct">__construct</a></li>
+    <li><a href="../SqueezePHPAPI/SqueezePlayers.html#method__destruct">__destruct</a></li>
+    <li><a href="../SqueezePHPAPI/SqueezePlayers.html#methodcanpoweroff">canpoweroff</a></li>
+    <li><a href="../SqueezePHPAPI/SqueezePlayers.html#methodcount">count</a></li>
+    <li><a href="../SqueezePHPAPI/SqueezePlayers.html#methoddisplaytype">displaytype</a></li>
+    <li><a href="../SqueezePHPAPI/SqueezePlayers.html#methodid">id</a></li>
+    <li><a href="../SqueezePHPAPI/SqueezePlayers.html#methodip">ip</a></li>
+    <li><a href="../SqueezePHPAPI/SqueezePlayers.html#methodisplayer">isplayer</a></li>
+    <li><a href="../SqueezePHPAPI/SqueezePlayers.html#methodmodel">model</a></li>
+    <li><a href="../SqueezePHPAPI/SqueezePlayers.html#methodname">name</a></li>
+    <li><a href="../SqueezePHPAPI/SqueezePlayers.html#methodplayers">players</a></li>
+    <li><a href="../SqueezePHPAPI/SqueezePlayers.html#methodsyncgroups">syncgroups</a></li>
+    <li><a href="../SqueezePHPAPI/SqueezePlayers.html#methoduuid">uuid</a></li>
+  </ul>
+</td>
+
+</tr></table>
+<hr />
+
+<table width="100%" border="0"><tr>
+
+
+
+
+
+<td>&nbsp;</td>
+</tr></table>
+<hr />
+
+<a name="class_details"></a>
+<h3>Class Details</h3>
+<div class="tags">
+[line 27]<br />
+SqueezePlayers<br /><br /><p>Squeeze Center player management.</p><br /><h4>Tags:</h4>
+<div class="tags">
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><b>author:</b>&nbsp;&nbsp;</td><td>David Broz &lt;<a href="mailto:db-dev__AT__0r9.org">db-dev__AT__0r9.org</a>&gt;</td>
+  </tr>
+  <tr>
+    <td><b>copyright:</b>&nbsp;&nbsp;</td><td>(c) 2009 by David Broz - <a href="http://org.0r9.org">Disorganization</a> Zurich, Switzerland</td>
+  </tr>
+  <tr>
+    <td><b>license:</b>&nbsp;&nbsp;</td><td><a href="http://creativecommons.org/licenses/GPL/2.0/">GNU General Public License v2</a></td>
+  </tr>
+</table>
+</div>
+</div><br /><br />
+<div class="top">[ <a href="#top">Top</a> ]</div><br />
+
+
+<hr />
+<a name="class_methods"></a>
+<h3>Class Methods</h3>
+<div class="tags">
+
+  <hr />
+	<a name="method__construct"></a>
+	<h3>constructor __construct <span class="smalllinenumber">[line 44]</span></h3>
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code><a href="../SqueezePHPAPI/SqueezePlayers.html">SqueezePlayers</a> __construct(
+<a href="../SqueezePHPAPI/SqueezeConnection.html">SqueezeConnection</a>
+$CLI)</code>
+    </td></tr></table>
+    </td></tr></table><br />
+	
+		SqueezePlayers (constructor)<br /><br /><br /><br />
+
+	
+        <h4>Parameters:</h4>
+    <div class="tags">
+    <table border="0" cellspacing="0" cellpadding="0">
+          <tr>
+        <td class="type"><a href="../SqueezePHPAPI/SqueezeConnection.html">SqueezeConnection</a>&nbsp;&nbsp;</td>
+        <td><b>$CLI</b>&nbsp;&nbsp;</td>
+        <td></td>
+      </tr>
+        </table>
+    </div><br />
+        <div class="top">[ <a href="#top">Top</a> ]</div>
+  </div>
+  <hr />
+	<a name="method__destruct"></a>
+	<h3>destructor __destruct <span class="smalllinenumber">[line 197]</span></h3>
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code>void __destruct(
+)</code>
+    </td></tr></table>
+    </td></tr></table><br />
+	
+		SqueezePlayers (destructor)<br /><br /><br /><br />
+
+	
+        <div class="top">[ <a href="#top">Top</a> ]</div>
+  </div>
+  <hr />
+	<a name="methodcanpoweroff"></a>
+	<h3>method canpoweroff <span class="smalllinenumber">[line 160]</span></h3>
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code>boolean canpoweroff(
+[string
+$playerindex_id = &quot;&quot;])</code>
+    </td></tr></table>
+    </td></tr></table><br />
+	
+		canpoweroff<br /><br /><p>Returns wether a player can be powered off or not. Current hardware players and SoftSqueeze would return 1, web clients 0.</p><br /><h4>Tags:</h4>
+<div class="tags">
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><b>access:</b>&nbsp;&nbsp;</td><td>public</td>
+  </tr>
+</table>
+</div>
+<br /><br />
+
+	
+        <h4>Parameters:</h4>
+    <div class="tags">
+    <table border="0" cellspacing="0" cellpadding="0">
+          <tr>
+        <td class="type">string&nbsp;&nbsp;</td>
+        <td><b>$playerindex_id</b>&nbsp;&nbsp;</td>
+        <td>&lt;playerindex|playerid&gt;</td>
+      </tr>
+        </table>
+    </div><br />
+        <div class="top">[ <a href="#top">Top</a> ]</div>
+  </div>
+  <hr />
+	<a name="methodcount"></a>
+	<h3>method count <span class="smalllinenumber">[line 56]</span></h3>
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code>integer count(
+)</code>
+    </td></tr></table>
+    </td></tr></table><br />
+	
+		count<br /><br /><p>The &quot;player count ?&quot; query returns the number of players connected to the server.</p><br /><h4>Tags:</h4>
+<div class="tags">
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><b>access:</b>&nbsp;&nbsp;</td><td>public</td>
+  </tr>
+</table>
+</div>
+<br /><br />
+
+	
+        <div class="top">[ <a href="#top">Top</a> ]</div>
+  </div>
+  <hr />
+	<a name="methoddisplaytype"></a>
+	<h3>method displaytype <span class="smalllinenumber">[line 147]</span></h3>
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code>string displaytype(
+[string
+$playerindex_id = &quot;&quot;])</code>
+    </td></tr></table>
+    </td></tr></table><br />
+	
+		displaytype<br /><br /><p>The &quot;player displaytype ?&quot; query returns the display model of the player. Graphical display types start with &quot;graphic-&quot;, non-graphical display type with &quot;noritake-&quot;.</p><br /><h4>Tags:</h4>
+<div class="tags">
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><b>access:</b>&nbsp;&nbsp;</td><td>public</td>
+  </tr>
+</table>
+</div>
+<br /><br />
+
+	
+        <h4>Parameters:</h4>
+    <div class="tags">
+    <table border="0" cellspacing="0" cellpadding="0">
+          <tr>
+        <td class="type">string&nbsp;&nbsp;</td>
+        <td><b>$playerindex_id</b>&nbsp;&nbsp;</td>
+        <td>&lt;playerindex|playerid&gt;</td>
+      </tr>
+        </table>
+    </div><br />
+        <div class="top">[ <a href="#top">Top</a> ]</div>
+  </div>
+  <hr />
+	<a name="methodid"></a>
+	<h3>method id <span class="smalllinenumber">[line 69]</span></h3>
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code>string id(
+[string
+$playerindex = &quot;&quot;])</code>
+    </td></tr></table>
+    </td></tr></table><br />
+	
+		id<br /><br /><p>The &quot;player id ?&quot; query returns the unique identifier of a player, (&lt;playerid&gt; parameter of many CLI commands). For physical players this is generally the MAC address. The IP address is used for remote streams.</p><br /><h4>Tags:</h4>
+<div class="tags">
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><b>access:</b>&nbsp;&nbsp;</td><td>public</td>
+  </tr>
+</table>
+</div>
+<br /><br />
+
+	
+        <h4>Parameters:</h4>
+    <div class="tags">
+    <table border="0" cellspacing="0" cellpadding="0">
+          <tr>
+        <td class="type">string&nbsp;&nbsp;</td>
+        <td><b>$playerindex</b>&nbsp;&nbsp;</td>
+        <td>&lt;playerindex&gt;</td>
+      </tr>
+        </table>
+    </div><br />
+        <div class="top">[ <a href="#top">Top</a> ]</div>
+  </div>
+  <hr />
+	<a name="methodip"></a>
+	<h3>method ip <span class="smalllinenumber">[line 108]</span></h3>
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code>string ip(
+[string
+$playerindex_id = &quot;&quot;])</code>
+    </td></tr></table>
+    </td></tr></table><br />
+	
+		name<br /><br /><p>The &quot;player ip ?&quot; query returns the IP address (along with port number) of the specified player.</p><br /><h4>Tags:</h4>
+<div class="tags">
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><b>access:</b>&nbsp;&nbsp;</td><td>public</td>
+  </tr>
+</table>
+</div>
+<br /><br />
+
+	
+        <h4>Parameters:</h4>
+    <div class="tags">
+    <table border="0" cellspacing="0" cellpadding="0">
+          <tr>
+        <td class="type">string&nbsp;&nbsp;</td>
+        <td><b>$playerindex_id</b>&nbsp;&nbsp;</td>
+        <td>&lt;playerindex|playerid&gt;</td>
+      </tr>
+        </table>
+    </div><br />
+        <div class="top">[ <a href="#top">Top</a> ]</div>
+  </div>
+  <hr />
+	<a name="methodisplayer"></a>
+	<h3>method isplayer <span class="smalllinenumber">[line 134]</span></h3>
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code>boolean isplayer(
+[string
+$playerindex_id = &quot;&quot;])</code>
+    </td></tr></table>
+    </td></tr></table><br />
+	
+		isplayer<br /><br /><p>Whether a player is a known player model. Currently know models are &quot;transporter&quot;, &quot;squeezebox2&quot;, &quot;squeezebox&quot;, &quot;slimp3&quot;, &quot;softsqueeze&quot;, or &quot;http&quot; (for remote streaming connections). Will return 0 for streaming connections.</p><br /><h4>Tags:</h4>
+<div class="tags">
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><b>access:</b>&nbsp;&nbsp;</td><td>public</td>
+  </tr>
+</table>
+</div>
+<br /><br />
+
+	
+        <h4>Parameters:</h4>
+    <div class="tags">
+    <table border="0" cellspacing="0" cellpadding="0">
+          <tr>
+        <td class="type">string&nbsp;&nbsp;</td>
+        <td><b>$playerindex_id</b>&nbsp;&nbsp;</td>
+        <td>&lt;playerindex|playerid&gt;</td>
+      </tr>
+        </table>
+    </div><br />
+        <div class="top">[ <a href="#top">Top</a> ]</div>
+  </div>
+  <hr />
+	<a name="methodmodel"></a>
+	<h3>method model <span class="smalllinenumber">[line 121]</span></h3>
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code>string model(
+[string
+$playerindex_id = &quot;&quot;])</code>
+    </td></tr></table>
+    </td></tr></table><br />
+	
+		model<br /><br /><p>The &quot;player model ?&quot; query returns the model of the player, currently one of &quot;transporter&quot;, &quot;squeezebox2&quot;, &quot;squeezebox&quot;, &quot;slimp3&quot;, &quot;softsqueeze&quot;, or &quot;http&quot; (for remote streaming connections).</p><br /><h4>Tags:</h4>
+<div class="tags">
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><b>access:</b>&nbsp;&nbsp;</td><td>public</td>
+  </tr>
+</table>
+</div>
+<br /><br />
+
+	
+        <h4>Parameters:</h4>
+    <div class="tags">
+    <table border="0" cellspacing="0" cellpadding="0">
+          <tr>
+        <td class="type">string&nbsp;&nbsp;</td>
+        <td><b>$playerindex_id</b>&nbsp;&nbsp;</td>
+        <td>&lt;playerindex|playerid&gt;</td>
+      </tr>
+        </table>
+    </div><br />
+        <div class="top">[ <a href="#top">Top</a> ]</div>
+  </div>
+  <hr />
+	<a name="methodname"></a>
+	<h3>method name <span class="smalllinenumber">[line 95]</span></h3>
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code>string name(
+[string
+$playerindex_id = &quot;&quot;])</code>
+    </td></tr></table>
+    </td></tr></table><br />
+	
+		name<br /><br /><p>The &quot;player name ?&quot; query returns the human-readable name for the specified player. If the name has not been specified by the user in the Player Settings, then a default name will be used, usually the IP address.</p><br /><h4>Tags:</h4>
+<div class="tags">
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><b>access:</b>&nbsp;&nbsp;</td><td>public</td>
+  </tr>
+</table>
+</div>
+<br /><br />
+
+	
+        <h4>Parameters:</h4>
+    <div class="tags">
+    <table border="0" cellspacing="0" cellpadding="0">
+          <tr>
+        <td class="type">string&nbsp;&nbsp;</td>
+        <td><b>$playerindex_id</b>&nbsp;&nbsp;</td>
+        <td>&lt;playerindex|playerid&gt;</td>
+      </tr>
+        </table>
+    </div><br />
+        <div class="top">[ <a href="#top">Top</a> ]</div>
+  </div>
+  <hr />
+	<a name="methodplayers"></a>
+	<h3>method players <span class="smalllinenumber">[line 187]</span></h3>
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code>array players(
+[integer
+$start = 0], [integer
+$itemsPerResponse = 5], [string
+$playerprefs = &quot;&quot;])</code>
+    </td></tr></table>
+    </td></tr></table><br />
+	
+		players<br /><br /><p>The &quot;players&quot; query returns information about all &quot;players&quot; (physical players as well as streaming clients) known by the SqueezeCenter.</p><br /><h4>Tags:</h4>
+<div class="tags">
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><b>access:</b>&nbsp;&nbsp;</td><td>public</td>
+  </tr>
+</table>
+</div>
+<br /><br />
+
+	
+        <h4>Parameters:</h4>
+    <div class="tags">
+    <table border="0" cellspacing="0" cellpadding="0">
+          <tr>
+        <td class="type">integer&nbsp;&nbsp;</td>
+        <td><b>$start</b>&nbsp;&nbsp;</td>
+        <td></td>
+      </tr>
+          <tr>
+        <td class="type">integer&nbsp;&nbsp;</td>
+        <td><b>$itemsPerResponse</b>&nbsp;&nbsp;</td>
+        <td></td>
+      </tr>
+          <tr>
+        <td class="type">string&nbsp;&nbsp;</td>
+        <td><b>$playerprefs</b>&nbsp;&nbsp;</td>
+        <td>Comma separated list of preference values to return (for each player).</td>
+      </tr>
+        </table>
+    </div><br />
+        <div class="top">[ <a href="#top">Top</a> ]</div>
+  </div>
+  <hr />
+	<a name="methodsyncgroups"></a>
+	<h3>method syncgroups <span class="smalllinenumber">[line 172]</span></h3>
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code>string syncgroups(
+)</code>
+    </td></tr></table>
+    </td></tr></table><br />
+	
+		syncgroups<br /><br /><p>The &quot;syncgroups&quot; query returns a comma separated list of sync groups members (IDs and names).</p><br /><h4>Tags:</h4>
+<div class="tags">
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><b>access:</b>&nbsp;&nbsp;</td><td>public</td>
+  </tr>
+</table>
+</div>
+<br /><br />
+
+	
+        <div class="top">[ <a href="#top">Top</a> ]</div>
+  </div>
+  <hr />
+	<a name="methoduuid"></a>
+	<h3>method uuid <span class="smalllinenumber">[line 82]</span></h3>
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code>string uuid(
+[string
+$playerindex = &quot;&quot;])</code>
+    </td></tr></table>
+    </td></tr></table><br />
+	
+		uuid<br /><br /><p>The &quot;player uuid ?&quot; query returns the player uuid. The uuid is used by SqueezeNetwork.</p><br /><h4>Tags:</h4>
+<div class="tags">
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><b>access:</b>&nbsp;&nbsp;</td><td>public</td>
+  </tr>
+</table>
+</div>
+<br /><br />
+
+	
+        <h4>Parameters:</h4>
+    <div class="tags">
+    <table border="0" cellspacing="0" cellpadding="0">
+          <tr>
+        <td class="type">string&nbsp;&nbsp;</td>
+        <td><b>$playerindex</b>&nbsp;&nbsp;</td>
+        <td>&lt;playerindex&gt;</td>
+      </tr>
+        </table>
+    </div><br />
+        <div class="top">[ <a href="#top">Top</a> ]</div>
+  </div>
+</div><br />
+
+
+        <div class="credit">
+		    <hr />
+		    Documentation generated on Wed, 16 Sep 2009 18:08:28 +0200 by <a href="http://www.phpdoc.org">phpDocumentor 1.4.2</a>
+	      </div>
+      </td></tr></table>
+    </td>
+  </tr>
+</table>
+</div>
+</div>
+</body>
+</html>

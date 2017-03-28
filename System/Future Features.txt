@@ -1,0 +1,34 @@
+Offset time for sunset/sunrise
+lifx support
+sonos support
+save camera images (take picture button for cameras)
+System Monitor for raspberry Pi
+Plex/Kodi
+any other ideas
+
+
+Built In Data Sensors:
+	System Monitor for raspberry pi
+		wifi signal strength if applicable (%)
+		Memory usage/Total (MB) & (%)
+		Hdd Usage/Total (GB) & (%)
+		CPU Usage (%)
+		uptime
+
+	Internet Speed Data Sensor:
+		Upload
+		Download
+		Ping
+		Router Connetion Status
+		
+	Ping Data Sensor
+		hostname/ip Address
+		connected/disconnected
+			
+by adding these two we can do an ifttt of:
+	IF routerPing = Disconneded THEN restart router
+	IF routerDownload <25 || routerUpload < 1 THEN restart router
+
+	
+	
+

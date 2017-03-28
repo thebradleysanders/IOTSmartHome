@@ -1,0 +1,44 @@
+#################################################################################### SmartHome Documentation ##########################################################################
+																			Created By: Brad Sanders Year: 15-17
+#######################################################################################################################################################################################
+Supported Node Types:
+	Transmit -needed for "send to node" function in Manage Devices
+	Recieve - not yet used
+	
+Data Format For Nodes:
+	:Name:version:SSID:PASSWORD:IP:Signal(dbm):MfDate:Desc:LastPacket:Uptime:Type(read above):
+Data Format for Data Sensors:
+	No limit on value/title count, Visible must be 1|0
+	Title1:Title2:Title3:Title4|Value1:Value2:Value3:Value4|isVisible1:isVisible2:isVisible3:isVisible4
+	
+Installed API's:
+	Belkin Wemo (Unoffical)
+	Phillips Hue
+	Smtp Email (PHP Mailer)
+	iCloud
+	Squeezebox (Unoffical)
+	MQTT
+	Open Weather Map
+	
+Folder Structure:
+	sh -> Contains all files needed for the web and SmatHome Broker
+	sh/system - > Contains the needed files for each API and the core of the program
+	sh/gui -> Contains files needed for the web ui
+	sh/gui/images/users -> Contains user images
+	sh/gui/includes -> Contains files needed for the web ui and encode functions
+	sh/gui/music -> Used to store music for the SqueezeBox Server/clients
+	sh/system/api/SmartHome_API/SHBroker -> Contains files only needed for the System Broker (Scripts that run in an endless loop)
+	sh/system/api/SmartHome_API/ifttt -> Contains files only needed for the SmartHome automation
+	
+System Requirements:
+	PHP 5.5+
+	MQTT Server
+	MySQLI
+	internet access - not required but prefered
+	cURL Support
+	soap Support
+	SH Broker Functions
+	System Monitor Funtions (Raspberry Pi 3, Windows)
+	MIME Types:
+		font/opentype .woff2
+		text/css .less

@@ -1,0 +1,714 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>Docs For Class SqueezeCenter</title>
+<link rel="stylesheet" type="text/css" href="../media/style.css" />
+</head>
+<body>
+<a name="top" style="display:none;"></a>
+<div align="center">
+<div class="page">
+<table border="0" cellspacing="0" cellpadding="0" width="100%">
+  <tr>
+    <td class="header_top"><div class="logo"><!-- crazy logo start--><div style="margin-bottom:0.75em;"><a href="http://org.0r9.org" style="color:#000;text-decoration:none;" title="0r9.org - Generally just disorganized."><span style="padding-bottom:0.75em;"><strong><font size="7" face="Verdana, Arial, Helvetica, sans-serif"><em>0</em></font><font color="#FF0000"size="7" face="Times,serif;">r</font></strong><span style="position:relative;top:0.5em;"><font size="7" face="Verdana, Arial, Helvetica, sans-serif"><strong><em>9</em></strong></font></span>&nbsp;<span style="position:relative;top:-0.5em;"><font size="5"face="Verdana, Arial, Helvetica, sans-serif"><strong><em>.org</em></strong></font></span></span></a><div style="margin-bottom:-0.75em;">&nbsp;</div><tt>&ldquo;Organization ((unofficial)) of the disorganized.<br />Don't ask! We can't find it.&rdquo;</tt></div><!-- crazy logo end--></div><div class="package_header">SqueezePHPAPI</div></td>
+  </tr>
+  <tr><td class="header_line"><img src="../media/empty.png" width="1" height="1" border="0" alt=""  /></td></tr>
+  <tr>
+    <td class="header_menu">
+        
+                                    
+                              		  [ <a href="../classtrees_SqueezePHPAPI.html" class="menu">class tree: SqueezePHPAPI</a> ]
+		  [ <a href="../elementindex_SqueezePHPAPI.html" class="menu">index: SqueezePHPAPI</a> ]
+		  	    [ <a href="../elementindex.html" class="menu">all elements</a> ]
+  	    [ <a href="../index.html" class="menu">doc index</a> ]
+    </td>
+  </tr>
+  <tr><td class="header_line"><img src="../media/empty.png" width="1" height="1" border="0" alt=""  /></td></tr>
+</table>
+
+<table width="100%" border="0" cellpadding="0" cellspacing="0">
+  <tr valign="top">
+    <td width="200" class="menu">
+	<div id="ric">
+					<p><a href="../ric_README.html">README</a></p>
+					<p><a href="../ric_ChangeLog.html">ChangeLog</a></p>
+					<p><a href="../ric_INSTALL.html">INSTALL</a></p>
+					<p><a href="../ric_NEWS.html">NEWS</a></p>
+			</div>
+	<div id="todolist">
+			<p><a href="../todolist.html">Todo List</a></p>
+	</div>
+      <b>Packages:</b><br />
+              <a href="../li_SqueezePHPAPI.html">SqueezePHPAPI</a><br />
+            <br /><br />
+                        <b>Files:</b><br />
+      	  <div class="package">
+			<a href="../SqueezePHPAPI/_examples---basic_example.php.html">		basic_example.php
+		</a><br />
+			<a href="../SqueezePHPAPI/_lib---class.SqueezeAlarm.php.html">		class.SqueezeAlarm.php
+		</a><br />
+			<a href="../SqueezePHPAPI/_lib---class.SqueezeCenter.php.html">		class.SqueezeCenter.php
+		</a><br />
+			<a href="../SqueezePHPAPI/_lib---class.SqueezeConnection.php.html">		class.SqueezeConnection.php
+		</a><br />
+			<a href="../SqueezePHPAPI/_lib---class.SqueezeDatabase.php.html">		class.SqueezeDatabase.php
+		</a><br />
+			<a href="../SqueezePHPAPI/_lib---class.SqueezeMixer.php.html">		class.SqueezeMixer.php
+		</a><br />
+			<a href="../SqueezePHPAPI/_lib---class.SqueezePlayer.php.html">		class.SqueezePlayer.php
+		</a><br />
+			<a href="../SqueezePHPAPI/_lib---class.SqueezePlayers.php.html">		class.SqueezePlayers.php
+		</a><br />
+			<a href="../SqueezePHPAPI/_lib---class.SqueezePlaylist.php.html">		class.SqueezePlaylist.php
+		</a><br />
+			<a href="../SqueezePHPAPI/_lib---class.SqueezeStreamProxy.php.html">		class.SqueezeStreamProxy.php
+		</a><br />
+	  </div><br />
+      
+      
+            <b>Classes:</b><br />
+        <div class="package">
+		    		<a href="../SqueezePHPAPI/SqueezeAlarm.html">SqueezeAlarm</a><br />
+	    		<a href="../SqueezePHPAPI/SqueezeCenter.html">SqueezeCenter</a><br />
+	    		<a href="../SqueezePHPAPI/SqueezeConnection.html">SqueezeConnection</a><br />
+	    		<a href="../SqueezePHPAPI/SqueezeDatabase.html">SqueezeDatabase</a><br />
+	    		<a href="../SqueezePHPAPI/SqueezeMixer.html">SqueezeMixer</a><br />
+	    		<a href="../SqueezePHPAPI/SqueezePlayer.html">SqueezePlayer</a><br />
+	    		<a href="../SqueezePHPAPI/SqueezePlayers.html">SqueezePlayers</a><br />
+	    		<a href="../SqueezePHPAPI/SqueezePlaylist.html">SqueezePlaylist</a><br />
+	    		<a href="../SqueezePHPAPI/SqueezeStreamProxy.html">SqueezeStreamProxy</a><br />
+	  </div>
+                </td>
+    <td style="padding-left:1em;">
+      <table cellpadding="10" cellspacing="0" width="100%" border="0"><tr><td valign="top">
+
+<h1>Class: SqueezeCenter</h1>
+Source Location: /lib/class.SqueezeCenter.php<br /><br />
+
+
+<table width="100%" border="0">
+<tr><td valign="top">
+
+<h3><a href="#class_details">Class Overview</a></h3>
+<div class="description">SqueezeCenter</div><br /><br />
+<h4>Author(s):</h4>
+<ul>
+          <li>David Broz &lt;<a href="mailto:db-dev__AT__0r9.org">db-dev__AT__0r9.org</a>&gt;</li>
+                  </ul>
+
+
+
+
+          
+      
+
+<h4>Copyright:</h4>
+<ul>
+  <li>(c) 2009 by David Broz - <a href="http://org.0r9.org">Disorganization</a> Zurich, Switzerland</li>
+</ul>
+        
+</td>
+
+<td valign="top">
+<h3><a href="#class_vars">Variables</a></h3>
+<ul>
+    <li><a href="../SqueezePHPAPI/SqueezeCenter.html#varCurrentPlayer">$CurrentPlayer</a></li>
+    <li><a href="../SqueezePHPAPI/SqueezeCenter.html#varDatabase">$Database</a></li>
+    <li><a href="../SqueezePHPAPI/SqueezeCenter.html#varPlayers">$Players</a></li>
+  </ul>
+</td>
+
+
+<td valign="top">
+<h3><a href="#class_methods">Methods</a></h3>
+<ul>
+    <li><a href="../SqueezePHPAPI/SqueezeCenter.html#method__construct">__construct</a></li>
+    <li><a href="../SqueezePHPAPI/SqueezeCenter.html#method__destruct">__destruct</a></li>
+    <li><a href="../SqueezePHPAPI/SqueezeCenter.html#methodcan">can</a></li>
+    <li><a href="../SqueezePHPAPI/SqueezeCenter.html#methodconnect">connect</a></li>
+    <li><a href="../SqueezePHPAPI/SqueezeCenter.html#methoddebug">debug</a></li>
+    <li><a href="../SqueezePHPAPI/SqueezeCenter.html#methoddisconnect">disconnect</a></li>
+    <li><a href="../SqueezePHPAPI/SqueezeCenter.html#methodgetstring">getstring</a></li>
+    <li><a href="../SqueezePHPAPI/SqueezeCenter.html#methodlisten">listen</a></li>
+    <li><a href="../SqueezePHPAPI/SqueezeCenter.html#methodpref">pref</a></li>
+    <li><a href="../SqueezePHPAPI/SqueezeCenter.html#methodpref_validate">pref_validate</a></li>
+    <li><a href="../SqueezePHPAPI/SqueezeCenter.html#methodsetCurrentPlayer">setCurrentPlayer</a></li>
+    <li><a href="../SqueezePHPAPI/SqueezeCenter.html#methodshutdown">shutdown</a></li>
+    <li><a href="../SqueezePHPAPI/SqueezeCenter.html#methodsubscribe">subscribe</a></li>
+    <li><a href="../SqueezePHPAPI/SqueezeCenter.html#methodversion">version</a></li>
+    <li><a href="../SqueezePHPAPI/SqueezeCenter.html#method__get">__get</a></li>
+  </ul>
+</td>
+
+</tr></table>
+<hr />
+
+<table width="100%" border="0"><tr>
+
+
+
+
+
+<td>&nbsp;</td>
+</tr></table>
+<hr />
+
+<a name="class_details"></a>
+<h3>Class Details</h3>
+<div class="tags">
+[line 28]<br />
+SqueezeCenter<br /><br /><p>Squeezecenter Command Line Inteface API</p><br /><h4>Tags:</h4>
+<div class="tags">
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><b>author:</b>&nbsp;&nbsp;</td><td>David Broz &lt;<a href="mailto:db-dev__AT__0r9.org">db-dev__AT__0r9.org</a>&gt;</td>
+  </tr>
+  <tr>
+    <td><b>copyright:</b>&nbsp;&nbsp;</td><td>(c) 2009 by David Broz - <a href="http://org.0r9.org">Disorganization</a> Zurich, Switzerland</td>
+  </tr>
+  <tr>
+    <td><b>license:</b>&nbsp;&nbsp;</td><td><a href="http://creativecommons.org/licenses/GPL/2.0/">GNU General Public License v2</a></td>
+  </tr>
+</table>
+</div>
+</div><br /><br />
+<div class="top">[ <a href="#top">Top</a> ]</div><br />
+
+<hr />
+<a name="class_vars"></a>
+<h3>Class Variables</h3>
+<div class="tags">
+	<a name="varCurrentPlayer"></a>
+	<h4>$CurrentPlayer = <span class="value">&nbsp;</span></h4>
+	<p>[line 60]</p>
+  CurrentPlayer<br /><br /><p>A currently selected SqueezePlayer Object</p><br /><h4>Tags:</h4>
+<div class="tags">
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><b>access:</b>&nbsp;&nbsp;</td><td>protected</td>
+  </tr>
+</table>
+</div>
+
+  <br />
+	<div class="tags">
+  <table border="0" cellspacing="0" cellpadding="0">
+    <tr>
+      <td><b>Type:</b>&nbsp;&nbsp;</td>
+      <td><a href="../SqueezePHPAPI/SqueezePlayer.html">SqueezePlayer</a></td>
+    </tr>
+      </table>
+	</div><br /><br />
+	<div class="top">[ <a href="#top">Top</a> ]</div><br />
+	<a name="varDatabase"></a>
+	<h4>$Database = <span class="value">&nbsp;</span></h4>
+	<p>[line 44]</p>
+  Database<br /><br /><p>Connection to SqueezeDatabase Object of server.</p><br /><h4>Tags:</h4>
+<div class="tags">
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><b>access:</b>&nbsp;&nbsp;</td><td>protected</td>
+  </tr>
+</table>
+</div>
+
+  <br />
+	<div class="tags">
+  <table border="0" cellspacing="0" cellpadding="0">
+    <tr>
+      <td><b>Type:</b>&nbsp;&nbsp;</td>
+      <td><a href="../SqueezePHPAPI/SqueezeDatabase.html">SqueezeDatabase</a></td>
+    </tr>
+      </table>
+	</div><br /><br />
+	<div class="top">[ <a href="#top">Top</a> ]</div><br />
+	<a name="varPlayers"></a>
+	<h4>$Players = <span class="value">&nbsp;</span></h4>
+	<p>[line 52]</p>
+  Players<br /><br /><p>Connection to SqueezePlayers Object of server.</p><br /><h4>Tags:</h4>
+<div class="tags">
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><b>access:</b>&nbsp;&nbsp;</td><td>protected</td>
+  </tr>
+</table>
+</div>
+
+  <br />
+	<div class="tags">
+  <table border="0" cellspacing="0" cellpadding="0">
+    <tr>
+      <td><b>Type:</b>&nbsp;&nbsp;</td>
+      <td><a href="../SqueezePHPAPI/SqueezePlayers.html">SqueezePlayers</a></td>
+    </tr>
+      </table>
+	</div><br /><br />
+	<div class="top">[ <a href="#top">Top</a> ]</div><br />
+</div><br />
+
+<hr />
+<a name="class_methods"></a>
+<h3>Class Methods</h3>
+<div class="tags">
+
+  <hr />
+	<a name="method__construct"></a>
+	<h3>constructor __construct <span class="smalllinenumber">[line 70]</span></h3>
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code><a href="../SqueezePHPAPI/SqueezeCenter.html">SqueezeCenter</a> __construct(
+<a href="../SqueezePHPAPI/SqueezeConnection.html">SqueezeConnection</a>
+$CLI)</code>
+    </td></tr></table>
+    </td></tr></table><br />
+	
+		SqueezeCenter (constructor)<br /><br /><br /><br />
+
+	
+        <h4>Parameters:</h4>
+    <div class="tags">
+    <table border="0" cellspacing="0" cellpadding="0">
+          <tr>
+        <td class="type"><a href="../SqueezePHPAPI/SqueezeConnection.html">SqueezeConnection</a>&nbsp;&nbsp;</td>
+        <td><b>$CLI</b>&nbsp;&nbsp;</td>
+        <td></td>
+      </tr>
+        </table>
+    </div><br />
+        <div class="top">[ <a href="#top">Top</a> ]</div>
+  </div>
+  <hr />
+	<a name="method__destruct"></a>
+	<h3>destructor __destruct <span class="smalllinenumber">[line 313]</span></h3>
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code>void __destruct(
+)</code>
+    </td></tr></table>
+    </td></tr></table><br />
+	
+		SqueezeCenter (destructor)<br /><br /><br /><br />
+
+	
+        <div class="top">[ <a href="#top">Top</a> ]</div>
+  </div>
+  <hr />
+	<a name="methodcan"></a>
+	<h3>method can <span class="smalllinenumber">[line 115]</span></h3>
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code>boolean can(
+[string
+$request_terms = &quot;&quot;])</code>
+    </td></tr></table>
+    </td></tr></table><br />
+	
+		can<br /><br /><p>The &quot;can&quot; query allows the caller to determine if the command or query indicated by &lt;request terms&gt; is available.</p><br /><h4>Tags:</h4>
+<div class="tags">
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><b>access:</b>&nbsp;&nbsp;</td><td>public</td>
+  </tr>
+</table>
+</div>
+<br /><br />
+
+	
+        <h4>Parameters:</h4>
+    <div class="tags">
+    <table border="0" cellspacing="0" cellpadding="0">
+          <tr>
+        <td class="type">string&nbsp;&nbsp;</td>
+        <td><b>$request_terms</b>&nbsp;&nbsp;</td>
+        <td></td>
+      </tr>
+        </table>
+    </div><br />
+        <div class="top">[ <a href="#top">Top</a> ]</div>
+  </div>
+  <hr />
+	<a name="methodconnect"></a>
+	<h3>method connect <span class="smalllinenumber">[line 82]</span></h3>
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code>boolean connect(
+)</code>
+    </td></tr></table>
+    </td></tr></table><br />
+	
+		connect<br /><br /><p>Connects to SqueezeCenter CLI socket</p><br /><h4>Tags:</h4>
+<div class="tags">
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><b>access:</b>&nbsp;&nbsp;</td><td>public</td>
+  </tr>
+</table>
+</div>
+<br /><br />
+
+	
+        <div class="top">[ <a href="#top">Top</a> ]</div>
+  </div>
+  <hr />
+	<a name="methoddebug"></a>
+	<h3>method debug <span class="smalllinenumber">[line 229]</span></h3>
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code>string debug(
+[string
+$debug_category = &quot;&quot;], [string
+$state = &quot;&quot;])</code>
+    </td></tr></table>
+    </td></tr></table><br />
+	
+		debug<br /><br /><p>The &quot;debug&quot; command allows the caller to query or set the server's internal debugging categories. Use 'OFF' to silence, 'FATAL' for only seeing fatal errors, 'ERROR' for non-fatal errors, etc. Finally, using ? will query the current level for the category.</p><br /><h4>Tags:</h4>
+<div class="tags">
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><b>access:</b>&nbsp;&nbsp;</td><td>public</td>
+  </tr>
+</table>
+</div>
+<br /><br />
+
+	
+        <h4>Parameters:</h4>
+    <div class="tags">
+    <table border="0" cellspacing="0" cellpadding="0">
+          <tr>
+        <td class="type">string&nbsp;&nbsp;</td>
+        <td><b>$debug_category</b>&nbsp;&nbsp;</td>
+        <td></td>
+      </tr>
+          <tr>
+        <td class="type">string&nbsp;&nbsp;</td>
+        <td><b>$state</b>&nbsp;&nbsp;</td>
+        <td></td>
+      </tr>
+        </table>
+    </div><br />
+        <div class="top">[ <a href="#top">Top</a> ]</div>
+  </div>
+  <hr />
+	<a name="methoddisconnect"></a>
+	<h3>method disconnect <span class="smalllinenumber">[line 98]</span></h3>
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code>boolean disconnect(
+)</code>
+    </td></tr></table>
+    </td></tr></table><br />
+	
+		disconnect<br /><br /><p>Disconnects from SqueezeCenter CLI socket</p><br /><h4>Tags:</h4>
+<div class="tags">
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><b>access:</b>&nbsp;&nbsp;</td><td>public</td>
+  </tr>
+</table>
+</div>
+<br /><br />
+
+	
+        <div class="top">[ <a href="#top">Top</a> ]</div>
+  </div>
+  <hr />
+	<a name="methodgetstring"></a>
+	<h3>method getstring <span class="smalllinenumber">[line 214]</span></h3>
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code>string getstring(
+[string
+$stringtoken = &quot;&quot;])</code>
+    </td></tr></table>
+    </td></tr></table><br />
+	
+		getstring<br /><br /><p>The &quot;getstring&quot; command allows the caller to query one or several localized strings. String tokens can be passed as a single, concatenated value.</p><br /><h4>Tags:</h4>
+<div class="tags">
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><b>access:</b>&nbsp;&nbsp;</td><td>public</td>
+  </tr>
+</table>
+</div>
+<br /><br />
+
+	
+        <h4>Parameters:</h4>
+    <div class="tags">
+    <table border="0" cellspacing="0" cellpadding="0">
+          <tr>
+        <td class="type">string&nbsp;&nbsp;</td>
+        <td><b>$stringtoken</b>&nbsp;&nbsp;</td>
+        <td></td>
+      </tr>
+        </table>
+    </div><br />
+        <div class="top">[ <a href="#top">Top</a> ]</div>
+  </div>
+  <hr />
+	<a name="methodlisten"></a>
+	<h3>method listen <span class="smalllinenumber">[line 145]</span></h3>
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code>boolean listen(
+)</code>
+    </td></tr></table>
+    </td></tr></table><br />
+	
+		listen<br /><br /><p>!CURRENTLY NOT SUPPORTED</p><br /><h4>Tags:</h4>
+<div class="tags">
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><b>access:</b>&nbsp;&nbsp;</td><td>public</td>
+  </tr>
+</table>
+</div>
+<br /><br />
+
+	
+        <div class="top">[ <a href="#top">Top</a> ]</div>
+  </div>
+  <hr />
+	<a name="methodpref"></a>
+	<h3>method pref <span class="smalllinenumber">[line 171]</span></h3>
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code>mixed pref(
+[string
+$prefname = &quot;&quot;], [$prefvalue
+$prefvalue = &quot;&quot;])</code>
+    </td></tr></table>
+    </td></tr></table><br />
+	
+		pref<br /><br /><p>The &quot;pref&quot; command allows the caller to set and query the SqueezeCenter's internal preference values.</p><br /><h4>Tags:</h4>
+<div class="tags">
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><b>return:</b>&nbsp;&nbsp;</td><td>(boolean success) OR (string from query)</td>
+  </tr>
+  <tr>
+    <td><b>access:</b>&nbsp;&nbsp;</td><td>public</td>
+  </tr>
+</table>
+</div>
+<br /><br />
+
+	
+        <h4>Parameters:</h4>
+    <div class="tags">
+    <table border="0" cellspacing="0" cellpadding="0">
+          <tr>
+        <td class="type">string&nbsp;&nbsp;</td>
+        <td><b>$prefname</b>&nbsp;&nbsp;</td>
+        <td>&lt;prefname|namespace:prefname&gt;</td>
+      </tr>
+          <tr>
+        <td class="type">$prefvalue&nbsp;&nbsp;</td>
+        <td><b>$prefvalue</b>&nbsp;&nbsp;</td>
+        <td>&lt;prefvalue|?&gt;</td>
+      </tr>
+        </table>
+    </div><br />
+        <div class="top">[ <a href="#top">Top</a> ]</div>
+  </div>
+  <hr />
+	<a name="methodpref_validate"></a>
+	<h3>method pref_validate <span class="smalllinenumber">[line 195]</span></h3>
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code>string pref_validate(
+[string
+$prefname = &quot;&quot;], [$prefvalue
+$prefvalue = &quot;&quot;])</code>
+    </td></tr></table>
+    </td></tr></table><br />
+	
+		pref_validate<br /><br /><p>The &quot;pref validate&quot; command allows the caller to validate a SqueezeCenter's internal preference value without setting it.</p><br /><h4>Tags:</h4>
+<div class="tags">
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><b>access:</b>&nbsp;&nbsp;</td><td>public</td>
+  </tr>
+</table>
+</div>
+<br /><br />
+
+	
+        <h4>Parameters:</h4>
+    <div class="tags">
+    <table border="0" cellspacing="0" cellpadding="0">
+          <tr>
+        <td class="type">string&nbsp;&nbsp;</td>
+        <td><b>$prefname</b>&nbsp;&nbsp;</td>
+        <td>&lt;prefname|namespace:prefname&gt;</td>
+      </tr>
+          <tr>
+        <td class="type">$prefvalue&nbsp;&nbsp;</td>
+        <td><b>$prefvalue</b>&nbsp;&nbsp;</td>
+        <td>&lt;prefvalue&gt;</td>
+      </tr>
+        </table>
+    </div><br />
+        <div class="top">[ <a href="#top">Top</a> ]</div>
+  </div>
+  <hr />
+	<a name="methodsetCurrentPlayer"></a>
+	<h3>method setCurrentPlayer <span class="smalllinenumber">[line 304]</span></h3>
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code>void setCurrentPlayer(
+[integer
+$playerindex = 0])</code>
+    </td></tr></table>
+    </td></tr></table><br />
+	
+		setCurrentPlayer<br /><br /><p>Sets the current player at playerindex. Query Players for a list of players.</p><br /><h4>Tags:</h4>
+<div class="tags">
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><b>access:</b>&nbsp;&nbsp;</td><td>public</td>
+  </tr>
+</table>
+</div>
+<br /><br />
+
+	
+        <h4>Parameters:</h4>
+    <div class="tags">
+    <table border="0" cellspacing="0" cellpadding="0">
+          <tr>
+        <td class="type">integer&nbsp;&nbsp;</td>
+        <td><b>$playerindex</b>&nbsp;&nbsp;</td>
+        <td></td>
+      </tr>
+        </table>
+    </div><br />
+        <div class="top">[ <a href="#top">Top</a> ]</div>
+  </div>
+  <hr />
+	<a name="methodshutdown"></a>
+	<h3>method shutdown <span class="smalllinenumber">[line 253]</span></h3>
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code>boolean shutdown(
+)</code>
+    </td></tr></table>
+    </td></tr></table><br />
+	
+		shutdown<br /><br /><p>Shuts down the SqueezeCenter server. (WARNING!) There is no way to come back up without restarting the server manually.</p><br /><h4>Tags:</h4>
+<div class="tags">
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><b>access:</b>&nbsp;&nbsp;</td><td>public</td>
+  </tr>
+</table>
+</div>
+<br /><br />
+
+	
+        <div class="top">[ <a href="#top">Top</a> ]</div>
+  </div>
+  <hr />
+	<a name="methodsubscribe"></a>
+	<h3>method subscribe <span class="smalllinenumber">[line 157]</span></h3>
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code>boolean subscribe(
+)</code>
+    </td></tr></table>
+    </td></tr></table><br />
+	
+		subscribe<br /><br /><p>!CURRENTLY NOT SUPPORTED</p><br /><h4>Tags:</h4>
+<div class="tags">
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><b>access:</b>&nbsp;&nbsp;</td><td>public</td>
+  </tr>
+</table>
+</div>
+<br /><br />
+
+	
+        <div class="top">[ <a href="#top">Top</a> ]</div>
+  </div>
+  <hr />
+	<a name="methodversion"></a>
+	<h3>method version <span class="smalllinenumber">[line 133]</span></h3>
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code>string version(
+)</code>
+    </td></tr></table>
+    </td></tr></table><br />
+	
+		version<br /><br /><p>Returns SqueezeCenter version</p><br /><h4>Tags:</h4>
+<div class="tags">
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><b>access:</b>&nbsp;&nbsp;</td><td>public</td>
+  </tr>
+</table>
+</div>
+<br /><br />
+
+	
+        <div class="top">[ <a href="#top">Top</a> ]</div>
+  </div>
+  <hr />
+	<a name="method__get"></a>
+	<h3>method __get <span class="smalllinenumber">[line 265]</span></h3>
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code>mixed __get(
+string
+$property_name)</code>
+    </td></tr></table>
+    </td></tr></table><br />
+	
+		__get (getter)<br /><br /><br /><br />
+
+	
+        <h4>Parameters:</h4>
+    <div class="tags">
+    <table border="0" cellspacing="0" cellpadding="0">
+          <tr>
+        <td class="type">string&nbsp;&nbsp;</td>
+        <td><b>$property_name</b>&nbsp;&nbsp;</td>
+        <td></td>
+      </tr>
+        </table>
+    </div><br />
+        <div class="top">[ <a href="#top">Top</a> ]</div>
+  </div>
+</div><br />
+
+
+        <div class="credit">
+		    <hr />
+		    Documentation generated on Wed, 16 Sep 2009 18:08:26 +0200 by <a href="http://www.phpdoc.org">phpDocumentor 1.4.2</a>
+	      </div>
+      </td></tr></table>
+    </td>
+  </tr>
+</table>
+</div>
+</div>
+</body>
+</html>

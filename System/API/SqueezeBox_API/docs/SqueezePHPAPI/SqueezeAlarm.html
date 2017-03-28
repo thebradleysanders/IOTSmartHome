@@ -1,0 +1,827 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>Docs For Class SqueezeAlarm</title>
+<link rel="stylesheet" type="text/css" href="../media/style.css" />
+</head>
+<body>
+<a name="top" style="display:none;"></a>
+<div align="center">
+<div class="page">
+<table border="0" cellspacing="0" cellpadding="0" width="100%">
+  <tr>
+    <td class="header_top"><div class="logo"><!-- crazy logo start--><div style="margin-bottom:0.75em;"><a href="http://org.0r9.org" style="color:#000;text-decoration:none;" title="0r9.org - Generally just disorganized."><span style="padding-bottom:0.75em;"><strong><font size="7" face="Verdana, Arial, Helvetica, sans-serif"><em>0</em></font><font color="#FF0000"size="7" face="Times,serif;">r</font></strong><span style="position:relative;top:0.5em;"><font size="7" face="Verdana, Arial, Helvetica, sans-serif"><strong><em>9</em></strong></font></span>&nbsp;<span style="position:relative;top:-0.5em;"><font size="5"face="Verdana, Arial, Helvetica, sans-serif"><strong><em>.org</em></strong></font></span></span></a><div style="margin-bottom:-0.75em;">&nbsp;</div><tt>&ldquo;Organization ((unofficial)) of the disorganized.<br />Don't ask! We can't find it.&rdquo;</tt></div><!-- crazy logo end--></div><div class="package_header">SqueezePHPAPI</div></td>
+  </tr>
+  <tr><td class="header_line"><img src="../media/empty.png" width="1" height="1" border="0" alt=""  /></td></tr>
+  <tr>
+    <td class="header_menu">
+        
+                                    
+                              		  [ <a href="../classtrees_SqueezePHPAPI.html" class="menu">class tree: SqueezePHPAPI</a> ]
+		  [ <a href="../elementindex_SqueezePHPAPI.html" class="menu">index: SqueezePHPAPI</a> ]
+		  	    [ <a href="../elementindex.html" class="menu">all elements</a> ]
+  	    [ <a href="../index.html" class="menu">doc index</a> ]
+    </td>
+  </tr>
+  <tr><td class="header_line"><img src="../media/empty.png" width="1" height="1" border="0" alt=""  /></td></tr>
+</table>
+
+<table width="100%" border="0" cellpadding="0" cellspacing="0">
+  <tr valign="top">
+    <td width="200" class="menu">
+	<div id="ric">
+					<p><a href="../ric_README.html">README</a></p>
+					<p><a href="../ric_ChangeLog.html">ChangeLog</a></p>
+					<p><a href="../ric_INSTALL.html">INSTALL</a></p>
+					<p><a href="../ric_NEWS.html">NEWS</a></p>
+			</div>
+	<div id="todolist">
+			<p><a href="../todolist.html">Todo List</a></p>
+	</div>
+      <b>Packages:</b><br />
+              <a href="../li_SqueezePHPAPI.html">SqueezePHPAPI</a><br />
+            <br /><br />
+                        <b>Files:</b><br />
+      	  <div class="package">
+			<a href="../SqueezePHPAPI/_examples---basic_example.php.html">		basic_example.php
+		</a><br />
+			<a href="../SqueezePHPAPI/_lib---class.SqueezeAlarm.php.html">		class.SqueezeAlarm.php
+		</a><br />
+			<a href="../SqueezePHPAPI/_lib---class.SqueezeCenter.php.html">		class.SqueezeCenter.php
+		</a><br />
+			<a href="../SqueezePHPAPI/_lib---class.SqueezeConnection.php.html">		class.SqueezeConnection.php
+		</a><br />
+			<a href="../SqueezePHPAPI/_lib---class.SqueezeDatabase.php.html">		class.SqueezeDatabase.php
+		</a><br />
+			<a href="../SqueezePHPAPI/_lib---class.SqueezeMixer.php.html">		class.SqueezeMixer.php
+		</a><br />
+			<a href="../SqueezePHPAPI/_lib---class.SqueezePlayer.php.html">		class.SqueezePlayer.php
+		</a><br />
+			<a href="../SqueezePHPAPI/_lib---class.SqueezePlayers.php.html">		class.SqueezePlayers.php
+		</a><br />
+			<a href="../SqueezePHPAPI/_lib---class.SqueezePlaylist.php.html">		class.SqueezePlaylist.php
+		</a><br />
+			<a href="../SqueezePHPAPI/_lib---class.SqueezeStreamProxy.php.html">		class.SqueezeStreamProxy.php
+		</a><br />
+	  </div><br />
+      
+      
+            <b>Classes:</b><br />
+        <div class="package">
+		    		<a href="../SqueezePHPAPI/SqueezeAlarm.html">SqueezeAlarm</a><br />
+	    		<a href="../SqueezePHPAPI/SqueezeCenter.html">SqueezeCenter</a><br />
+	    		<a href="../SqueezePHPAPI/SqueezeConnection.html">SqueezeConnection</a><br />
+	    		<a href="../SqueezePHPAPI/SqueezeDatabase.html">SqueezeDatabase</a><br />
+	    		<a href="../SqueezePHPAPI/SqueezeMixer.html">SqueezeMixer</a><br />
+	    		<a href="../SqueezePHPAPI/SqueezePlayer.html">SqueezePlayer</a><br />
+	    		<a href="../SqueezePHPAPI/SqueezePlayers.html">SqueezePlayers</a><br />
+	    		<a href="../SqueezePHPAPI/SqueezePlaylist.html">SqueezePlaylist</a><br />
+	    		<a href="../SqueezePHPAPI/SqueezeStreamProxy.html">SqueezeStreamProxy</a><br />
+	  </div>
+                </td>
+    <td style="padding-left:1em;">
+      <table cellpadding="10" cellspacing="0" width="100%" border="0"><tr><td valign="top">
+
+<h1>Class: SqueezeAlarm</h1>
+Source Location: /lib/class.SqueezeAlarm.php<br /><br />
+
+
+<table width="100%" border="0">
+<tr><td valign="top">
+
+<h3><a href="#class_details">Class Overview</a></h3>
+<div class="description">SqueezeAlarm</div><br /><br />
+<h4>Author(s):</h4>
+<ul>
+          <li>David Broz &lt;<a href="mailto:db-dev__AT__0r9.org">db-dev__AT__0r9.org</a>&gt;</li>
+                  </ul>
+
+
+
+
+          
+      
+
+<h4>Copyright:</h4>
+<ul>
+  <li>(c) 2009 by David Broz - <a href="http://org.0r9.org">Disorganization</a> Zurich, Switzerland</li>
+</ul>
+        
+</td>
+
+
+
+<td valign="top">
+<h3><a href="#class_methods">Methods</a></h3>
+<ul>
+    <li><a href="../SqueezePHPAPI/SqueezeAlarm.html#method__construct">__construct</a></li>
+    <li><a href="../SqueezePHPAPI/SqueezeAlarm.html#method__destruct">__destruct</a></li>
+    <li><a href="../SqueezePHPAPI/SqueezeAlarm.html#methodadd">add</a></li>
+    <li><a href="../SqueezePHPAPI/SqueezeAlarm.html#methodalarms">alarms</a></li>
+    <li><a href="../SqueezePHPAPI/SqueezeAlarm.html#methoddefaultvolume">defaultvolume</a></li>
+    <li><a href="../SqueezePHPAPI/SqueezeAlarm.html#methoddelete">delete</a></li>
+    <li><a href="../SqueezePHPAPI/SqueezeAlarm.html#methoddisableall">disableall</a></li>
+    <li><a href="../SqueezePHPAPI/SqueezeAlarm.html#methodenableall">enableall</a></li>
+    <li><a href="../SqueezePHPAPI/SqueezeAlarm.html#methodplaylists">playlists</a></li>
+    <li><a href="../SqueezePHPAPI/SqueezeAlarm.html#methodupdate">update</a></li>
+  </ul>
+</td>
+
+</tr></table>
+<hr />
+
+<table width="100%" border="0"><tr>
+
+
+
+
+
+<td>&nbsp;</td>
+</tr></table>
+<hr />
+
+<a name="class_details"></a>
+<h3>Class Details</h3>
+<div class="tags">
+[line 27]<br />
+SqueezeAlarm<br /><br /><p>SqueezePlayer Alarms interface</p><br /><h4>Tags:</h4>
+<div class="tags">
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><b>author:</b>&nbsp;&nbsp;</td><td>David Broz &lt;<a href="mailto:db-dev__AT__0r9.org">db-dev__AT__0r9.org</a>&gt;</td>
+  </tr>
+  <tr>
+    <td><b>copyright:</b>&nbsp;&nbsp;</td><td>(c) 2009 by David Broz - <a href="http://org.0r9.org">Disorganization</a> Zurich, Switzerland</td>
+  </tr>
+  <tr>
+    <td><b>license:</b>&nbsp;&nbsp;</td><td><a href="http://creativecommons.org/licenses/GPL/2.0/">GNU General Public License v2</a></td>
+  </tr>
+</table>
+</div>
+</div><br /><br />
+<div class="top">[ <a href="#top">Top</a> ]</div><br />
+
+
+<hr />
+<a name="class_methods"></a>
+<h3>Class Methods</h3>
+<div class="tags">
+
+  <hr />
+	<a name="method__construct"></a>
+	<h3>constructor __construct <span class="smalllinenumber">[line 52]</span></h3>
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code><a href="../SqueezePHPAPI/SqueezeAlarm.html">SqueezeAlarm</a> __construct(
+<a href="../SqueezePHPAPI/SqueezeConnection.html">SqueezeConnection</a>
+$CLI, string
+$playerid)</code>
+    </td></tr></table>
+    </td></tr></table><br />
+	
+		SqueezeAlarm (constructor)<br /><br /><br /><br />
+
+	
+        <h4>Parameters:</h4>
+    <div class="tags">
+    <table border="0" cellspacing="0" cellpadding="0">
+          <tr>
+        <td class="type"><a href="../SqueezePHPAPI/SqueezeConnection.html">SqueezeConnection</a>&nbsp;&nbsp;</td>
+        <td><b>$CLI</b>&nbsp;&nbsp;</td>
+        <td></td>
+      </tr>
+          <tr>
+        <td class="type">string&nbsp;&nbsp;</td>
+        <td><b>$playerid</b>&nbsp;&nbsp;</td>
+        <td></td>
+      </tr>
+        </table>
+    </div><br />
+        <div class="top">[ <a href="#top">Top</a> ]</div>
+  </div>
+  <hr />
+	<a name="method__destruct"></a>
+	<h3>destructor __destruct <span class="smalllinenumber">[line 271]</span></h3>
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code>void __destruct(
+)</code>
+    </td></tr></table>
+    </td></tr></table><br />
+	
+		SqueezeAlarm (destructor)<br /><br /><br /><br />
+
+	
+        <div class="top">[ <a href="#top">Top</a> ]</div>
+  </div>
+  <hr />
+	<a name="methodadd"></a>
+	<h3>method add <span class="smalllinenumber">[line 77]</span></h3>
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code>array add(
+[string
+$dow = &quot;0,1,2,3,4,5,6&quot;], [string
+$dowAdd = &quot;&quot;], [string
+$dowDel = &quot;&quot;], [boolean
+$enabled = false], [boolean
+$repeat = true], [integer
+$time = -1], [string
+$volume = &quot;&quot;], [string
+$url = &quot;&quot;])</code>
+    </td></tr></table>
+    </td></tr></table><br />
+	
+		add<br /><br /><p>Adds a new alarm.</p><br /><h4>Tags:</h4>
+<div class="tags">
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><b>return:</b>&nbsp;&nbsp;</td><td>&lt;taggedParameters&gt;</td>
+  </tr>
+  <tr>
+    <td><b>access:</b>&nbsp;&nbsp;</td><td>public</td>
+  </tr>
+</table>
+</div>
+<br /><br />
+
+	
+        <h4>Parameters:</h4>
+    <div class="tags">
+    <table border="0" cellspacing="0" cellpadding="0">
+          <tr>
+        <td class="type">string&nbsp;&nbsp;</td>
+        <td><b>$dow</b>&nbsp;&nbsp;</td>
+        <td>Day Of Week. 0 is Sunday, 1 is Monday, etc. up to 6 being Saturday. You can define a group of days by concatenating them with &quot;,&quot; as separator. Default: 0-6.</td>
+      </tr>
+          <tr>
+        <td class="type">string&nbsp;&nbsp;</td>
+        <td><b>$dowAdd</b>&nbsp;&nbsp;</td>
+        <td>Add a single day of the week to the alarm list This takes precendence over anything sent in the dow tag</td>
+      </tr>
+          <tr>
+        <td class="type">string&nbsp;&nbsp;</td>
+        <td><b>$dowDel</b>&nbsp;&nbsp;</td>
+        <td>Removes a single day (0-6) of the week from the alarm list This takes precendence over anything sent in the dow tag</td>
+      </tr>
+          <tr>
+        <td class="type">boolean&nbsp;&nbsp;</td>
+        <td><b>$enabled</b>&nbsp;&nbsp;</td>
+        <td>1 if the alarm is enabled. Default: 0.</td>
+      </tr>
+          <tr>
+        <td class="type">boolean&nbsp;&nbsp;</td>
+        <td><b>$repeat</b>&nbsp;&nbsp;</td>
+        <td><ol><li>if the alarm repeats. Default: 1.</li></ol></td>
+      </tr>
+          <tr>
+        <td class="type">integer&nbsp;&nbsp;</td>
+        <td><b>$time</b>&nbsp;&nbsp;</td>
+        <td>Time of the alarm, in seconds from midnight. Mandatory when add command is issued</td>
+      </tr>
+          <tr>
+        <td class="type">string&nbsp;&nbsp;</td>
+        <td><b>$volume</b>&nbsp;&nbsp;</td>
+        <td>Mixer volume of the alarm. Default: use the default volume for alarms. Mandatory when defaultvolume command is issued</td>
+      </tr>
+          <tr>
+        <td class="type">string&nbsp;&nbsp;</td>
+        <td><b>$url</b>&nbsp;&nbsp;</td>
+        <td>URL of the alarm playlist. Default: the current playlist. url should be a valid Squeezecenter audio url. The special value 0 means the current playlist.</td>
+      </tr>
+        </table>
+    </div><br />
+        <div class="top">[ <a href="#top">Top</a> ]</div>
+  </div>
+  <hr />
+	<a name="methodalarms"></a>
+	<h3>method alarms <span class="smalllinenumber">[line 253]</span></h3>
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code>array alarms(
+[integer
+$start = 0], [integer
+$itemsPerResponse = 5], [string
+$dow = &quot;&quot;], [string
+$filter = &quot;enabled&quot;])</code>
+    </td></tr></table>
+    </td></tr></table><br />
+	
+		alarms<br /><br /><p>The &quot;alarms&quot; query returns information about player alarms.</p><br /><h4>Tags:</h4>
+<div class="tags">
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><b>return:</b>&nbsp;&nbsp;</td><td>&lt;taggedParameters&gt;</td>
+  </tr>
+  <tr>
+    <td><b>access:</b>&nbsp;&nbsp;</td><td>public</td>
+  </tr>
+</table>
+</div>
+<br /><br />
+
+	
+        <h4>Parameters:</h4>
+    <div class="tags">
+    <table border="0" cellspacing="0" cellpadding="0">
+          <tr>
+        <td class="type">integer&nbsp;&nbsp;</td>
+        <td><b>$start</b>&nbsp;&nbsp;</td>
+        <td>&lt;start&gt;</td>
+      </tr>
+          <tr>
+        <td class="type">integer&nbsp;&nbsp;</td>
+        <td><b>$itemsPerResponse</b>&nbsp;&nbsp;</td>
+        <td>&lt;itemsPerResponse&gt;</td>
+      </tr>
+          <tr>
+        <td class="type">string&nbsp;&nbsp;</td>
+        <td><b>$dow</b>&nbsp;&nbsp;</td>
+        <td>If present, the query returns information about this Day Of Week only. Note this takes precedence over any &quot;filter&quot; parameter. 0 is Sunday, 1 is Monday, etc. up to 6 being Saturday.</td>
+      </tr>
+          <tr>
+        <td class="type">string&nbsp;&nbsp;</td>
+        <td><b>$filter</b>&nbsp;&nbsp;</td>
+        <td>One of &quot;all&quot; or &quot;enabled&quot; (the default). To get all possible alarms, use &quot;all&quot;. To get only enabled alarms, use &quot;enabled&quot;</td>
+      </tr>
+        </table>
+    </div><br />
+        <div class="top">[ <a href="#top">Top</a> ]</div>
+  </div>
+  <hr />
+	<a name="methoddefaultvolume"></a>
+	<h3>method defaultvolume <span class="smalllinenumber">[line 218]</span></h3>
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code>array defaultvolume(
+[string
+$id = &quot;&quot;], [string
+$dow = &quot;0,1,2,3,4,5,6&quot;], [string
+$dowAdd = &quot;&quot;], [string
+$dowDel = &quot;&quot;], [boolean
+$enabled = false], [boolean
+$repeat = true], [integer
+$time = 0], [string
+$volume = &quot;&quot;], [string
+$url = &quot;&quot;])</code>
+    </td></tr></table>
+    </td></tr></table><br />
+	
+		defaultvolume<br /><br /><p>Sets the default volume of an alarm.</p><br /><h4>Tags:</h4>
+<div class="tags">
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><b>return:</b>&nbsp;&nbsp;</td><td>&lt;taggedParameters&gt;</td>
+  </tr>
+  <tr>
+    <td><b>access:</b>&nbsp;&nbsp;</td><td>public</td>
+  </tr>
+</table>
+</div>
+<br /><br />
+
+	
+        <h4>Parameters:</h4>
+    <div class="tags">
+    <table border="0" cellspacing="0" cellpadding="0">
+          <tr>
+        <td class="type">string&nbsp;&nbsp;</td>
+        <td><b>$id</b>&nbsp;&nbsp;</td>
+        <td>The id of an existing alarm. This value is mandatory unless you &quot;add&quot; a new alarm.</td>
+      </tr>
+          <tr>
+        <td class="type">string&nbsp;&nbsp;</td>
+        <td><b>$dow</b>&nbsp;&nbsp;</td>
+        <td>Day Of Week. 0 is Sunday, 1 is Monday, etc. up to 6 being Saturday. You can define a group of days by concatenating them with &quot;,&quot; as separator. Default: 0-6.</td>
+      </tr>
+          <tr>
+        <td class="type">string&nbsp;&nbsp;</td>
+        <td><b>$dowAdd</b>&nbsp;&nbsp;</td>
+        <td>Add a single day of the week to the alarm list This takes precendence over anything sent in the dow tag</td>
+      </tr>
+          <tr>
+        <td class="type">string&nbsp;&nbsp;</td>
+        <td><b>$dowDel</b>&nbsp;&nbsp;</td>
+        <td>Removes a single day (0-6) of the week from the alarm list This takes precendence over anything sent in the dow tag</td>
+      </tr>
+          <tr>
+        <td class="type">boolean&nbsp;&nbsp;</td>
+        <td><b>$enabled</b>&nbsp;&nbsp;</td>
+        <td>1 if the alarm is enabled. Default: 0.</td>
+      </tr>
+          <tr>
+        <td class="type">boolean&nbsp;&nbsp;</td>
+        <td><b>$repeat</b>&nbsp;&nbsp;</td>
+        <td><ol><li>if the alarm repeats. Default: 1.</li></ol></td>
+      </tr>
+          <tr>
+        <td class="type">integer&nbsp;&nbsp;</td>
+        <td><b>$time</b>&nbsp;&nbsp;</td>
+        <td>Time of the alarm, in seconds from midnight. Mandatory when add command is issued</td>
+      </tr>
+          <tr>
+        <td class="type">string&nbsp;&nbsp;</td>
+        <td><b>$volume</b>&nbsp;&nbsp;</td>
+        <td>Mixer volume of the alarm. Default: use the default volume for alarms. Mandatory when defaultvolume command is issued</td>
+      </tr>
+          <tr>
+        <td class="type">string&nbsp;&nbsp;</td>
+        <td><b>$url</b>&nbsp;&nbsp;</td>
+        <td>URL of the alarm playlist. Default: the current playlist. url should be a valid Squeezecenter audio url. The special value 0 means the current playlist.</td>
+      </tr>
+        </table>
+    </div><br />
+        <div class="top">[ <a href="#top">Top</a> ]</div>
+  </div>
+  <hr />
+	<a name="methoddelete"></a>
+	<h3>method delete <span class="smalllinenumber">[line 134]</span></h3>
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code>array delete(
+[string
+$id = &quot;&quot;], [string
+$dow = &quot;0,1,2,3,4,5,6&quot;], [string
+$dowAdd = &quot;&quot;], [string
+$dowDel = &quot;&quot;], [boolean
+$enabled = false], [boolean
+$repeat = true], [integer
+$time = 0], [string
+$volume = &quot;&quot;], [string
+$url = &quot;&quot;])</code>
+    </td></tr></table>
+    </td></tr></table><br />
+	
+		delete<br /><br /><p>Deletes an alarm.</p><br /><h4>Tags:</h4>
+<div class="tags">
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><b>return:</b>&nbsp;&nbsp;</td><td>&lt;taggedParameters&gt;</td>
+  </tr>
+  <tr>
+    <td><b>access:</b>&nbsp;&nbsp;</td><td>public</td>
+  </tr>
+</table>
+</div>
+<br /><br />
+
+	
+        <h4>Parameters:</h4>
+    <div class="tags">
+    <table border="0" cellspacing="0" cellpadding="0">
+          <tr>
+        <td class="type">string&nbsp;&nbsp;</td>
+        <td><b>$id</b>&nbsp;&nbsp;</td>
+        <td>The id of an existing alarm. This value is mandatory unless you &quot;add&quot; a new alarm.</td>
+      </tr>
+          <tr>
+        <td class="type">string&nbsp;&nbsp;</td>
+        <td><b>$dow</b>&nbsp;&nbsp;</td>
+        <td>Day Of Week. 0 is Sunday, 1 is Monday, etc. up to 6 being Saturday. You can define a group of days by concatenating them with &quot;,&quot; as separator. Default: 0-6.</td>
+      </tr>
+          <tr>
+        <td class="type">string&nbsp;&nbsp;</td>
+        <td><b>$dowAdd</b>&nbsp;&nbsp;</td>
+        <td>Add a single day of the week to the alarm list This takes precendence over anything sent in the dow tag</td>
+      </tr>
+          <tr>
+        <td class="type">string&nbsp;&nbsp;</td>
+        <td><b>$dowDel</b>&nbsp;&nbsp;</td>
+        <td>Removes a single day (0-6) of the week from the alarm list This takes precendence over anything sent in the dow tag</td>
+      </tr>
+          <tr>
+        <td class="type">boolean&nbsp;&nbsp;</td>
+        <td><b>$enabled</b>&nbsp;&nbsp;</td>
+        <td>1 if the alarm is enabled. Default: 0.</td>
+      </tr>
+          <tr>
+        <td class="type">boolean&nbsp;&nbsp;</td>
+        <td><b>$repeat</b>&nbsp;&nbsp;</td>
+        <td><ol><li>if the alarm repeats. Default: 1.</li></ol></td>
+      </tr>
+          <tr>
+        <td class="type">integer&nbsp;&nbsp;</td>
+        <td><b>$time</b>&nbsp;&nbsp;</td>
+        <td>Time of the alarm, in seconds from midnight. Mandatory when add command is issued</td>
+      </tr>
+          <tr>
+        <td class="type">string&nbsp;&nbsp;</td>
+        <td><b>$volume</b>&nbsp;&nbsp;</td>
+        <td>Mixer volume of the alarm. Default: use the default volume for alarms. Mandatory when defaultvolume command is issued</td>
+      </tr>
+          <tr>
+        <td class="type">string&nbsp;&nbsp;</td>
+        <td><b>$url</b>&nbsp;&nbsp;</td>
+        <td>URL of the alarm playlist. Default: the current playlist. url should be a valid Squeezecenter audio url. The special value 0 means the current playlist.</td>
+      </tr>
+        </table>
+    </div><br />
+        <div class="top">[ <a href="#top">Top</a> ]</div>
+  </div>
+  <hr />
+	<a name="methoddisableall"></a>
+	<h3>method disableall <span class="smalllinenumber">[line 190]</span></h3>
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code>array disableall(
+[string
+$id = &quot;&quot;], [string
+$dow = &quot;0,1,2,3,4,5,6&quot;], [string
+$dowAdd = &quot;&quot;], [string
+$dowDel = &quot;&quot;], [boolean
+$enabled = false], [boolean
+$repeat = true], [integer
+$time = 0], [string
+$volume = &quot;&quot;], [string
+$url = &quot;&quot;])</code>
+    </td></tr></table>
+    </td></tr></table><br />
+	
+		disableall<br /><br /><p>Disables all alarms.</p><br /><h4>Tags:</h4>
+<div class="tags">
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><b>return:</b>&nbsp;&nbsp;</td><td>&lt;taggedParameters&gt;</td>
+  </tr>
+  <tr>
+    <td><b>access:</b>&nbsp;&nbsp;</td><td>public</td>
+  </tr>
+</table>
+</div>
+<br /><br />
+
+	
+        <h4>Parameters:</h4>
+    <div class="tags">
+    <table border="0" cellspacing="0" cellpadding="0">
+          <tr>
+        <td class="type">string&nbsp;&nbsp;</td>
+        <td><b>$id</b>&nbsp;&nbsp;</td>
+        <td>The id of an existing alarm. This value is mandatory unless you &quot;add&quot; a new alarm.</td>
+      </tr>
+          <tr>
+        <td class="type">string&nbsp;&nbsp;</td>
+        <td><b>$dow</b>&nbsp;&nbsp;</td>
+        <td>Day Of Week. 0 is Sunday, 1 is Monday, etc. up to 6 being Saturday. You can define a group of days by concatenating them with &quot;,&quot; as separator. Default: 0-6.</td>
+      </tr>
+          <tr>
+        <td class="type">string&nbsp;&nbsp;</td>
+        <td><b>$dowAdd</b>&nbsp;&nbsp;</td>
+        <td>Add a single day of the week to the alarm list This takes precendence over anything sent in the dow tag</td>
+      </tr>
+          <tr>
+        <td class="type">string&nbsp;&nbsp;</td>
+        <td><b>$dowDel</b>&nbsp;&nbsp;</td>
+        <td>Removes a single day (0-6) of the week from the alarm list This takes precendence over anything sent in the dow tag</td>
+      </tr>
+          <tr>
+        <td class="type">boolean&nbsp;&nbsp;</td>
+        <td><b>$enabled</b>&nbsp;&nbsp;</td>
+        <td>1 if the alarm is enabled. Default: 0.</td>
+      </tr>
+          <tr>
+        <td class="type">boolean&nbsp;&nbsp;</td>
+        <td><b>$repeat</b>&nbsp;&nbsp;</td>
+        <td><ol><li>if the alarm repeats. Default: 1.</li></ol></td>
+      </tr>
+          <tr>
+        <td class="type">integer&nbsp;&nbsp;</td>
+        <td><b>$time</b>&nbsp;&nbsp;</td>
+        <td>Time of the alarm, in seconds from midnight. Mandatory when add command is issued</td>
+      </tr>
+          <tr>
+        <td class="type">string&nbsp;&nbsp;</td>
+        <td><b>$volume</b>&nbsp;&nbsp;</td>
+        <td>Mixer volume of the alarm. Default: use the default volume for alarms. Mandatory when defaultvolume command is issued</td>
+      </tr>
+          <tr>
+        <td class="type">string&nbsp;&nbsp;</td>
+        <td><b>$url</b>&nbsp;&nbsp;</td>
+        <td>URL of the alarm playlist. Default: the current playlist. url should be a valid Squeezecenter audio url. The special value 0 means the current playlist.</td>
+      </tr>
+        </table>
+    </div><br />
+        <div class="top">[ <a href="#top">Top</a> ]</div>
+  </div>
+  <hr />
+	<a name="methodenableall"></a>
+	<h3>method enableall <span class="smalllinenumber">[line 162]</span></h3>
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code>array enableall(
+[string
+$id = &quot;&quot;], [string
+$dow = &quot;0,1,2,3,4,5,6&quot;], [string
+$dowAdd = &quot;&quot;], [string
+$dowDel = &quot;&quot;], [boolean
+$enabled = false], [boolean
+$repeat = true], [integer
+$time = 0], [string
+$volume = &quot;&quot;], [string
+$url = &quot;&quot;])</code>
+    </td></tr></table>
+    </td></tr></table><br />
+	
+		enableall<br /><br /><p>Enables all alarms.</p><br /><h4>Tags:</h4>
+<div class="tags">
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><b>return:</b>&nbsp;&nbsp;</td><td>&lt;taggedParameters&gt;</td>
+  </tr>
+  <tr>
+    <td><b>access:</b>&nbsp;&nbsp;</td><td>public</td>
+  </tr>
+</table>
+</div>
+<br /><br />
+
+	
+        <h4>Parameters:</h4>
+    <div class="tags">
+    <table border="0" cellspacing="0" cellpadding="0">
+          <tr>
+        <td class="type">string&nbsp;&nbsp;</td>
+        <td><b>$id</b>&nbsp;&nbsp;</td>
+        <td>The id of an existing alarm. This value is mandatory unless you &quot;add&quot; a new alarm.</td>
+      </tr>
+          <tr>
+        <td class="type">string&nbsp;&nbsp;</td>
+        <td><b>$dow</b>&nbsp;&nbsp;</td>
+        <td>Day Of Week. 0 is Sunday, 1 is Monday, etc. up to 6 being Saturday. You can define a group of days by concatenating them with &quot;,&quot; as separator. Default: 0-6.</td>
+      </tr>
+          <tr>
+        <td class="type">string&nbsp;&nbsp;</td>
+        <td><b>$dowAdd</b>&nbsp;&nbsp;</td>
+        <td>Add a single day of the week to the alarm list This takes precendence over anything sent in the dow tag</td>
+      </tr>
+          <tr>
+        <td class="type">string&nbsp;&nbsp;</td>
+        <td><b>$dowDel</b>&nbsp;&nbsp;</td>
+        <td>Removes a single day (0-6) of the week from the alarm list This takes precendence over anything sent in the dow tag</td>
+      </tr>
+          <tr>
+        <td class="type">boolean&nbsp;&nbsp;</td>
+        <td><b>$enabled</b>&nbsp;&nbsp;</td>
+        <td>1 if the alarm is enabled. Default: 0.</td>
+      </tr>
+          <tr>
+        <td class="type">boolean&nbsp;&nbsp;</td>
+        <td><b>$repeat</b>&nbsp;&nbsp;</td>
+        <td><ol><li>if the alarm repeats. Default: 1.</li></ol></td>
+      </tr>
+          <tr>
+        <td class="type">integer&nbsp;&nbsp;</td>
+        <td><b>$time</b>&nbsp;&nbsp;</td>
+        <td>Time of the alarm, in seconds from midnight. Mandatory when add command is issued</td>
+      </tr>
+          <tr>
+        <td class="type">string&nbsp;&nbsp;</td>
+        <td><b>$volume</b>&nbsp;&nbsp;</td>
+        <td>Mixer volume of the alarm. Default: use the default volume for alarms. Mandatory when defaultvolume command is issued</td>
+      </tr>
+          <tr>
+        <td class="type">string&nbsp;&nbsp;</td>
+        <td><b>$url</b>&nbsp;&nbsp;</td>
+        <td>URL of the alarm playlist. Default: the current playlist. url should be a valid Squeezecenter audio url. The special value 0 means the current playlist.</td>
+      </tr>
+        </table>
+    </div><br />
+        <div class="top">[ <a href="#top">Top</a> ]</div>
+  </div>
+  <hr />
+	<a name="methodplaylists"></a>
+	<h3>method playlists <span class="smalllinenumber">[line 237]</span></h3>
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code>array playlists(
+)</code>
+    </td></tr></table>
+    </td></tr></table><br />
+	
+		playlists<br /><br /><p>The &quot;alarm playlists&quot; returns all the playlists, sounds, favorites etc. available to alarms.</p><br /><h4>Tags:</h4>
+<div class="tags">
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><b>return:</b>&nbsp;&nbsp;</td><td>&lt;taggedParameters&gt;</td>
+  </tr>
+  <tr>
+    <td><b>access:</b>&nbsp;&nbsp;</td><td>public</td>
+  </tr>
+</table>
+</div>
+<br /><br />
+
+	
+        <div class="top">[ <a href="#top">Top</a> ]</div>
+  </div>
+  <hr />
+	<a name="methodupdate"></a>
+	<h3>method update <span class="smalllinenumber">[line 106]</span></h3>
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code>array update(
+[string
+$id = &quot;&quot;], [string
+$dow = &quot;0,1,2,3,4,5,6&quot;], [string
+$dowAdd = &quot;&quot;], [string
+$dowDel = &quot;&quot;], [boolean
+$enabled = false], [boolean
+$repeat = true], [integer
+$time = 0], [string
+$volume = &quot;&quot;], [string
+$url = &quot;&quot;])</code>
+    </td></tr></table>
+    </td></tr></table><br />
+	
+		update<br /><br /><p>Updates an alarm.</p><br /><h4>Tags:</h4>
+<div class="tags">
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><b>return:</b>&nbsp;&nbsp;</td><td>&lt;taggedParameters&gt;</td>
+  </tr>
+  <tr>
+    <td><b>access:</b>&nbsp;&nbsp;</td><td>public</td>
+  </tr>
+</table>
+</div>
+<br /><br />
+
+	
+        <h4>Parameters:</h4>
+    <div class="tags">
+    <table border="0" cellspacing="0" cellpadding="0">
+          <tr>
+        <td class="type">string&nbsp;&nbsp;</td>
+        <td><b>$id</b>&nbsp;&nbsp;</td>
+        <td>The id of an existing alarm. This value is mandatory unless you &quot;add&quot; a new alarm.</td>
+      </tr>
+          <tr>
+        <td class="type">string&nbsp;&nbsp;</td>
+        <td><b>$dow</b>&nbsp;&nbsp;</td>
+        <td>Day Of Week. 0 is Sunday, 1 is Monday, etc. up to 6 being Saturday. You can define a group of days by concatenating them with &quot;,&quot; as separator. Default: 0-6.</td>
+      </tr>
+          <tr>
+        <td class="type">string&nbsp;&nbsp;</td>
+        <td><b>$dowAdd</b>&nbsp;&nbsp;</td>
+        <td>Add a single day of the week to the alarm list This takes precendence over anything sent in the dow tag</td>
+      </tr>
+          <tr>
+        <td class="type">string&nbsp;&nbsp;</td>
+        <td><b>$dowDel</b>&nbsp;&nbsp;</td>
+        <td>Removes a single day (0-6) of the week from the alarm list This takes precendence over anything sent in the dow tag</td>
+      </tr>
+          <tr>
+        <td class="type">boolean&nbsp;&nbsp;</td>
+        <td><b>$enabled</b>&nbsp;&nbsp;</td>
+        <td>1 if the alarm is enabled. Default: 0.</td>
+      </tr>
+          <tr>
+        <td class="type">boolean&nbsp;&nbsp;</td>
+        <td><b>$repeat</b>&nbsp;&nbsp;</td>
+        <td><ol><li>if the alarm repeats. Default: 1.</li></ol></td>
+      </tr>
+          <tr>
+        <td class="type">integer&nbsp;&nbsp;</td>
+        <td><b>$time</b>&nbsp;&nbsp;</td>
+        <td>Time of the alarm, in seconds from midnight. Mandatory when add command is issued</td>
+      </tr>
+          <tr>
+        <td class="type">string&nbsp;&nbsp;</td>
+        <td><b>$volume</b>&nbsp;&nbsp;</td>
+        <td>Mixer volume of the alarm. Default: use the default volume for alarms. Mandatory when defaultvolume command is issued</td>
+      </tr>
+          <tr>
+        <td class="type">string&nbsp;&nbsp;</td>
+        <td><b>$url</b>&nbsp;&nbsp;</td>
+        <td>URL of the alarm playlist. Default: the current playlist. url should be a valid Squeezecenter audio url. The special value 0 means the current playlist.</td>
+      </tr>
+        </table>
+    </div><br />
+        <div class="top">[ <a href="#top">Top</a> ]</div>
+  </div>
+</div><br />
+
+
+        <div class="credit">
+		    <hr />
+		    Documentation generated on Wed, 16 Sep 2009 18:08:26 +0200 by <a href="http://www.phpdoc.org">phpDocumentor 1.4.2</a>
+	      </div>
+      </td></tr></table>
+    </td>
+  </tr>
+</table>
+</div>
+</div>
+</body>
+</html>

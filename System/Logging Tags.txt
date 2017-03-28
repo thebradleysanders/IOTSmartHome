@@ -1,0 +1,36 @@
+Phillips Hue
+Services
+Warnings
+Devices
+Sensors
+Camera
+System
+System Monitor
+System Timer
+Offline
+Online
+"Device Name"
+"Device Type"
+"Sensor ID"
+On
+Off
+Enable
+Disable
+email address
+email subject
+Email Sent
+Email Not Sent
+System Services
+alarm mode -> home:away
+alarm state -> On:Off
+Enable Featured
+Disable Featured
+Music
+SqueezeBox
+"SqueezeBox Command"
+Shutdown
+Restart
+Alarm
+Triggered
+IFTTT
+Find Sensor/Device
