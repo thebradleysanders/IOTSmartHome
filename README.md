@@ -1,33 +1,31 @@
-<snippet>
-  <content>
-## IOTSmartHome
-Currently Supported Products/API
-	Phillips Hue
-	Belkin Wemo
-	Logitech Squeezebox
-	Open Weather Map
-	MQTT	
+# IOTSmartHome PHP
+
+This is written PHP. It includes the following API's:
+
+* Phillips Hue
+* Belkin Wemo
+* Open Weather Map
+* MQTT
+* Logitech Squeezebox
+* iCoud Geolocation
+
+## Requirements
+* PHP 5.5 or greater.
+* PHP [cURL extension](http://php.net/manual/en/book.curl.php) (Usually included with PHP).
+* PHP [mySQLi extension]
+* An MQTT Broker  (https://mosquitto.org/)
+* MySQL Server
+
 ## Installation
-	PHP 5.5+
-	MQTT Broker
-	MySQLI
-	internet access - not required but prefered
-	cURL Support
-	MIME Types:
-		font/opentype .woff2
-		text/css .less
-## Usage
-Software for your home.
-## Contributing
-1. Fork it!
-2. Create your feature branch: `git checkout -b my-new-feature`
-3. Commit your changes: `git commit -am 'Add some feature'`
-4. Push to the branch: `git push origin my-new-feature`
-5. Submit a pull request :D
-## Credits
-	Brad Sanders 
+Add the IOTSmartHome Project to your web server
+Install the sql file located at System/Install/smarthome.sql
+Ajust the System/Install/Config.php file to match your configuration
+
+
+## Screenshots
+![alt tag](https://github.com/thebradleysanders/IOTSmartHome/Screenshots/home.png)
+![alt tag](https://github.com/thebradleysanders/IOTSmartHome/Screenshots/login.png)
+
+
 ## License
-TODO: Write license
-</content>
-  <tabTrigger>readme</tabTrigger>
-</snippet>
+TODO
