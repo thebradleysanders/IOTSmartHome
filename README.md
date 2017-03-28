@@ -1,7 +1,7 @@
 <snippet>
   <content>
 ## IOTSmartHome
-Currently Supported Products/API's:
+Currently Supported Products/API
 	Phillips Hue
 	Belkin Wemo
 	Logitech Squeezebox
