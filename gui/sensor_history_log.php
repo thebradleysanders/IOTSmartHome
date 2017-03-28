@@ -595,35 +595,37 @@ require_once(realpath(__DIR__ ."/../System/API/SmartHome_API/IOTIncludes.php"));
 						}
 				?>
 					 <text text-anchor="end" x="111" y="<?php echo $y;?>" font-family="Arial" font-size="13" stroke="none" stroke-width="0" fill="#4d4d4d"><?php echo $sensor['sensor_name'];?></text>
-				<?php }?>
+				<?php } if($count==0):?>
+					<text text-anchor="end" x="120" y="25" font-family="Arial" font-size="13" stroke="none" stroke-width="0" fill="#4d4d4d">No Sensors Found</text>
+				<?php endif;?>
 
 				<rect x="0" y="0" width="1499" height="737.8559999999999" stroke="#9a9a9a" stroke-width="1" fill-opacity="1" fill="none"></rect>
 			 </g>
 			 <g>
-				<text text-anchor="middle" x="166.7877242476852" y="1758.9059999999998" font-family="Arial" font-size="13" font-weight="bold" stroke="none" stroke-width="0" fill="#000000">1:00 AM</text> 
-				<text text-anchor="middle" x="224.07939091435185" y="758.9059999999998" font-family="Arial" font-size="13" stroke="none" stroke-width="0" fill="#000000">2:00</text>
-				<text text-anchor="middle" x="281.3710575810185" y="758.9059999999998" font-family="Arial" font-size="13" stroke="none" stroke-width="0" fill="#000000">3:00</text>
-				<text text-anchor="middle" x="338.66272424768516" y="758.9059999999998" font-family="Arial" font-size="13" stroke="none" stroke-width="0" fill="#000000">4:00</text>
-				<text text-anchor="middle" x="395.95439091435185" y="758.9059999999998" font-family="Arial" font-size="13" stroke="none" stroke-width="0" fill="#000000">5:00</text>
-				<text text-anchor="middle" x="453.2460575810185" y="758.9059999999998" font-family="Arial" font-size="13" stroke="none" stroke-width="0" fill="#000000">6:00</text>
-				<text text-anchor="middle" x="510.53772424768516" y="758.9059999999998" font-family="Arial" font-size="13" stroke="none" stroke-width="0" fill="#000000">7:00</text>
-				<text text-anchor="middle" x="567.8293909143517" y="758.9059999999998" font-family="Arial" font-size="13" stroke="none" stroke-width="0" fill="#000000">8:00</text>
-				<text text-anchor="middle" x="625.1210575810185" y="758.9059999999998" font-family="Arial" font-size="13" stroke="none" stroke-width="0" fill="#000000">9:00</text>
-				<text text-anchor="middle" x="682.4127242476851" y="758.9059999999998" font-family="Arial" font-size="13" stroke="none" stroke-width="0" fill="#000000">10:00</text>
-				<text text-anchor="middle" x="739.7043909143518" y="758.9059999999998" font-family="Arial" font-size="13" stroke="none" stroke-width="0" fill="#000000">11:00</text>
-				<text text-anchor="middle" x="796.9960575810185" y="758.9059999999998" font-family="Arial" font-size="13" font-weight="bold" stroke="none" stroke-width="0" fill="#000000">12:00</text>
-				<text text-anchor="middle" x="854.2877242476851" y="758.9059999999998" font-family="Arial" font-size="13" stroke="none" stroke-width="0" fill="#000000">1:00 PM</text>
-				<text text-anchor="middle" x="911.5793909143517" y="758.9059999999998" font-family="Arial" font-size="13" stroke="none" stroke-width="0" fill="#000000">2:00</text>
-				<text text-anchor="middle" x="968.8710575810185" y="758.9059999999998" font-family="Arial" font-size="13" stroke="none" stroke-width="0" fill="#000000">3:00</text>
-				<text text-anchor="middle" x="1026.1627242476852" y="758.9059999999998" font-family="Arial" font-size="13" stroke="none" stroke-width="0" fill="#000000">4:00</text>
-				<text text-anchor="middle" x="1083.4543909143517" y="758.9059999999998" font-family="Arial" font-size="13" stroke="none" stroke-width="0" fill="#000000">5:00</text>
-				<text text-anchor="middle" x="1140.7460575810185" y="758.9059999999998" font-family="Arial" font-size="13" stroke="none" stroke-width="0" fill="#000000">6:00</text>
-				<text text-anchor="middle" x="1198.037724247685" y="758.9059999999998" font-family="Arial" font-size="13" stroke="none" stroke-width="0" fill="#000000">7:00</text>
-				<text text-anchor="middle" x="1255.3293909143517" y="758.9059999999998" font-family="Arial" font-size="13" stroke="none" stroke-width="0" fill="#000000">8:00</text>
-				<text text-anchor="middle" x="1312.6210575810185" y="758.9059999999998" font-family="Arial" font-size="13" stroke="none" stroke-width="0" fill="#000000">9:00</text>
-				<text text-anchor="middle" x="1369.912724247685" y="758.9059999999998" font-family="Arial" font-size="13" stroke="none" stroke-width="0" fill="#000000">10:00</text>
-				<text text-anchor="middle" x="1427.2043909143517" y="758.9059999999998" font-family="Arial" font-size="13" stroke="none" stroke-width="0" fill="#000000">11:00</text>
-				<text text-anchor="end" x="1484.4960575810185" y="758.9059999999998" font-family="Arial" font-size="13" stroke="none" font-weight="bold" stroke-width="0" fill="#000000">12:00</text>
+				<text text-anchor="middle" x="166.7877242476852" y="1758.9059999999998" font-family="Arial" font-size="13" font-weight="bold" stroke="none" stroke-width="0" fill="#000000">1:00a</text> 
+				<text text-anchor="middle" x="224.07939091435185" y="758.9059999999998" font-family="Arial" font-size="13" stroke="none" stroke-width="0" fill="#000000">2:00a</text>
+				<text text-anchor="middle" x="281.3710575810185" y="758.9059999999998" font-family="Arial" font-size="13" stroke="none" stroke-width="0" fill="#000000">3:00a</text>
+				<text text-anchor="middle" x="338.66272424768516" y="758.9059999999998" font-family="Arial" font-size="13" stroke="none" stroke-width="0" fill="#000000">4:00a</text>
+				<text text-anchor="middle" x="395.95439091435185" y="758.9059999999998" font-family="Arial" font-size="13" stroke="none" stroke-width="0" fill="#000000">5:00a</text>
+				<text text-anchor="middle" x="453.2460575810185" y="758.9059999999998" font-family="Arial" font-size="13" stroke="none" stroke-width="0" fill="#000000">6:00a</text>
+				<text text-anchor="middle" x="510.53772424768516" y="758.9059999999998" font-family="Arial" font-size="13" stroke="none" stroke-width="0" fill="#000000">7:00a</text>
+				<text text-anchor="middle" x="567.8293909143517" y="758.9059999999998" font-family="Arial" font-size="13" stroke="none" stroke-width="0" fill="#000000">8:00a</text>
+				<text text-anchor="middle" x="625.1210575810185" y="758.9059999999998" font-family="Arial" font-size="13" stroke="none" stroke-width="0" fill="#000000">9:00a</text>
+				<text text-anchor="middle" x="682.4127242476851" y="758.9059999999998" font-family="Arial" font-size="13" stroke="none" stroke-width="0" fill="#000000">10:00a</text>
+				<text text-anchor="middle" x="739.7043909143518" y="758.9059999999998" font-family="Arial" font-size="13" stroke="none" stroke-width="0" fill="#000000">11:00a</text>
+				<text text-anchor="middle" x="796.9960575810185" y="758.9059999999998" font-family="Arial" font-size="13" font-weight="bold" stroke="none" stroke-width="0" fill="#000000">12:00a</text>
+				<text text-anchor="middle" x="854.2877242476851" y="758.9059999999998" font-family="Arial" font-size="13" stroke="none" stroke-width="0" fill="#000000">1:00p</text>
+				<text text-anchor="middle" x="911.5793909143517" y="758.9059999999998" font-family="Arial" font-size="13" stroke="none" stroke-width="0" fill="#000000">2:00p</text>
+				<text text-anchor="middle" x="968.8710575810185" y="758.9059999999998" font-family="Arial" font-size="13" stroke="none" stroke-width="0" fill="#000000">3:00p</text>
+				<text text-anchor="middle" x="1026.1627242476852" y="758.9059999999998" font-family="Arial" font-size="13" stroke="none" stroke-width="0" fill="#000000">4:00p</text>
+				<text text-anchor="middle" x="1083.4543909143517" y="758.9059999999998" font-family="Arial" font-size="13" stroke="none" stroke-width="0" fill="#000000">5:00p</text>
+				<text text-anchor="middle" x="1140.7460575810185" y="758.9059999999998" font-family="Arial" font-size="13" stroke="none" stroke-width="0" fill="#000000">6:00p</text>
+				<text text-anchor="middle" x="1198.037724247685" y="758.9059999999998" font-family="Arial" font-size="13" stroke="none" stroke-width="0" fill="#000000">7:00p</text>
+				<text text-anchor="middle" x="1255.3293909143517" y="758.9059999999998" font-family="Arial" font-size="13" stroke="none" stroke-width="0" fill="#000000">8:00p</text>
+				<text text-anchor="middle" x="1312.6210575810185" y="758.9059999999998" font-family="Arial" font-size="13" stroke="none" stroke-width="0" fill="#000000">9:00p</text>
+				<text text-anchor="middle" x="1369.912724247685" y="758.9059999999998" font-family="Arial" font-size="13" stroke="none" stroke-width="0" fill="#000000">10:00p</text>
+				<text text-anchor="middle" x="1427.2043909143517" y="758.9059999999998" font-family="Arial" font-size="13" stroke="none" stroke-width="0" fill="#000000">11:00p</text>
+				<text text-anchor="end" x="1500.4960575810185" y="758.9059999999998" font-family="Arial" font-size="13" stroke="none" font-weight="bold" stroke-width="0" fill="#000000">12:00p</text>
 			 </g>
 			 <g></g>
 			 <g>

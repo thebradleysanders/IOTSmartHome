@@ -330,11 +330,11 @@
                         <?php $count2=0;
                             $query = "SELECT * FROM devices ";
                             $devices = mysqli_query($GS_DBCONN, $query);
-                            while($device = mysqli_fetch_assoc($devices)) { 
+                            while($device = mysqli_fetch_assoc($devices)) { $count2++;
                             
                             //get Device config
 							 $deviceConfig = simplexml_load_string("<?xml version='1.0' standalone='yes'?>".trim($device["deviceXML"])) or die("Error: Cannot create object");
-							$count2++;
+							
 							$query = "SELECT * FROM scene_events WHERE scene_id='".$scene_id."' AND (event_name LIKE 'Device:".$device['ID'].":1%' OR event_name LIKE 'Device:".$device['ID'].":0%' OR event_name='Device:".$device['ID']."_ignore')";
 							$scenes2 = mysqli_query($GS_DBCONN, $query);
 							$scene2 = mysqli_fetch_assoc($scenes2);
@@ -503,7 +503,9 @@
                                  
                             </script>
                         </tr>
-                        <?php } ?>
+                        <?php } if($count2==0):?>
+							<td colspan="4" style="text-align:center;">You Have No Devices</td>
+						<?php endif;?>
                     </tbody>
                 </table>
             </div>

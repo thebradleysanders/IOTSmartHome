@@ -114,7 +114,6 @@ require_once(realpath(__DIR__ ."/../System/API/SmartHome_API/IOTIncludes.php"));
 ?>
          
 	<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12" style="padding:0px;margin-bottom:30px;">
-
 		<h3>
 			Manage Buttons
 			<div style="overflow:auto;height:40px;text-align:right;">
@@ -386,8 +385,7 @@ require_once(realpath(__DIR__ ."/../System/API/SmartHome_API/IOTIncludes.php"));
 	<?php include("includes/findSensorModal.php");?>
 	<?php include("includes/iftttOptions.php");//ifttt modals and options ?>	
 	<?php include("includes/footer.php");?>
-
-<?php include("includes/modals.php");?>
+	<?php include("includes/modals.php");?>
 	
 	<script>
 		setInterval(function(){

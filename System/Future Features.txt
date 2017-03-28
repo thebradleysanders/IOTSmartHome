@@ -2,7 +2,6 @@ Offset time for sunset/sunrise
 lifx support
 sonos support
 save camera images (take picture button for cameras)
-System Monitor for raspberry Pi
 Plex/Kodi
 any other ideas
 

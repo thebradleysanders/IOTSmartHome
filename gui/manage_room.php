@@ -188,7 +188,7 @@
 							$sensor_stringArray.=$sensor['ID'].":";
 						}
 						$sensorStyleArray = array();
-						$sensorStyleArray['card_style']="0:259";
+						$sensorStyleArray['card_style']="0:280";
 						$sensorStyleArray['ID']="1";
 						if($sensorCount>0){
 							SensorCard("","Sensors",trim($sensor_stringArray,":"),$sensorStyleArray);
@@ -197,17 +197,17 @@
 					<!----------------------------------- Data Sensor List ----------------------------------->
 					<?php 
 						$Datasensor_stringArray = "";
-						$query = "SELECT * FROM data_sensors WHERE room='".$room_page['ID']."' AND enalbed='1'";
+						$query = "SELECT * FROM data_sensors WHERE room='".$room_page['ID']."' AND enabled='1'";
 						$sensors = mysqli_query($GS_DBCONN, $query);
 						$DataSensorCount = mysqli_num_rows($sensors);
 						while($sensor = mysqli_fetch_assoc($sensors)) {
 							$DataSensor_stringArray.=$sensor['ID'].":";
 						}
 						$DataSensorStyleArray = array();
-						$DataSensorStyleArray['card_style']="0:259";
+						$DataSensorStyleArray['card_style']="0:280";
 						$DataSensorStyleArray['ID']="1";
 						if($DataSensorCount>0){
-							DataSensor("","Sensors",trim($DataSensor_stringArray,":"),$DatsSensorStyleArray);
+							DataSensor("","Data Sensors",trim($DataSensor_stringArray,":"),$DatsSensorStyleArray);
 						}
 					?>
 					<!----------------------------------- Group List ----------------------------------->
@@ -222,7 +222,7 @@
 							$group_stringArray.=$group['ID'].":";
 						}
 						$GroupStyleArray = array();
-						$GroupStyleArray['card_style']="0:259";
+						$GroupStyleArray['card_style']="0:280";
 						$GroupStyleArray['ID']="2";
 						if($groupCount>0){	
 							GroupList("","Groups",trim($group_stringArray,":"),$GroupStyleArray);
@@ -238,7 +238,7 @@
 							$device_stringArray.=$device['ID'].":";
 						}
 						$DeviceStyleArray = array();
-						$DeviceStyleArray['card_style']="0:259";
+						$DeviceStyleArray['card_style']="0:280";
 						$DeviceStyleArray['ID']="3";
 						if($deviceCount>0){
 							DeviceCard("","Devices",trim($device_stringArray,":"),$DeviceStyleArray);
@@ -247,7 +247,7 @@
 					<!----------------------------------- Weather ----------------------------------->
 					<?php
 						$WeatherStyleArray = array();
-						$WeatherStyleArray['card_style']="0:0";
+						$WeatherStyleArray['card_style']="0:280";
 						WeatherCard("",$WeatherStyleArray);
 					?>
 					<!----------------------------------- Cameras ----------------------------------->

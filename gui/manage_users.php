@@ -373,7 +373,7 @@
             }
             // Display the paging information
             echo "<center style='margin-bottom:15px;'><p style='font-size:18px;'><b>".$prevlink." Page ".$page." of ".$pages." ".$nextlink."</b></p></center>";
-            ?>
+        ?>
         <?php
             $count = 0;
             if($_GET['search']!=""){
@@ -421,7 +421,7 @@
                             <div class="modal-body" style="display:inline-block;overflow:auto;width:310px;height:400px;background-color:#fff;box-shadow:0 1px 3px 0px rgba(0, 0, 0, 0.2);">
                                 <input type="hidden" name="ID" value="<?php echo $result['ID'];?>"/>
                                 <div class="input-group">
-                                    <span class="input-group-addon"><i class="fa fa-user"></i></span>
+                                    <span class="input-group-addon">Name</span>
                                     <input type="text" name="user_name" class="form-control1" value="<?php echo $result['user_name'];?>" style="height:30px;width:100%;"/>
                                 </div>
                                 <div class="input-group">
@@ -457,7 +457,8 @@
                                 <div class="input-group">
                                     <span class="input-group-addon"><i class="fa fa-bed"></i></span>
                                     <select name="room_assign" class="form-control1" style="height:30px;width:100%;" id="room<?php echo $result['ID'];?>">
-                                        <?php 
+                                        <option value="0">No Room</option>
+										<?php 
                                             $query = "SELECT * FROM home_rooms ORDER BY ID ASC";
                                             $rooms = mysqli_query($GS_DBCONN, $query);
                                             while($room_list = mysqli_fetch_assoc($rooms)){
