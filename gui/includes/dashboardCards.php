@@ -449,7 +449,7 @@ function WeatherCard($OrderInput, $data=""){ global $permis_result; global $GS_D
 			<?php echo $OrderInput;?> <!--This return an input with the id of the card this is used to save the order-->
 
 			<h4 class="panel-title" style="font-size:17px;">
-				<a href="#" data-target="#CardUIModal" data-toggle="modal" onclick="editWeatherCard('<?php echo ucfirst($cardName);?>','<?php echo $user;?>','<?php echo $data['card_style'];?>','<?php echo $data['ID'];?>');" 
+				<a href="#" data-target="#CardUIModal" data-toggle="modal" onclick="editWeatherCard('<?php echo ucfirst("Weather");?>','<?php echo $user;?>','<?php echo $data['card_style'];?>','<?php echo $data['ID'];?>');" 
 					title="Edit" class="draggableCardEditIcon"><i style="cursor:pointer;float:right;overflow:hidden;width:0px;"class="fa fa-pencil"></i></a>
 			</h4>
 			
@@ -798,11 +798,11 @@ function RoomListCard($OrderInput,$cardName,$roomArray, $data=""){ global $permi
 								</button>
 								
 								<!-- Brightness Slider -->	
-								<div class="DeviceRoomBrightnessSlider<?php echo $room['ID'];?>" style="height:50px;width:64%;display:inline-block;padding:0px;float:right;border:none;line-height:50px;">
+								<div class="DeviceRoomBrightnessSlider<?php echo $room['ID'];?>" style="height:50px;width:64%;display:inline-block;padding:0px;float:right;border:none;line-height:50px;color:#333;">
 									<?php echo $room['room_name'];?>
 								</div>
 							</form>
-							<button type="button" data-toggle="modal" data-target="#INDEX_ROOM_MODAL<?php echo $room['ID'];?>" class="btn btn-default" style="height:55px;width:16%;">
+							<button type="button" data-toggle="modal" data-target="#INDEX_ROOM_MODAL<?php echo $room['ID'];?>" class="btn btn-default" style="height:55px;width:16%;padding:0px;">
 								<i class="fa fa-bars"></i>
 							</button>
 						</li>
@@ -822,7 +822,7 @@ function RoomListCard($OrderInput,$cardName,$roomArray, $data=""){ global $permi
 									<?php echo $room['room_name'];?>
 								</div>
 							</form>
-							<button type="button" data-toggle="modal" data-target="#INDEX_ROOM_MODAL<?php echo $room['ID'];?>" class="btn btn-default" style="height:55px;width:16%;">
+							<button type="button" data-toggle="modal" data-target="#INDEX_ROOM_MODAL<?php echo $room['ID'];?>" class="btn btn-default" style="height:55px;width:16%;padding:0px;">
 								<i class="fa fa-bars"></i>
 							</button>
 						</li>	
@@ -870,10 +870,11 @@ function RoomListCard($OrderInput,$cardName,$roomArray, $data=""){ global $permi
 										<div style="width:45%;margin:0px;height:300px;overflow-y:auto;overflow-x:hidden;display:inline-block;margin-right:10px;">
 											<label><b>Groups:</b></label>
 											<?php
+											$count=0;
 											$query = "SELECT * FROM device_groups ORDER BY ID ASC LIMIT 8 ";
 											$Rgroups = mysqli_query($GS_DBCONN, $query);
-											while($group = mysqli_fetch_assoc($Rgroups)) { 
-												if(mysqli_num_rows(mysqli_query($GS_DBCONN, "SELECT * FROM devices WHERE room='".$room['ID']."' AND group_id='".$group['ID']."'"))==0){continue;} ?>
+											while($group = mysqli_fetch_assoc($Rgroups)) {
+												if(mysqli_num_rows(mysqli_query($GS_DBCONN, "SELECT * FROM devices WHERE room='".$room['ID']."' AND group_id='".$group['ID']."'"))==0){continue;}else{$count++;} ?>
 													<form method="post" class="autoform">
 													 <input type="hidden" name="type" value="<?php echo temp_encode("modalRoomGroup");?>"/>
 													 <input type="hidden" name="room_id" value="<?php echo $room['ID'];?>"/>
@@ -887,15 +888,18 @@ function RoomListCard($OrderInput,$cardName,$roomArray, $data=""){ global $permi
 														<i style="float:left;" class="fa <?php echo $group['group_icon'];?>"></i>&nbsp;<?php echo $group['group_name'];?>
 													 </button>												
 												</form>
-											<?php }?>
+											<?php } if($count==0):?>
+												<p>No Groups</p>
+											<?php endif;?>
 										</div>
 										
 										<div style="width:45%;margin:0px;height:300px;overflow-y:auto;overflow-x:hidden;display:inline-block;">											
 											<label><b>Devices:</b></label>
 											<?php
+											$count = 0;
 											$query = "SELECT * FROM devices WHERE room='".$room['ID']."' ORDER BY ID ASC LIMIT 8 ";
 											$Rdevices = mysqli_query($GS_DBCONN, $query);
-											while($Rdevice = mysqli_fetch_assoc($Rdevices)) {
+											while($Rdevice = mysqli_fetch_assoc($Rdevices)) { $count++;
 											?>
 												<form method="POST" class="turnOff_<?php echo $Rdevice['ID'];?> autoform" style="display:none;" >
 													<input type="hidden" name="type" value="<?php echo temp_encode("toggle_deviceOff");?>" />
@@ -913,7 +917,9 @@ function RoomListCard($OrderInput,$cardName,$roomArray, $data=""){ global $permi
 														<?php echo $Rdevice['device_name'];?>
 													</button>																	
 												</form>	
-											<?php } ?>
+											<?php } if($count==0):?>
+												<p>No Devices</p>
+											<?php endif;?>
 										</div>
 									</div> <!--END MODAL BODY -->
 								</div><!-- END MODAL CONTENT -->

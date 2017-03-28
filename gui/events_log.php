@@ -114,8 +114,7 @@
                     $start = $offset + 1;
                     $end = min(($offset + $limit), $total);
                     
-                    
-                    
+
                     if($_GET['type']==""){
                     	 // The "back" link
                     	$prevlink = ($page > 1) ? "
@@ -165,7 +164,9 @@
                      mysqli_query($GS_DBCONN, "UPDATE event_log SET event_read='1' WHERE ID='".$result['ID']."'");
                 ?>
 					<li><b><?php echo $result['event_date'];?></b> - <?php echo $result['event'];?> </li>
-                <?php }?>
+                <?php } if($count==0):?>
+					<p style="text-align:center;margin-top:10px;color:#888;">No Events Have Been Logged</p>
+				<?php endif;?>
             </ul>
         </div>
     </div>

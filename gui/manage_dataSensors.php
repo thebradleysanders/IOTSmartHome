@@ -180,7 +180,7 @@
 						<div class="input-group">
 							<span class="input-group-addon"><b>Room</b></span>
 							<select name="sensor_room" id="sensor_room" style="height:30px;width:100%;" class="form-control1">
-								<option value="">No Room</option>
+								<option value="0">No Room</option>
 								<?php
 									$query = "SELECT * FROM home_rooms";
 									$results = mysqli_query($GS_DBCONN, $query);
@@ -216,7 +216,6 @@
 </div>
     <div class="clearfix"> </div>
     <?php $deviceOrSensor="Sensor";?>
-    <?php include("includes/findSensorModal.php");?>
     <?php include("includes/footer.php");?>
 	<?php include("includes/modals.php");?>
 <script>

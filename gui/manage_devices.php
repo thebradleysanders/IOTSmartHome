@@ -630,7 +630,6 @@
 </div>
     <div class="clearfix"> </div>
     <?php $deviceOrSensor="Device";?>
-    <?php include("includes/findSensorModal.php");?>
     <?php include("includes/footer.php");?>
 	<?php include("includes/modals.php");?>
 <script>

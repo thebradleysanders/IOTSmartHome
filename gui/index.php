@@ -253,7 +253,7 @@
     	if($_POST["card_type"]=="Weather"){
     		$attr1="";
     		$insert_query="INSERT INTO dashboard_cards (user_id,card_name,card_type,card_style,attr1,enabled,index_order)
-    						VALUES('".$_SESSION['id']."','".ucwords(strtolower($_POST['card_name']))."','".$_POST['card_type']."','".$style."','".trim($attr1,":")."','1','0')";
+    						VALUES('".$_SESSION['id']."','"."Weather"."','".$_POST['card_type']."','".$style."','".trim($attr1,":")."','1','0')";
     		mysqli_query($GS_DBCONN, $insert_query) or die (mysqli_error($GS_DBCONN));
     	}
     	
@@ -395,7 +395,7 @@
     	//Weather
     	if($_POST["card_type"]=="Weather"){
     		$attr1="";
-    		$insert_query="UPDATE dashboard_cards SET card_name='".ucwords(strtolower($_POST['card_name']))."',attr1='',card_style='".$style."' WHERE ID='".$_POST['ID']."' AND user_id='".$_SESSION['id']."'";
+    		$insert_query="UPDATE dashboard_cards SET card_name='"."Weather"."',attr1='',card_style='".$style."' WHERE ID='".$_POST['ID']."' AND user_id='".$_SESSION['id']."'";
     		mysqli_query($GS_DBCONN, $insert_query) or die (mysqli_error($GS_DBCONN));
     	}
     	
