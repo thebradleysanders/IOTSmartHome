@@ -1,6 +1,6 @@
 <snippet>
   <content><![CDATA[
-# IOTSmartHome
+## IOTSmartHome
 Currently Supported Products/API's:
 	Phillips Hue
 	Belkin Wemo
