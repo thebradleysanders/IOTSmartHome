@@ -1,13 +1,12 @@
 <snippet>
-  <content><![CDATA[
+  <content>
 ## IOTSmartHome
 Currently Supported Products/API's:
 	Phillips Hue
 	Belkin Wemo
 	Logitech Squeezebox
 	Open Weather Map
-	MQTT
-	
+	MQTT	
 ## Installation
 	PHP 5.5+
 	MQTT Broker
@@ -29,6 +28,6 @@ Software for your home.
 	Brad Sanders 
 ## License
 TODO: Write license
-]]></content>
+</content>
   <tabTrigger>readme</tabTrigger>
 </snippet>
