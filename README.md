@@ -18,8 +18,7 @@ This is written PHP. It includes the following API's:
 
 ## Installation
 * Add the IOTSmartHome Project to your web server
-* Install the sql file located at System/Install/smarthome.sql
-* Adjust the System/Install/Config.php file to match your configuration
+* Enter your web servers URL and navigate through the install
 
 
 ## Screenshots
