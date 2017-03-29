@@ -2,17 +2,6 @@
 $GS_Config = array();
 /* INITIAL CONFIG SETTINGS   Created By: Brad Sanders */
 
-########################################### Database Setup ###########################################
-$GS_Config['MySqlServer'] = "localhost";
-$GS_Config['dbUsername'] = "root";
-$GS_Config['dbPassword'] = "1234";
-$GS_Config['dbName'] = "smarthome";
-######################################################################################################
-
-##########################################  Decryption Password ######################################
- $GS_Config['EncryptKey'] = "YourPassword";
-######################################################################################################
-
 ##############################################  General ##############################################
  $GS_Config['SiteName'] = "IOT";
  $GS_Config['InstallType'] = "normal"; //lite or normal
@@ -35,3 +24,13 @@ $GS_Config['MQTTRecievePath'] = "WirelessNode/toBroker/#";
 //default permissions users get when there account is created
 $GS_Config['DefaultUserPermissions'] = ":index.php|read:index.html|read:";
 ######################################################################################################
+ ########################################### Database Setup ###########################################
+$GS_Config["MySqlServer"] = "localhost";
+$GS_Config["dbUsername"] = "root";
+$GS_Config["dbPassword"] = "1234";
+$GS_Config["dbName"] = "smarthome";
+######################################################################################################
+##########################################  Decryption Password ######################################
+$GS_Config["EncryptKey"] = "SH337808119235775";
+######################################################################################################
+$GS_Config["installCheck"] = "true";

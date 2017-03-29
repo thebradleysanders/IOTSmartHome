@@ -89,6 +89,49 @@
                     </script>
                 </div>
 				
+				<!-- USER DEFINED VARIABLE -->
+                <div style="padding:5px;display:none;" class="UserVariable_box">
+                  <div class="input-group" style="margin-top:10px;">
+						<span class="input-group-addon"><b>Variable</b></span>
+						<select class="form-control1" style="height:30px;width:100%;" id="userVariable_ID" onchange="saveSetVariable();">
+							<option value="">Not Set</option>
+							<?php 
+								$query1_a = "SELECT * FROM ifttt_userDefinedVariables";
+								$results1_a = mysqli_query($GS_DBCONN, $query1_a);
+								while($result1_a = mysqli_fetch_assoc($results1_a)) { 
+							?>	
+								<option value="<?php echo $result1_a['ID'];?>:<?php echo ucwords($result1_a['variable_name']);?>">
+									<?php echo ucwords($result1_a['variable_name']);?>
+								</option>
+							<?php }?>
+						</select>
+					</div>
+					
+                    <center>
+						<input value="=" type="radio" name="userVariable_compare" onclick="saveSetVariable();"/> <span style="font-size:12px;">Equal To</span>&nbsp;
+						<input value="!=" type="radio" name="userVariable_compare" onclick="saveSetVariable();"/> <span style="font-size:12px;">Not Equal To</span>&nbsp;
+                        <input value="<" type="radio" name="userVariable_compare" onclick="saveSetVariable();"/> <span style="font-size:12px;">Less Than</span>&nbsp;
+                        <input value=">" type="radio" name="userVariable_compare" onclick="saveSetVariable();"/> <span style="font-size:12px;">Greater Than</span>&nbsp;
+                    </center>
+					
+					<div class="input-group" style="margin-top:10px;">
+						<span class="input-group-addon"><b>Value</b></span>
+						<input type="text" class="form-control1" style="height:30px;width:100%;" id="userVariable_compareTo" onkeyup="saveSetVariable();"/>
+					</div>
+                       
+                  
+                    <script>
+                        function saveSetVariable(){
+							var compareOption = $("input[name='userVariable_compare']:checked").val();
+							var variableData = $('#userVariable_ID').val().split(":");
+
+							var niceString = variableData[1] +" "+ compareOption +" "+$('#userVariable_compareTo').val();
+                        	var endString = '<IF>UserVariable:' + variableData[0]  +':'+ compareOption + ':' + $('#userVariable_compareTo').val() + '</IF> ' + niceString;
+                        	save_if_event(endString);
+                        }
+                    </script>
+                </div>
+				
                 <div style="padding:5px;display:none;" id="main_select_box">
                     <!-- SENSORS -->
                     <label class="ifttt_ifThis_Sensor" for="">Select a Sensor:</label>
@@ -353,6 +396,7 @@
     	  
     	  $(".Schedule").hide();
     	  $('.DataSensor_box').hide();
+		  $(".UserVariable_box").hide();
     	}
        
     	/* show items in modal based on selection of ifttt if select box */
@@ -364,6 +408,7 @@
     	if (type=="DeviceState"){ hide_all(); $(".ifttt_ifThis_Device").show(); $("#if_moreHeader").text("Select a Device");}
     	if (type=="Status"){ hide_all(); $(".ifttt_ifThis_Status").show();}
     	if (type=="Schedule"){ hide_all(); $(".Schedule").show(); $("#main_select_box").hide(); $("#Schedule_box").show(); $("#if_moreHeader").text("Select a Date/Time");}
+		if (type=="UserVariable"){ hide_all(); $(".UserVariable_box").show(); $("#if_moreHeader").text("User Variable");}
     }				
 </script>
 <!--#########################################################################################################################################################################-->
@@ -589,6 +634,35 @@
                     <script>
                         function saveToLog(){
                         	var endString="<THEN>LOG:"+$("#log_text").val()+"</THEN> Add To Log:"+$("#log_text").val();
+                        	save_that_event(endString);							
+                        }
+                    </script>
+                </div>
+				<!---- User Defined Variable -->
+                <div style="display:none;" class="SetUserVariable">
+                    <!---- Variable ---->
+					<label>Variable:</label>
+					<select class="form-control1" style="height:30px;width:100%;" id="setUserVariable_ID" onchange="saveUserVariable();">
+						<option value="">Not Set</option>
+						<?php 
+							$query1_a = "SELECT * FROM ifttt_userDefinedVariables";
+							$results1_a = mysqli_query($GS_DBCONN, $query1_a);
+							while($result1_a = mysqli_fetch_assoc($results1_a)) { 
+						?>	
+							<option value="<?php echo $result1_a['ID'];?>:<?php echo ucwords($result1_a['variable_name']);?>">
+								<?php echo ucwords($result1_a['variable_name']);?>
+							</option>
+						<?php }?>
+					</select>
+                    <label>Value:</label>
+                    <input type="text" onKeyUp="saveUserVariable()" id="userVariableText" style="width:100%;margin-bottom:2px;" class="form-control1"/>
+					
+                    <script>
+                        function saveUserVariable(){
+							var userVariableData = $("#setUserVariable_ID").val().split(":");
+							
+							var nicetext = "Set Variable: "+userVariableData[1]+" to "+$("#userVariableText").val();
+                        	var endString="<THEN>UserVariable:"+userVariableData[0]+":"+$("#userVariableText").val()+"</THEN> "+nicetext;
                         	save_that_event(endString);							
                         }
                     </script>
@@ -1046,6 +1120,8 @@
     	  $(".AddDelay").hide();
     	  $(".then_that_Scripts").hide();
     	  $(".Speak_in_room").hide();
+		  $("#SetUserVariable").hide();
+		  
     	}
        
     	/* show items in modal based on selection of ifttt if select box */
@@ -1067,6 +1143,8 @@
     	if (type=="Script"){ hide_all(); $(".then_that_Scripts").show(); $("#that_moreHeader").text("Select a Script");}
     	if (type=="Speak"){ hide_all(); $(".Speak_in_room").show(); $("#that_moreHeader").text("Speak In Room(s)");}
     	if (type=="UINotification"){ hide_all(); $(".UINotification").show(); $("#that_moreHeader").text("Send UI Notification");}
+		if (type=="SetUserVariable"){ hide_all(); $(".SetUserVariable").show(); $("#that_moreHeader").text("Set User Variable");}
+		
     }
     
 </script>
@@ -1083,6 +1161,7 @@
     	<?php endif;?>
     	$(id).append($("<option></option>").attr("value","Alarm").text("Alarm Status"));
     	$(id).append($("<option></option>").attr("value","Status").text("Occupancy Status"));
+		$(id).append($("<option></option>").attr("value","UserVariable").text("User Variable"));
     }	
     
     					
@@ -1103,6 +1182,8 @@
     	$(id).append($("<option></option>").attr("value","Write To Log").text("Write To Log"));
     	$(id).append($("<option></option>").attr("value","UINotification").text("Send UI Notification"));
     	$(id).append($("<option></option>").attr("value","Speak").text("Speak In Room"));
+		$(id).append($("<option></option>").attr("value","SetUserVariable").text("Set User Variable"));
+		
     	<?php if($GS_squeezeBoxServiceEnabled == true):?>
     		$(id).append($("<option></option>").attr("value","Music Control").text("Music Control"));
     	<?php endif;?>

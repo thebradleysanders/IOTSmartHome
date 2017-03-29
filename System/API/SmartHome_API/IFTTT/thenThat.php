@@ -159,6 +159,15 @@ function GF_ThenThat($RawData, $calledBy=""){
 			$notification = explode(":",$data);
 			UINotification($notification[1],$notification[2],$notification[3]);// userID,type,data
 			break;
+		//User Defined Variable
+		case strpos($data, 'UserVariable:') !== false:
+			$array = explode(":",$data);
+			$variableID=(int)$array[1];
+			$value=$array[2];
+			
+			$query = "UPDATE ifttt_userdefinedvariables SET variable_value='".$value."' WHERE ID='".$variableID."'";
+			mysqli_query($GS_DBCONN,$query);
+			break;
 		//Scenes
 		case strpos($data, 'Scene:') !== false:
 			$scene = str_replace("Scene:", "", $data);

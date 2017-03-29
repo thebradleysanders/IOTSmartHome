@@ -219,6 +219,24 @@ function GF_iftttEvent($ifttt_info_Raw,$ifttt_ID=""){
 			elseif(((int)$sensor_dataValues[$col_number]<=(int)$compareTo) && $comparison=="<="){Return true;} //not in UI
 			else{RETURN 0;}
 			break;
+		//User Defined Variable
+		case strpos($ifttt_info,'UserVariable:') !== false:
+			$array = explode(":",$ifttt_info);
+			$variable_id=(int)trim($array[1]);
+			$comparison = trim($array[2]);
+			$compareTo = trim($array[3]);
+			
+			$variableData=mysqli_fetch_array(mysqli_query($GS_DBCONN, "SELECT * FROM ifttt_userdefinedvariables WHERE ID='".$variable_id."' LIMIT 1"));	
+			$variableValue = $variableData['variable_value'];
+			
+			if(($variableValue==$compareTo) && $comparison=="="){Return true; }
+			elseif(($variableValue!=$compareTo) && $comparison=="!="){Return true;}
+			elseif(((int)$variableValue>(int)$compareTo) && $comparison==">"){Return true;}
+			elseif(((int)$variableValue<(int)$compareTo) && $comparison=="<"){Return true;}
+			elseif(((int)$variableValue>=(int)$compareTo) && $comparison==">="){Return true;} //not in UI
+			elseif(((int)$variableValue<=(int)$compareTo) && $comparison=="<="){Return true;} //not in UI
+			else{RETURN 0;}
+			break;
 		//Sensor State	
 		case strpos($ifttt_info,'Sensor:') !== false:
 			$array = explode(":",$ifttt_info);

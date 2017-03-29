@@ -65,17 +65,18 @@ while(true){
 	$query    = "SELECT * FROM ifttt WHERE (if_Array NOT LIKE '%<IF>Sensor:%') AND enabled='1'";
 	$results5 = mysqli_query($GS_DBCONN, $query);
 	while ($ifttt_info = mysqli_fetch_assoc($results5)) {
-		if (time() > strtotime('+'.$ifttt_info['delay'].' seconds', $ifttt_info['last_ran'])) {
-			
-			$opperatorArray = explode("+",$ifttt_info['opperatorArray']);
-			$parenthaseArrayAll = explode("+", $ifttt_info['parenthaseArray']);
-			
-			$conditionsALL = explode("<Condition>", rtrim($ifttt_info['if_Array'],"<Condition>"));
-			$actionsALL = explode("<Action>", rtrim($ifttt_info['ifThen_Array'],"<Action>"));
+		$delayArray = explode("+",$ifttt_info['delayArray']);
 
-			//IF
-			$conditionCount=0;
-			foreach($conditionsALL as $condition){$conditionCount++;
+		$opperatorArray = explode("+",$ifttt_info['opperatorArray']);
+		$parenthaseArrayAll = explode("+", $ifttt_info['parenthaseArray']);
+		
+		$conditionsALL = explode("<Condition>", rtrim($ifttt_info['if_Array'],"<Condition>"));
+		$actionsALL = explode("<Action>", rtrim($ifttt_info['ifThen_Array'],"<Action>"));
+
+		//IF
+		$conditionCount=0;
+		foreach($conditionsALL as $condition){$conditionCount++;
+			if (time() > strtotime('+'.$delayArray[$conditionCount-1].' seconds', $ifttt_info['last_ran'])) {
 				//IF Array
 				$if_Array = explode("<Done>",rtrim($conditionsALL[$conditionCount-1],"<Done>"));
 				//THEN Array
@@ -102,7 +103,7 @@ while(true){
 						mysqli_query($GS_DBCONN, "UPDATE ifttt SET last_ran='".time()."' WHERE ID='".$ifttt_info['ID']."'");
 						GF_logging('IFTTT Event: <b>(System Timer.IF:'.$conditionCount.')</b> <u>'.ucfirst($ifttt_info['name']).'</u> Has Been Activated','|IFTTT|Sensors|System Services|'.$ifttt_info['name'].'|');
 						break;
-					}	
+					}
 				}
 			}
 		}
