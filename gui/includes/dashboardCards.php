@@ -269,10 +269,12 @@ function SensorCard($OrderInput,$cardName,$sensorArray, $data=""){  global $perm
 			
 			<div class="panel-body">
 				<ul class="list-unstyled">
-					<?php foreach (explode(":",$sensorArray) as $sensorID){
+					<?php 
+					$count=0;
+					foreach (explode(":",$sensorArray) as $sensorID){
 						$results = mysqli_query($GS_DBCONN, "SELECT * FROM sensors WHERE ID='".$sensorID."'");
 						$result = mysqli_fetch_assoc($results);
-						if($result['ID']==""){continue;}//skip if id dont exitst
+						if($result['ID']==""){continue;}else{$count++;} //skip if id dont exitst
 					?>
 						
 						<li style="padding:0px;margin-bottom:5px;height:45px;border:1px solid #e8e8e8;">
@@ -290,7 +292,9 @@ function SensorCard($OrderInput,$cardName,$sensorArray, $data=""){  global $perm
 							<span class="indexSensorState_<?php echo $result['ID'];?> small-font"></span>
 						</li>
 
-					<?php }?>
+					<?php } if($count==0):?>
+						<p style="color:#888;">There Are No Sensors</p>
+					<?php endif;?>
 				</ul>
 			</div>
 		</div>
@@ -463,9 +467,10 @@ function WeatherCard($OrderInput, $data=""){ global $permis_result; global $GS_D
 			</script>	
 
 			<div class="panel-body">
+				
 				<div class="cloud">
+					<p class="monday" style="box-shadow:rgba(0, 0, 0, 0.2) 0px 1px 3px 0px;padding:12px;"> <?php echo date("l, F jS");?> </p>
 					<?php if($GS_weatherServiceEnabled == true): //Check if service is enabled ?>
-						<p class="monday" style="box-shadow:rgba(0, 0, 0, 0.2) 0px 1px 3px 0px;padding:12px;"> <?php echo date("l, F jS");?> </p>
 						<div class="grid-date" style="padding:4px;border-radius:0px;margin-top:5px;box-shadow:rgba(0, 0, 0, 0.2) 0px 1px 3px 0px;">
 							<div class="date">
 								<p class="date-in">
@@ -499,10 +504,12 @@ function WeatherCard($OrderInput, $data=""){ global $permis_result; global $GS_D
 						</div>
 					<?php endif;?>
 				</div>
-				<p class="monday" style="margin-bottom:5px;box-shadow:rgba(0, 0, 0, 0.2) 0px 1px 3px 1px;font-size:16px;margin-top:6px;padding:12px;">
-					<b>Sunrise:</b> <span style="" id="DashboardCardWeather_sunrise"></span>&nbsp;&nbsp;
-					<b>Sunset:</b> <span style="" id="DashboardCardWeather_sunset"></span>
-				</p>
+				<?php if($GS_weatherServiceEnabled == true): //Check if service is enabled ?>
+					<p class="monday" style="margin-bottom:5px;box-shadow:rgba(0, 0, 0, 0.2) 0px 1px 3px 1px;font-size:16px;margin-top:6px;padding:12px;">
+						<b>Sunrise:</b> <span style="" id="DashboardCardWeather_sunrise"></span>&nbsp;&nbsp;
+						<b>Sunset:</b> <span style="" id="DashboardCardWeather_sunset"></span>
+					</p>
+				<?php endif;?>
 			</div>
 		</div>
 	</li>
@@ -648,16 +655,18 @@ function SceneControl($OrderInput,$cardName,$sceneArray, $data=""){ global $perm
 			</script>
 
 			<div class="panel-body">
-				<?php foreach (explode(":",$sceneArray) as $SceneID) {
+				<?php 
+				$count = 0;
+				foreach (explode(":",$sceneArray) as $SceneID) {
 					$query = "SELECT * FROM scene WHERE ID='".$SceneID."'";
 					$scenes = mysqli_query($GS_DBCONN, $query);
 					$scene = mysqli_fetch_assoc($scenes);
 					
 					//skip if id dont exitst
 					if($scene['ID']==""){continue;}
-					
 					//check permissions
 					if(GetUserPermissions($scene['ID'],"manage_scene.php")==false){continue;}
+					$count++;
 				?>
 					<form method="POST" class="autoform">
 						<input type="hidden" name="type" value="activateScene"/>
@@ -670,7 +679,9 @@ function SceneControl($OrderInput,$cardName,$sceneArray, $data=""){ global $perm
 							<?php echo $scene['scene_name'];?>
 						</button>
 					</form>
-				<?php } ?>
+				<?php } if($count==0):?>
+					<p style="color:#888;">There Are No Scenes</p>
+				<?php endif;?>
 			</div>
 		</div>
 	</li>
@@ -704,13 +715,14 @@ function GroupList($OrderInput,$cardName,$groupArray, $data=""){ global $permis_
 			<div class="panel-body">
 				<ul style="list-style:none;margin:0px;padding:0px;">
 					<?php 
+					$count =0;
 					foreach (explode(":",$groupArray) as $groupID){
 						$query = "SELECT * FROM device_groups WHERE ID='".$groupID."'";
 						$groups = mysqli_query($GS_DBCONN, $query);
 						$group = mysqli_fetch_assoc($groups);
 						
 						//skip if id dont exitst
-						if($group['ID']==""){continue;}
+						if($group['ID']==""){continue;}else{$count++;}
 					?>
 						<li id="turnOnGroup_<?php echo $group['ID'];?>" style="display:none;border:none;padding:0px;">
 							<form method="POST" class="autoform">
@@ -738,7 +750,9 @@ function GroupList($OrderInput,$cardName,$groupArray, $data=""){ global $permis_
 							</form>
 						</li>
 			  
-					<?php } ?>
+					<?php } if($count==0):?>
+						<p style="color:#888;">No Groups Are In This Room</p>
+					<?php endif;?>
 			   </ul>
 			</div>
 		</div>
@@ -771,9 +785,9 @@ function RoomListCard($OrderInput,$cardName,$roomArray, $data=""){ global $permi
 			
 			<div class="panel-body">
 				<ul style="list-style:none;margin:0px;padding:0px;">
-					 <?php 
-						 foreach (explode(":",$roomArray) as $roomID){
-
+					 <?php
+						$count=0;
+						foreach (explode(":",$roomArray) as $roomID){
 							$query = "SELECT * FROM home_rooms WHERE ID='".$roomID."'";
 							$rooms = mysqli_query($GS_DBCONN, $query);
 							$room = mysqli_fetch_assoc($rooms);
@@ -786,6 +800,7 @@ function RoomListCard($OrderInput,$cardName,$roomArray, $data=""){ global $permi
 			
 							if($room['guest_access']=="0" && $_SESSION['type']=='Guest'){continue;}
 							if(GetUserPermissions($room['ID'],"manage_room.php")==false){continue;}
+							$count++;
 					?>
 						<li id="turnOnRoom_<?php echo $room['ID'];?>" style="display:none;border:none;padding:0px;margin-bottom:5px;">
 							<form method="POST" class="autoform" style="width:78%;border-radius:0px;margin:0px;padding:0px;text-align:left;border:1px solid #e8e8e8;margin-bottom:5px;display:inline-block;">
@@ -889,7 +904,7 @@ function RoomListCard($OrderInput,$cardName,$roomArray, $data=""){ global $permi
 													 </button>												
 												</form>
 											<?php } if($count==0):?>
-												<p>No Groups</p>
+												<p style="color:#888;">No Groups</p>
 											<?php endif;?>
 										</div>
 										
@@ -918,14 +933,16 @@ function RoomListCard($OrderInput,$cardName,$roomArray, $data=""){ global $permi
 													</button>																	
 												</form>	
 											<?php } if($count==0):?>
-												<p>No Devices</p>
+												<p style="color:#888;">No Devices</p>
 											<?php endif;?>
 										</div>
 									</div> <!--END MODAL BODY -->
 								</div><!-- END MODAL CONTENT -->
 							</div><!-- END MODAL DIALOG -->
 						</div><!-- END MODAL FADE -->
-					<?php } //END FOR EACH ROOM ?>
+					<?php } /* END FOR EACH ROOM  */ if($count==0):?>
+						<p style="color:#888;">There Are No Room</p>
+					<?php endif;?>
 
 				</ul>
 			</div>

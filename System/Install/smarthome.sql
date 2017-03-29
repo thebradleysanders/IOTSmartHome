@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Mar 28, 2017 at 07:48 AM
+-- Generation Time: Mar 29, 2017 at 03:22 PM
 -- Server version: 5.7.17-log
 -- PHP Version: 7.0.9
 
@@ -17,7 +17,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `smarthome`
+-- Database: `smarthome1`
 --
 
 -- --------------------------------------------------------
@@ -40,7 +40,7 @@ CREATE TABLE `alarm_status` (
 --
 
 INSERT INTO `alarm_status` (`ID`, `alarm_mode`, `alarm_state`, `alarm_time`, `alarm_ready`, `alarm_triggered`) VALUES
-(1, 'Away', 0, '9:17:43 AM', 1, 0);
+(1, 'Home', 0, '9:17:43 AM', 1, 0);
 
 -- --------------------------------------------------------
 
@@ -217,8 +217,8 @@ INSERT INTO `enabled_services` (`ID`, `service_name`, `service_attr1`, `service_
 (2, 'MQTT', 'localhost:1883', '', '', '', 0),
 (3, 'Belkin Wemo', '', '', '', '', 0),
 (4, 'SqueezeBox', '', '', '', '', 0),
-(5, 'Email', 'smtp.gmail.com', '465', '', '', 0),
-(6, 'Weather', '', '', '', '', 1),
+(5, 'Email', '', '', '', '', 0),
+(6, 'Weather', '', '', '', '', 0),
 (7, 'Spotify', '', '', '', '', 0);
 
 -- --------------------------------------------------------
@@ -287,11 +287,11 @@ CREATE TABLE `home_rooms` (
 --
 
 INSERT INTO `home_rooms` (`ID`, `room_name`, `room_icon`, `guest_access`, `last_active`, `timeout`, `timeout_last_active`, `timeout_enable`, `autoWakeUpTime`, `autoWakeUpLastRan`) VALUES
-(2, 'Back Office', 'fa-power-off', 1, '1490198134', 1, '', 1, '0|12:01|mon tue wed thu fri', '1483554777'),
-(3, 'Bedroom', 'fa-power-off', 1, '1490198136', 15, '', 1, '1|06:00|mon tue wed thu fri', '1488371490'),
-(4, 'Main', 'fa-power-off', 1, '1490198135', 15, '', 1, '0|18:00|', '1482841574'),
-(5, 'Hallway', 'fa-power-off', 1, '1490629842', 2, '1490629842', 1, '0|18:00|', ''),
-(6, 'Kitchen', 'fa-power-off', 1, '1490198129', 3, '', 1, '', '');
+(2, 'Back Office', 'fa-power-off', 1, '1490198134', 30, '', 1, '0|12:00|', '1483554777'),
+(3, 'Bedroom', 'fa-power-off', 1, '1490198136', 30, '', 1, '0|12:00|', '1488371490'),
+(4, 'Main', 'fa-power-off', 1, '1490198135', 30, '', 1, '0|12:00|', '1482841574'),
+(5, 'Hallway', 'fa-power-off', 1, '1490629842', 30, '1490629842', 1, '0|12:00|', ''),
+(6, 'Kitchen', 'fa-power-off', 1, '1490198129', 30, '', 1, '0|12:00|', '');
 
 -- --------------------------------------------------------
 
@@ -310,13 +310,6 @@ CREATE TABLE `ifttt` (
   `delay` varchar(10) NOT NULL DEFAULT '',
   `enabled` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
---
--- Dumping data for table `ifttt`
---
-
-INSERT INTO `ifttt` (`ID`, `name`, `if_Array`, `ifThen_Array`, `opperatorArray`, `parenthaseArray`, `last_ran`, `delay`, `enabled`) VALUES
-(142, 'TEST', '<IF>Sensor:34:1</IF> Hallway Motion Open/Active<Done><Condition><IF>Sensor:34:0</IF> Hallway Motion Closed/Inactive<Done><Condition>', '<THEN>UINotification:0:MessageModal:Test|Test1|http://localhost/images/logo.png|30</THEN> Show Message Dialog On User: All Users for 30 seconds<Done><Action>', ':+:+++', ':(:|:):+:(:|:):+:|:+:|:+', '1490629842', '18', 1);
 
 -- --------------------------------------------------------
 
@@ -798,7 +791,7 @@ CREATE TABLE `settings` (
 --
 
 INSERT INTO `settings` (`ID`, `name`, `home_address`, `home_latLong`, `city_state`, `zip_code`, `outgoing_email_list`, `scan_for_new_sensors`) VALUES
-(1, 'Brad Sanders', '', '', '', '', '', 0);
+(1, '', '', '', '', '', '', 0);
 
 -- --------------------------------------------------------
 
@@ -818,11 +811,11 @@ CREATE TABLE `shbroker` (
 --
 
 INSERT INTO `shbroker` (`ID`, `page_name`, `proc_id`, `state`) VALUES
-(1, 'SystemTimer.php', 11632, 1),
-(2, 'SystemServices.php', 9788, 1),
-(3, 'SystemMonitor.php', 10372, 1),
-(4, 'SystemMQTTInbox.php', 7280, 1),
-(5, 'HomeStatus.php', 3784, 1);
+(1, 'SystemTimer.php', 11632, 3),
+(2, 'SystemServices.php', 9788, 3),
+(3, 'SystemMonitor.php', 10372, 3),
+(4, 'SystemMQTTInbox.php', 7280, 3),
+(5, 'HomeStatus.php', 3784, 3);
 
 -- --------------------------------------------------------
 
@@ -866,7 +859,7 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`ID`, `user_name`, `username`, `password`, `alarm_pin`, `last_login`, `last_access_ip`, `type`, `decription`, `user_img`, `user_workAddress`, `user_workLatLong`, `enabled`, `user_permissions`, `room_assign`) VALUES
-(1, 'Admin Account', 'Admin', '1234', 1234, '1490707899', '172.21.2.77', 'Admin', 'Admin Account', 'Default.png', '', '', 1, ':alarm_access|readedit|:index.php|read|edit|add|delete|:ifttt_simple.php|read|:ifttt_advanced.php|read|edit|add|delete|:manage_buttons.php|read|edit|add|delete|:manage_music.php|read|edit|add|delete|:manage_users.php|read|edit|add|delete|:manage_devices.php|read|edit|add|delete|:manage_sensors.php|read|edit|add|delete|:manage_dataSensors.php|read|edit|add|delete|:events_log.php|read|delete|:manage_settings.php|read|edit|:sensor_history_log.php|read|:device_history_log.php|read|:manage_room.php|read|edit|add|delete|2|3|4|5|6|:manage_cameras.php|read|edit|add|delete|:manage_scene.php|read|edit|add|delete|3|7|8|', 3);
+(1, 'Admin', 'Admin', '1234', 1234, '1490821930', '172.21.2.77', 'Admin', 'Admin Account', 'Default.png', '', '', 1, ':alarm_access|readedit|:index.php|read|edit|add|delete|:ifttt_simple.php|read|:ifttt_advanced.php|read|edit|add|delete|:manage_buttons.php|read|edit|add|delete|:manage_music.php|read|edit|add|delete|:manage_users.php|read|edit|add|delete|:manage_devices.php|read|edit|add|delete|:manage_sensors.php|read|edit|add|delete|:manage_dataSensors.php|read|edit|add|delete|:events_log.php|read|delete|:manage_settings.php|read|edit|:sensor_history_log.php|read|:device_history_log.php|read|:manage_room.php|read|edit|add|delete|2|3|4|5|6|:manage_cameras.php|read|edit|add|delete|:manage_scene.php|read|edit|add|delete|3|7|8|', 0);
 
 -- --------------------------------------------------------
 
@@ -896,13 +889,13 @@ CREATE TABLE `weather_data` (
 --
 
 INSERT INTO `weather_data` (`city_name`, `ID`, `temp`, `humidity`, `heat_index`, `temp_min`, `temp_max`, `temp_condition`, `sunrise_time`, `sunset_time`, `wind_speed`, `last_updated`, `update_interval`, `day_added`) VALUES
-('Salina', 1, 70, 60, '', 70, 70, 'broken clouds', '06:27:25 AM', '06:46:25 PM', '25.28', '1490298317', '30', 'Monday'),
-('Salina', 2, 70, 60, '', 70, 70, 'broken clouds', '06:27:25 AM', '06:46:25 PM', '25.28', '1490298317', '30', 'Tuesday'),
-('Salina', 3, 60, 60, '68', 70, 70, 'broken clouds', '06:27:25 AM', '06:46:25 PM', '25.28', '1490298317', '30', 'Wednsday'),
-('Salina', 4, 75, 53, '77', 75, 75, 'clear sky', '06:27:16 AM', '06:46:30 PM', '19.46', '1490306410', '30', 'Thursday'),
-('Salina', 5, 73, 40, '77', 73, 73, 'clear sky', '06:25:43 AM', '06:47:28 PM', '17.22', '1490392210', '30', 'Friday'),
-('Salina', 6, 70, 60, '', 70, 70, 'broken clouds', '06:27:25 AM', '06:46:25 PM', '25.28', '1490298465', '30', 'Saturday'),
-('Salina', 7, 70, 60, '', 70, 70, 'broken clouds', '06:27:25 AM', '06:46:25 PM', '25.28', '1490298317', '30', 'Sunday');
+('', 1, 70, 60, '', 70, 70, 'broken clouds', '06:27:25 AM', '06:46:25 PM', '25.28', '1490298317', '30', 'Monday'),
+('', 2, 70, 60, '', 70, 70, 'broken clouds', '06:27:25 AM', '06:46:25 PM', '25.28', '1490298317', '30', 'Tuesday'),
+('', 3, 60, 60, '68', 70, 70, 'broken clouds', '06:27:25 AM', '06:46:25 PM', '25.28', '1490298317', '30', 'Wednsday'),
+('', 4, 75, 53, '77', 75, 75, 'clear sky', '06:27:16 AM', '06:46:30 PM', '19.46', '1490306410', '30', 'Thursday'),
+('', 5, 73, 40, '77', 73, 73, 'clear sky', '06:25:43 AM', '06:47:28 PM', '17.22', '1490392210', '30', 'Friday'),
+('', 6, 70, 60, '', 70, 70, 'broken clouds', '06:27:25 AM', '06:46:25 PM', '25.28', '1490298465', '30', 'Saturday'),
+('', 7, 70, 60, '', 70, 70, 'broken clouds', '06:27:25 AM', '06:46:25 PM', '25.28', '1490298317', '30', 'Sunday');
 
 -- --------------------------------------------------------
 

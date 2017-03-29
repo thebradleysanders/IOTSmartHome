@@ -131,11 +131,6 @@
     	WHERE service_name='Weather'";
     	mysqli_query($GS_DBCONN, $insert_query) or die (mysqli_error($GS_DBCONN));
     	
-    	$insert_query="UPDATE weather_data SET 
-    	set_zip='".clean_text($_POST['general_zipcode'],10)."'
-    	WHERE ID='1'";
-    	mysqli_query($GS_DBCONN, $insert_query) or die (mysqli_error($GS_DBCONN));
-    	
     	//Spotify Squeezbox Service
     	$insert_query="UPDATE enabled_services SET 
     	service_attr1='".clean_text($_POST['spotify_apikey1'],100)."',
@@ -159,6 +154,7 @@
 		}else{
 			startSmartHomeService(temp_decode($_GET['page']));
 		}
+		echo "<script>location.href='?';</script>";
     }
     
     if(temp_decode($_GET['type'])=="StopSystemService" && GetUserPermissions("edit")==true){
@@ -171,6 +167,7 @@
 		}else{
 			endSmartHomeService(temp_decode($_GET['page']));
 		}
+		echo "<script>location.href='?';</script>";
     }
     
     if(temp_decode($_GET['type'])=="Test_email" && temp_decode($_GET['type'])!="[EXPIRED]" && GetUserPermissions("edit")==true){

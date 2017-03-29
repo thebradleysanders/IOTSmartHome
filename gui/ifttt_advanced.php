@@ -51,18 +51,21 @@
 				
 				$ifCount=(int)$_POST['appendedIfCount'.$currentIFTTTConditionCount];
 				$thenCount=(int)$_POST['appendedThenCount'.$currentIFTTTConditionCount];
-				$whileIfCount=0;
+				
 				$parenthasesLeft_Cond="";
 				$parenthasesRight_Cond="";
 				$opperators_Cond="";
+				$delay_Cond="";
 				
 				//IF
+				$whileIfCount=0;
 				while ($whileIfCount <= $ifCount){$whileIfCount++;
 					if(trim($_POST['ifThis'.$currentIFTTTConditionCount.$whileIfCount])!=""){
 						$if_Array .= $_POST['ifThis'.$currentIFTTTConditionCount.$whileIfCount]."<Done>";
 						$opperators_Cond .= $_POST['opperator'.$currentIFTTTConditionCount.$whileIfCount].":";
 						$parenthasesLeft_Cond.=$_POST['parenthaseLeft'.$currentIFTTTConditionCount.$whileIfCount].":";
 						$parenthasesRight_Cond.=$_POST['parenthaseRight'.$currentIFTTTConditionCount.$whileIfCount].":";
+						$delay_Cond.=$_POST['delay'.$currentIFTTTConditionCount];
 					}
 				}
 				
@@ -72,6 +75,7 @@
 				
 				$parenthases .=":".$parenthasesLeft_Cond."|:".$parenthasesRight_Cond."+";
 				$opperators.= $opperators_Cond."+";
+				$delay .= $delay_Cond."+"; 
 				
 				//THEN
 				$whileThenCount=0;
@@ -98,15 +102,15 @@
 			
 			
 			if((int)$_POST['ID']==0 && GetUserPermissions("add")==true){
-				$insert_query="INSERT INTO ifttt (name,if_Array,ifthen_Array,opperatorArray,parenthaseArray,last_ran,delay,enabled)
+				$insert_query="INSERT INTO ifttt (name,if_Array,ifthen_Array,opperatorArray,parenthaseArray,delayArray,last_ran,enabled)
 				VALUES(
 				'".clean_text($name,100)."',
 				'".trim($if_Array)."',
 				'".trim($then_Array)."',
 				'".$opperators."',
 				'".$parenthases."',
+				'".$delay."',
 				'',
-				'".clean_text($_POST['delay'],100)."',
 				'".clean_text((int)$_POST['enabled'],1)."'
 				)";
 				mysqli_query($GS_DBCONN, $insert_query) or GF_logging("error");
@@ -117,7 +121,7 @@
 				ifThen_Array='".trim($then_Array)."',
 				opperatorArray='".$opperators."',
 				parenthaseArray='".$parenthases."',
-				delay='".clean_text($_POST['delay'],100)."',
+				delayArray='".$delay."',
 				enabled='".clean_text((int)$_POST['enabled'],1)."'
 				WHERE ID='".clean_text((int)$_POST['ID'],11)."'";
 				mysqli_query($GS_DBCONN, $insert_query) or die (mysqli_error($GS_DBCONN));
@@ -145,6 +149,7 @@
 		$IFTTTThenArray = explode("<Action>", $result['ifThen_Array']);
 		$IFTTToperatorArray = explode("+", $result['opperatorArray']);
 		$IFTTTparenthaseArrayALL = explode("+", $result['parenthaseArray']);
+		$IFTTTdelayArray = explode("+", $result['delayArray']);
 	?>
 	
 	<form method="Post" style="padding:0px;" id="iftttFrm" class="col-xs-12 col-sm-12 col-md-8 col-lg-8 autoform">
@@ -160,18 +165,11 @@
 					<input type="checkbox" data-toggle="toggle" data-size="medium" data-off="Enable" data-on="Enable" id="chk_enabled" name="enabled"  value="1"/>
 				</div>
 				<!----- DESCRIPTION ----->
-				<div class="col-xs-12 col-sm-12 col-md-12 col-lg-5" style="background-color:#fff;padding:10px;height:115px;box-shadow:0 1px 3px 0px rgba(0, 0, 0, 0.2);">
+				<div class="col-xs-12 col-sm-12 col-md-12 col-lg-8" style="background-color:#fff;padding:10px;height:115px;box-shadow:0 1px 3px 0px rgba(0, 0, 0, 0.2);">
 					<h4 style="background-color:#f1f1f1;padding:5px;border:1px solid #d8d8d8;overflow:hidden;padding:8px;width:100%;">
 						<b>Description:</b>
 					</h4>
 					<input id="txt_name" name="txt_name" type="text" style="width:100%;" class="form-control1" value="<?php echo $result['name'];?>">
-				</div>
-				<!----- DELAY ----->
-				<div class="col-xs-12 col-sm-12 col-md-12 col-lg-3" style="background-color:#fff;padding:10px;height:115px;box-shadow:0 1px 3px 0px rgba(0, 0, 0, 0.2);">
-					<h4 style="text-align:center;background-color:#f1f1f1;padding:5px;border:1px solid #d8d8d8;overflow:hidden;padding:8px;width:100%;">
-						<span><b>Delay:</b> (sec.)</span>
-					</h4>
-					<input id="txt_delay" name="delay" type="number" style="width:100%;" class="form-control1" value="<?php echo $result['delay'];?>"/>
 				</div>
 				<!----- SAVE/CANCEL ----->
 				<div class="col-xs-12 col-sm-12 col-md-12 col-lg-2" style="padding:10px;background-color:#fff;height:115px;box-shadow:0 1px 3px 0px rgba(0, 0, 0, 0.2);">
@@ -208,9 +206,21 @@
 				<div style="background-color:#fff;padding:15px;box-shadow:0 1px 3px 0px rgba(0, 0, 0, 0.2);" id="IFLIST<?php echo $iftttConditionCount;?>">
 				
 					<?php if($iftttConditionCount==1):?>
-						<h4 style="margin-top:10px;background-color:#f1f1f1;padding:8px;border:1px solid #d8d8d8;"><b>If This:</b></h4>
+						<h4 style="margin-top:10px;background-color:#f1f1f1;padding:8px;border:1px solid #d8d8d8;">
+							<b>If This:</b>
+							<div class="input-group" style="float:right;width:50px;margin-top:-6px;">
+								<span class="input-group-addon"><b>Delay</b> (sec):</span>
+								<input type="number" value="" name="delay<?php echo $iftttConditionCount;?>" id="delay<?php echo $iftttConditionCount;?>" min="0" style="width:80px;height:30px;"/>
+							</div>
+						</h4>
 					<?php else :?>
-						<h4 style="margin-top:10px;background-color:#f1f1f1;padding:8px;border:1px solid #d8d8d8;"><b>Else If:</b></h4>
+						<h4 style="margin-top:10px;background-color:#f1f1f1;padding:8px;border:1px solid #d8d8d8;">
+							<b>Else If:</b>
+							<div class="input-group" style="float:right;width:50px;margin-top:-6px;">
+								<span class="input-group-addon"><b>Delay</b> (sec):</span>
+								<input type="number" value="" name="delay<?php echo $iftttConditionCount;?>" id="delay<?php echo $iftttConditionCount;?>" min="0" style="width:80px;height:30px;"/>
+							</div>
+						</h4>
 					<?php endif;?>
 
 					<?php
@@ -266,6 +276,7 @@
 									$('#ParenthaseRightValue<?php echo $iftttConditionCount.$appendedIfCount;?>').val("");
 									$('#ParenthaseRight<?php echo $iftttConditionCount.$appendedIfCount;?>').html("<b> </b>");
 								<?php endif;?>
+								$("#delay<?php echo $iftttConditionCount;?>").val("<?php echo $IFTTTdelayArray[$iftttConditionCount-1];?>");
 
 							});
 						</script>

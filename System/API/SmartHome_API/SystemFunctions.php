@@ -324,6 +324,7 @@ function startSmartHomeService($page)
             //Get Parent process Id  
             $ppid = proc_get_status($prog);
             $pid  = $ppid['pid'];
+			GF_logging( $runPath);
         } else {
            GF_logging("Failed to start SmartHome Broker service: ".$page);
 		   return false;
@@ -508,8 +509,6 @@ function GF_ChangeAlarmState($mode, $state, $calledBy = "")
     
     if ($state != "") {
         if ($state == "0") {
-            //turn off the blinking lights
-            GF_blinkAllHueLights(false, $calledBy);
             
             $query   = "SELECT * FROM home_rooms";
             $results = mysqli_query($GS_DBCONN, $query);
@@ -520,7 +519,7 @@ function GF_ChangeAlarmState($mode, $state, $calledBy = "")
         } else {
             $alarm_on_time = time();
         }
-        $insert_query = "UPDATE alarm_status SET alarm_state='0', alarm_triggered='0', alarm_time='', alarm_on_time='" . $alarm_on_time . "', alarm_activated='0' WHERE ID='1'";
+        $insert_query = "UPDATE alarm_status SET alarm_state='".$state."', alarm_triggered='0', alarm_time='', alarm_on_time='" . $alarm_on_time . "', alarm_activated='0' WHERE ID='1'";
         mysqli_query($GS_DBCONN, $insert_query);
     }
     
