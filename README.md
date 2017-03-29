@@ -7,25 +7,25 @@ This is written PHP. It includes the following API's:
 * Open Weather Map
 * MQTT
 * Logitech Squeezebox
-* iCoud Geolocation
+* iCloud Geolocation 
 
-## Requirements
+## Requirements 
 * PHP 5.5 or greater.
 * PHP [cURL extension](http://php.net/manual/en/book.curl.php) (Usually included with PHP).
-* PHP [mySQLi extension]
+* PHP [mySQLi extension](http://php.net/manual/en/class.mysqli.php)
 * An MQTT Broker  (https://mosquitto.org/)
 * MySQL Server
 
 ## Installation
-Add the IOTSmartHome Project to your web server
-Install the sql file located at System/Install/smarthome.sql
-Ajust the System/Install/Config.php file to match your configuration
+* Add the IOTSmartHome Project to your web server
+* Install the sql file located at System/Install/smarthome.sql
+* Adjust the System/Install/Config.php file to match your configuration
 
 
 ## Screenshots
-![alt tag](https://github.com/thebradleysanders/IOTSmartHome/Screenshots/home.png)
-![alt tag](https://github.com/thebradleysanders/IOTSmartHome/Screenshots/login.png)
+![Home Page](/Screenshots/home.png?raw=true)
+![Login Page](/Screenshots/login.png?raw=true)
 
 
-## License
+## License 
 TODO
